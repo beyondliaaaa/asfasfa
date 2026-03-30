@@ -1,0 +1,21 @@
+# config/stock_pool_template.txt
+# 格式：symbol,5min_momentum,hour_momentum,day_momentum,week_momentum,reference_level,notes
+# 动量字段: True/False (字符串，区分大小写)
+# reference_level: 5-min | 1-hour | 1-day | 1-week (最佳参考时间框架)
+# notes: 人工备注（可选）
+
+# ===== 已有仓位（自动从 IBKR 同步，可手动补充）=====
+# symbol, 5min, hour, day, week, ref_level, notes
+AAPL,True,False,True,False,5-min,earnings catalyst
+MSFT,False,True,False,True,1-hour,sector rotation
+
+# ===== 新观察股票（最多 7 只）=====
+# 选择逻辑：多时间框架动量确认 + 流动性充足
+# 动量确认越多 = 信号越强；大周期确认 = 更安全
+TSLA,True,True,False,False,5-min,high volatility
+NVDA,False,False,True,True,1-day,trend following
+AMD,False,True,True,False,1-hour,chip sector
+GOOGL,False,False,True,False,1-day,tech momentum
+META,False,True,False,False,1-hour,social recovery
+NFLX,True,False,False,False,5-min,content catalyst
+AMZN,False,False,True,True,1-day,cloud growth
