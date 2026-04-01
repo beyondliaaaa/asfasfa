@@ -69,22 +69,21 @@ def format_series_data(series: List[Dict], max_bars: int = None,
         return "N/A"
     
     if fields is None:
-        fields = ["close", "vwap", "bbi", "bbiboll_upper", "bbiboll_lower", "bbiboll_ratio"]
+        fields = ["close", "vwap", "bbi", "bbiboll_ratio"]  # 🔧 精简关键字段
     
-    # 限制条数
     if max_bars and len(series) > max_bars:
         series = series[-max_bars:]
     
     lines = []
     for item in series:
         dt = item.get("datetime", "N/A")
-        indicators = item.get("indicators", {})
         
-        # 构建单行：时间 | key=value 对
+        # 🔧 兼容两种数据格式：带 indicators 嵌套 或 扁平结构
+        indicators = item.get("indicators", item)
+        
         parts = [f"{dt}"]
         for field in fields:
             value = indicators.get(field, "N/A")
-            # 格式化数值，避免过长
             if isinstance(value, (int, float)):
                 value = f"{value:.4f}"
             parts.append(f"{field}:{value}")

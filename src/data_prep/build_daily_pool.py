@@ -113,48 +113,102 @@ def query_multi_granularity_data(symbol: str, adapter: IBKRPriceAdapter) -> Dict
         "symbol": symbol,
         "5min_series": [],
         "hourly_series": [],
-        "2hour_series": [],  # 新增
         "daily_series": [],
         "latest": {}
     }
     
-    session = get_session()
-    
+    # ── 1. 查询 intraday DB 获取 5 分钟数据 ──
+    session = get_session()  # intraday_db 的 session
     try:
-        # ── 5 分钟数据 ──
-        from shared.intraday_db import IntradayBar, IntradayHourlyBar, Intraday2HourBar
+        from shared.intraday_db import IntradayBar
         
         bars_5min = session.query(IntradayBar).filter(
             IntradayBar.symbol == symbol
         ).order_by(IntradayBar.datetime.desc()).limit(settings.MAX_BARS_5MIN).all()
+        
         if bars_5min:
             result["5min_series"] = [bar.to_dict() for bar in reversed(bars_5min)]
-        
-        # ── 1 小时数据 ──
-        bars_hourly = session.query(IntradayHourlyBar).filter(
-            IntradayHourlyBar.symbol == symbol
-        ).order_by(IntradayHourlyBar.datetime.desc()).limit(settings.MAX_BARS_HOURLY).all()
-        if bars_hourly:
-            result["hourly_series"] = [bar.to_dict() for bar in reversed(bars_hourly)]
-        
-        # ── 2 小时数据 ──
-        bars_2hour = session.query(Intraday2HourBar).filter(
-            Intraday2HourBar.symbol == symbol
-        ).order_by(Intraday2HourBar.datetime.desc()).limit(settings.MAX_BARS_2HOUR).all()
-        if bars_2hour:
-            result["2hour_series"] = [bar.to_dict() for bar in reversed(bars_2hour)]
-        
-        # ── 日线数据（从历史 DB）─ ─
-        # 通过 adapter 查询历史数据库
-        daily_data = adapter.get_from_historical_db(symbol)
-        if daily_data:
-            result["daily_series"].append(daily_data)
-            result["latest"]["daily"] = daily_data
-        
+            result["latest"]["5min"] = bars_5min[0].to_dict()
+            logger.debug(f"📊 {symbol}: 加载 {len(bars_5min)} 条 5 分钟数据")
     except Exception as e:
-        logger.error(f"{symbol} 数据查询失败：{e}")
+        logger.warning(f"⚠️ {symbol} 5 分钟数据查询失败：{e}")
     finally:
         session.close()
+    
+    # ── 2. 查询 historical DB 获取小时/日线数据 ──
+    from sqlalchemy import create_engine, text
+    from sqlalchemy.orm import sessionmaker
+    
+    hist_engine = create_engine(f'sqlite:///{settings.HISTORICAL_DB_PATH}')
+    hist_session = sessionmaker(bind=hist_engine)()
+    
+    try:
+        # 🔧 查询 HourlyBar 表（1 小时线）
+        hourly_query = text("""
+            SELECT symbol, datetime, open, high, low, close, volume,
+                   vwap, bbi, bbiboll_upper, bbiboll_lower, bbiboll_ratio
+            FROM hourly_bars
+            WHERE symbol = :symbol
+            ORDER BY datetime DESC
+            LIMIT :limit
+        """)
+        hourly_result = hist_session.execute(hourly_query, {
+            "symbol": symbol,
+            "limit": settings.MAX_BARS_HOURLY
+        }).fetchall()
+        
+        if hourly_result:
+            # 转换为与 IntradayBar.to_dict() 兼容的格式
+            for row in reversed(hourly_result):
+                result["hourly_series"].append({
+                    "symbol": row[0],
+                    "datetime": str(row[1]) if row[1] else None,
+                    "indicators": {
+                        "close": str(row[5]) if row[5] else "N/A",
+                        "vwap": str(row[7]) if row[7] else "N/A",
+                        "bbi": str(row[8]) if row[8] else "N/A",
+                        "bbiboll_upper": str(row[9]) if row[9] else "N/A",
+                        "bbiboll_lower": str(row[10]) if row[10] else "N/A",
+                        "bbiboll_ratio": str(row[11]) if row[11] else "N/A"
+                    }
+                })
+            logger.debug(f"📊 {symbol}: 加载 {len(hourly_result)} 条小时数据")
+        
+        # 🔧 查询 DailyBar 表（日线）
+        daily_query = text("""
+            SELECT symbol, date, open, high, low, close, volume,
+                   vwap, bbi, bbiboll_upper, bbiboll_lower, bbiboll_ratio
+            FROM daily_bars
+            WHERE symbol = :symbol
+            ORDER BY date DESC
+            LIMIT :limit
+        """)
+        daily_result = hist_session.execute(daily_query, {
+            "symbol": symbol,
+            "limit": settings.MAX_BARS_DAILY
+        }).fetchall()
+        
+        if daily_result:
+            for row in reversed(daily_result):
+                result["daily_series"].append({
+                    "symbol": row[0],
+                    "datetime": str(row[1]) if row[1] else None,
+                    "indicators": {
+                        "close": str(row[5]) if row[5] else "N/A",
+                        "vwap": str(row[7]) if row[7] else "N/A",
+                        "bbi": str(row[8]) if row[8] else "N/A",
+                        "bbiboll_upper": str(row[9]) if row[9] else "N/A",
+                        "bbiboll_lower": str(row[10]) if row[10] else "N/A",
+                        "bbiboll_ratio": str(row[11]) if row[11] else "N/A"
+                    }
+                })
+            logger.debug(f"📊 {symbol}: 加载 {len(daily_result)} 条日线数据")
+            
+    except Exception as e:
+        logger.warning(f"⚠️ {symbol} 历史数据查询失败：{e}")
+    finally:
+        hist_session.close()
+        hist_engine.dispose()
     
     return result
 

@@ -6,12 +6,13 @@
 
 # ===== 已有仓位（自动从 IBKR 同步，可手动补充）=====
 # symbol, 5min, hour, day, week, ref_level, notes
-AAPL,True,False,True,False,5-min,earnings catalyst
-MSFT,False,True,False,True,1-hour,sector rotation
+
 
 # ===== 新观察股票（最多 7 只）=====
 # 选择逻辑：多时间框架动量确认 + 流动性充足
 # 动量确认越多 = 信号越强；大周期确认 = 更安全
+AAPL,True,False,True,False,5-min,earnings catalyst
+MSFT,False,True,False,True,1-hour,sector rotation
 TSLA,True,True,False,False,5-min,high volatility
 NVDA,False,False,True,True,1-day,trend following
 AMD,False,True,True,False,1-hour,chip sector

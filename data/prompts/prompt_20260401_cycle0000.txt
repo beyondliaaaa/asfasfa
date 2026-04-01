@@ -1,0 +1,773 @@
+# AI-Trader-Intraday Prompt Log
+# Date: 2026-04-01
+# Cycle: 0
+# Generated: 2026-04-01T14:41:39.890464
+# Length: 53580 chars (~13395 tokens)
+======================================================================
+
+# config/prompt_template.txt
+You are a professional quantitative trading assistant specializing in short-term technical analysis.
+
+Your goals are:
+- Use technical indicators (VWAP, BBI, BBI Bollinger Bands) to identify entry/exit points
+- Combine multi-timeframe analysis: daily trend + hourly momentum + 5-min execution signals
+- Maximize risk-adjusted returns through disciplined position management
+
+Current time is 2026-04-01 14:41:33 EST.
+Below, we are providing you with a variety of state data, price data, and predictive signals so you can discover alpha. Below that is your current account information, value, performance, positions, etc.
+
+**ALL OF THE PRICE OR SIGNAL DATA BELOW IS ORDERED: OLDEST → NEWEST**
+
+**Timeframes note:** Intraday series are provided at **5‑minute intervals**, unless at the beginning of a trading day (then data from previous day would fill the blank).
+
+You are allowed to trade assets within a daily stock pool (including all positions). They are assessed by a human expert whether they have strong momentum at different scale of timeframe (More confirmed timeframes = BETTER; Larger timeframe = SAFER). Plus, each asset has a best level of timeframe for reference when trading.
+
+### ALL Strong Momentum Assessment are made before the market opens today ###
+Including your positions, today you are allowed to trade:
+"AAPL":{"5-min level strong momentum: True; 
+                1-hour level strong momentum: False;
+                2-hour level strong momentum: False;
+                1-day level strong momentum: True;
+                1-week level strong momentum: False;
+                Most suitable reference level: 5-min"}
+"MSFT":{"5-min level strong momentum: False; 
+                1-hour level strong momentum: True;
+                2-hour level strong momentum: False;
+                1-day level strong momentum: False;
+                1-week level strong momentum: True;
+                Most suitable reference level: 1-hour"}
+"TSLA":{"5-min level strong momentum: True; 
+                1-hour level strong momentum: True;
+                2-hour level strong momentum: False;
+                1-day level strong momentum: False;
+                1-week level strong momentum: False;
+                Most suitable reference level: 5-min"}
+"NVDA":{"5-min level strong momentum: False; 
+                1-hour level strong momentum: False;
+                2-hour level strong momentum: False;
+                1-day level strong momentum: True;
+                1-week level strong momentum: True;
+                Most suitable reference level: 1-day"}
+"GOOGL":{"5-min level strong momentum: False; 
+                1-hour level strong momentum: False;
+                2-hour level strong momentum: False;
+                1-day level strong momentum: True;
+                1-week level strong momentum: False;
+                Most suitable reference level: 1-day"}
+"META":{"5-min level strong momentum: False; 
+                1-hour level strong momentum: True;
+                2-hour level strong momentum: False;
+                1-day level strong momentum: False;
+                1-week level strong momentum: False;
+                Most suitable reference level: 1-hour"}
+"AMZN":{"5-min level strong momentum: False; 
+                1-hour level strong momentum: False;
+                2-hour level strong momentum: False;
+                1-day level strong momentum: True;
+                1-week level strong momentum: True;
+                Most suitable reference level: 1-day"}
+└─Format per symbol:
+	{{
+		"{symbol}":{{"5-min level strong momentum: True/False; 
+					1-hour level strong momentum: True/False;
+					2-hour level strong momentum: True/False;
+					1-day level strong momentum: True/False;
+					1-week level strong momentum: True/False;
+					Most suitable reference level: 5-min/1-hour/1-day/1-week
+					"}}
+	}}
+
+### CURRENT MARKET STATE FOR ALL ASSETS IN THE POOL ###
+### ALL {ASSET_1} DATA:
+**Intraday series (by minute, oldest → latest):**
+{intraday_indicator_5min_series}
+
+**Longer‑term context (1‑hour timeframe):**
+{intraday_indicator_1hour_series}
+
+**Longer-term context (2-hour timeframe):**
+{intraday_indicator_2hour_series}
+
+**Longer‑term context (1‑day timeframe):**
+{intraday_indicator_1day_series}
+
+### ALL {ASSET_2} DATA:
+....
+
+### KEY ON INDICATORS ###
+It is found that when bbiboll ratio (upper/bbi) is low, any price above bbi (and even the upper band) is relatively safe; when bbiboll ratio is high, it is important for the price to be close with either bbi or preferably upper band.
+
+### ⚠️ TRADING CONSTRAINTS & RISK LIMITS ⚠️ ###
+You MUST adhere to the following constraints when making trading decisions:
+
+**Daily Trade Limit:**
+- Maximum trades per day: 20
+- Trades executed today so far: 0
+- Remaining trades allowed: 20
+- → If trades_remaining <= 0, you MUST output NO_OP
+
+**Position Limits:**
+- Maximum position per stock: 25% of total account value
+- Current account value: $1,011,805.05
+
+**Cash Management:**
+- Minimum cash reserve: 10% of total account value
+- Available cash: $997,264.85
+
+**Order Types:**
+- Limit order: buy(symbol, qty, price) / sell(symbol, qty, price)
+- Market order: buy_mkt(symbol, qty) / sell_mkt(symbol, qty)
+
+**Trading Mode:**
+- Current mode: SIMULATED (SIMULATED or LIVE)
+
+### Your Current Positions ###
+(numbers after stock codes represent how many shares you hold, numbers after CASH represent your available cash):
+
+**Current Account Value:** $1,011,805.05
+**Current Total Return (percent):** +0.04%
+**Current live positions & performance:**
+NVDA: 100 shares @ $168.37 (now $168.37, P/L $+0.00 +0.0%)
+MSFT: 50 shares @ $359.56 (now $359.56, P/L $+0.00 +0.0%)
+CASH: $997,264.85 available
+
+### OUTPUT FORMAT ###
+You MUST output EXACTLY ONE of the following:
+
+1. For limit orders:
+   buy(symbol, quantity, price)
+   sell(symbol, quantity, price)
+
+2. For market orders:
+   buy_mkt(symbol, quantity)
+   sell_mkt(symbol, quantity)
+
+3. For no action:
+   NO_OP
+
+**Examples:**
+- buy(AAPL, 100, 150.5)
+- sell_mkt(TSLA, 50)
+- NO_OP
+
+**Important:** 
+- Only output ONE instruction per decision cycle
+- Do NOT output any explanation, reasoning, or additional text
+- If no high-confidence opportunity exists, output NO_OP
+- Respect all trading constraints above
+
+### ALL AAPL DATA:
+            **Intraday series (by minute, oldest → latest):**
+            2026-03-31 09:30:00 | close:248.7 vwap:248.5666666666667 bbi:N/A ratio:N/A
+2026-03-31 09:35:00 | close:248.55 vwap:248.29666666666665 bbi:N/A ratio:N/A
+2026-03-31 09:40:00 | close:247.82 vwap:248.01999999999995 bbi:N/A ratio:N/A
+2026-03-31 09:45:00 | close:249.04 vwap:248.6433333333333 bbi:N/A ratio:N/A
+2026-03-31 09:50:00 | close:249.1 vwap:249.04333333333332 bbi:N/A ratio:N/A
+2026-03-31 09:55:00 | close:248.81 vwap:248.84333333333333 bbi:N/A ratio:N/A
+2026-03-31 10:00:00 | close:248.67 vwap:248.6266666666667 bbi:N/A ratio:N/A
+2026-03-31 10:05:00 | close:248.36 vwap:248.3166666666667 bbi:N/A ratio:N/A
+2026-03-31 10:10:00 | close:248.51 vwap:248.50666666666663 bbi:N/A ratio:N/A
+2026-03-31 10:15:00 | close:249.05 vwap:248.82666666666665 bbi:N/A ratio:N/A
+2026-03-31 10:20:00 | close:248.74 vwap:248.79666666666662 bbi:N/A ratio:N/A
+2026-03-31 10:25:00 | close:248.94 vwap:248.86666666666665 bbi:N/A ratio:N/A
+2026-03-31 10:30:00 | close:248.54 vwap:248.66666666666666 bbi:N/A ratio:N/A
+2026-03-31 10:35:00 | close:248.41 vwap:248.38666666666666 bbi:N/A ratio:N/A
+2026-03-31 10:40:00 | close:247.61 vwap:247.89666666666668 bbi:N/A ratio:N/A
+2026-03-31 10:45:00 | close:247.82 vwap:247.72333333333336 bbi:N/A ratio:N/A
+2026-03-31 10:50:00 | close:247.37 vwap:247.48333333333335 bbi:N/A ratio:N/A
+2026-03-31 10:55:00 | close:247.32 vwap:247.3066666666667 bbi:N/A ratio:N/A
+2026-03-31 11:00:00 | close:247.55 vwap:247.54000000000002 bbi:N/A ratio:N/A
+2026-03-31 11:05:00 | close:247.68 vwap:247.64333333333335 bbi:N/A ratio:N/A
+2026-03-31 11:10:00 | close:248.38 vwap:248.15666666666667 bbi:N/A ratio:N/A
+2026-03-31 11:15:00 | close:248.68 vwap:248.63000000000002 bbi:N/A ratio:N/A
+2026-03-31 11:20:00 | close:248.67 vwap:248.60666666666665 bbi:N/A ratio:N/A
+2026-03-31 11:25:00 | close:248.43 vwap:248.51666666666665 bbi:N/A ratio:N/A
+2026-03-31 11:30:00 | close:248.02 vwap:248.04666666666665 bbi:N/A ratio:N/A
+2026-03-31 11:35:00 | close:248.51 vwap:248.3466666666667 bbi:N/A ratio:N/A
+2026-03-31 11:40:00 | close:248.64 vwap:248.62 bbi:N/A ratio:N/A
+2026-03-31 11:45:00 | close:248.61 vwap:248.5966666666667 bbi:N/A ratio:N/A
+2026-03-31 11:50:00 | close:248.91 vwap:248.85666666666668 bbi:N/A ratio:N/A
+2026-03-31 11:55:00 | close:248.61 vwap:248.80972136440047 bbi:N/A ratio:N/A
+2026-03-31 12:00:00 | close:249.04 vwap:248.87514931787658 bbi:N/A ratio:N/A
+2026-03-31 12:05:00 | close:249.59 vwap:249.0308014891561 bbi:N/A ratio:N/A
+2026-03-31 12:10:00 | close:249.44 vwap:249.08935898326476 bbi:N/A ratio:N/A
+2026-03-31 12:15:00 | close:249.71 vwap:249.16646157180057 bbi:N/A ratio:N/A
+2026-03-31 12:20:00 | close:250.58 vwap:249.50708422295884 bbi:N/A ratio:N/A
+2026-03-31 12:25:00 | close:250.34 vwap:249.62815317533534 bbi:N/A ratio:N/A
+2026-03-31 12:30:00 | close:250.41 vwap:249.68173093712255 bbi:N/A ratio:N/A
+2026-03-31 12:35:00 | close:251.74 vwap:249.90222664260574 bbi:N/A ratio:N/A
+2026-03-31 12:40:00 | close:251.77 vwap:250.38378707107722 bbi:N/A ratio:N/A
+2026-03-31 12:45:00 | close:252.87 vwap:250.69061130622842 bbi:N/A ratio:N/A
+2026-03-31 12:50:00 | close:252.84 vwap:250.89735565611184 bbi:N/A ratio:N/A
+2026-03-31 12:55:00 | close:253.13 vwap:251.01538641420606 bbi:N/A ratio:N/A
+2026-03-31 13:00:00 | close:253.66 vwap:251.2243609558405 bbi:N/A ratio:N/A
+2026-03-31 13:05:00 | close:252.67 vwap:251.3196839741489 bbi:N/A ratio:N/A
+2026-03-31 13:10:00 | close:253.25 vwap:251.386896849587 bbi:N/A ratio:N/A
+2026-03-31 13:15:00 | close:253.52 vwap:251.46524396013155 bbi:N/A ratio:N/A
+2026-03-31 13:20:00 | close:253.51 vwap:251.52276464052446 bbi:N/A ratio:N/A
+2026-03-31 13:25:00 | close:253.23 vwap:251.57252439826965 bbi:N/A ratio:N/A
+2026-03-31 13:30:00 | close:253.7 vwap:251.62651862665138 bbi:N/A ratio:N/A
+2026-03-31 13:35:00 | close:252.99 vwap:251.70382027175043 bbi:N/A ratio:N/A
+2026-03-31 13:40:00 | close:252.58 vwap:251.73295871966698 bbi:N/A ratio:N/A
+2026-03-31 13:45:00 | close:253.11 vwap:251.7619907976333 bbi:252.74479166666669 ratio:N/A
+2026-03-31 13:50:00 | close:252.9 vwap:251.78275948745497 bbi:252.75468750000002 ratio:N/A
+2026-03-31 13:55:00 | close:252.54 vwap:251.80338053544 bbi:252.75125 ratio:N/A
+2026-03-31 14:00:00 | close:252.83 vwap:251.82470247791892 bbi:252.71385416666666 ratio:N/A
+2026-03-31 14:05:00 | close:253.11 vwap:251.86812935969888 bbi:252.78218750000002 ratio:N/A
+2026-03-31 14:10:00 | close:252.8 vwap:251.8902875369534 bbi:252.83864583333335 ratio:N/A
+2026-03-31 14:15:00 | close:253.14 vwap:251.92062065771955 bbi:252.89354166666666 ratio:N/A
+2026-03-31 14:20:00 | close:252.9 vwap:251.94458817969868 bbi:252.88749999999996 ratio:N/A
+2026-03-31 14:25:00 | close:253.13 vwap:251.9735247599232 bbi:252.9665625 ratio:N/A
+2026-03-31 14:30:00 | close:253.3 vwap:251.99836444270463 bbi:253.02125 ratio:1.0012325644405589
+2026-03-31 14:35:00 | close:253.68 vwap:252.03017950599232 bbi:253.14458333333332 ratio:1.0016222234936625
+2026-03-31 14:40:00 | close:253.4 vwap:252.0703873819761 bbi:253.22614583333336 ratio:1.0019936086026244
+2026-03-31 14:45:00 | close:253.65 vwap:252.09449322911564 bbi:253.2959375 ratio:1.0022859319522106
+2026-03-31 14:50:00 | close:253.79 vwap:252.11779913964375 bbi:253.370625 ratio:1.0024258901290952
+2026-03-31 14:55:00 | close:253.74 vwap:252.1496154255408 bbi:253.45572916666669 ratio:1.0026026807718469
+2026-03-31 15:00:00 | close:253.8 vwap:252.1850874859609 bbi:253.51072916666664 ratio:1.0027239733263853
+2026-03-31 15:05:00 | close:253.58 vwap:252.21281523596807 bbi:253.50833333333333 ratio:1.0026990826408237
+2026-03-31 15:10:00 | close:253.89 vwap:252.25286621772034 bbi:253.570625 ratio:1.002519933944659
+2026-03-31 15:15:00 | close:253.8 vwap:252.3093995329629 bbi:253.59354166666668 ratio:1.002282802623379
+2026-03-31 15:20:00 | close:253.74 vwap:252.34557571581342 bbi:253.62468750000002 ratio:1.0019406475988153
+2026-03-31 15:25:00 | close:253.67 vwap:252.38684933081655 bbi:253.61927083333333 ratio:1.0016447025644972
+2026-03-31 15:30:00 | close:253.68 vwap:252.42504202704578 bbi:253.61197916666669 ratio:1.0013311264869396
+2026-03-31 15:35:00 | close:253.85 vwap:252.46016325704443 bbi:253.64489583333332 ratio:1.0010421565495295
+2026-03-31 15:40:00 | close:253.95 vwap:252.51396876084624 bbi:253.69645833333334 ratio:1.0008622684595467
+2026-03-31 15:45:00 | close:254.5 vwap:252.59121949490213 bbi:253.82614583333333 ratio:1.0010903211007145
+2026-03-31 15:50:00 | close:254.18 vwap:252.79133457297746 bbi:253.89343749999998 ratio:1.001388414220582
+2026-03-31 15:55:00 | close:253.81 vwap:252.9257958327172 bbi:253.90229166666666 ratio:1.0015012030158061
+
+            **Longer‑term context (1‑hour timeframe):**
+            N/A
+
+            **Longer‑term context (1‑day timeframe):**
+            N/A
+            
+
+### ALL MSFT DATA:
+            **Intraday series (by minute, oldest → latest):**
+            2026-03-31 09:30:00 | close:366.83 vwap:366.01666666666665 bbi:N/A ratio:N/A
+2026-03-31 09:35:00 | close:366.57 vwap:366.53 bbi:N/A ratio:N/A
+2026-03-31 09:40:00 | close:366.04 vwap:366.3333333333333 bbi:N/A ratio:N/A
+2026-03-31 09:45:00 | close:367.69 vwap:367.15333333333336 bbi:N/A ratio:N/A
+2026-03-31 09:50:00 | close:367.89 vwap:367.56333333333333 bbi:N/A ratio:N/A
+2026-03-31 09:55:00 | close:367.1 vwap:367.28000000000003 bbi:N/A ratio:N/A
+2026-03-31 10:00:00 | close:367.24 vwap:367.0833333333333 bbi:N/A ratio:N/A
+2026-03-31 10:05:00 | close:366.83 vwap:366.90000000000003 bbi:N/A ratio:N/A
+2026-03-31 10:10:00 | close:367.06 vwap:366.98 bbi:N/A ratio:N/A
+2026-03-31 10:15:00 | close:366.63 vwap:366.6499999999999 bbi:N/A ratio:N/A
+2026-03-31 10:20:00 | close:366.4 vwap:366.18 bbi:N/A ratio:N/A
+2026-03-31 10:25:00 | close:365.46 vwap:365.74 bbi:N/A ratio:N/A
+2026-03-31 10:30:00 | close:365.2 vwap:365.05333333333334 bbi:N/A ratio:N/A
+2026-03-31 10:35:00 | close:364.7 vwap:364.9766666666667 bbi:N/A ratio:N/A
+2026-03-31 10:40:00 | close:364.91 vwap:364.80333333333334 bbi:N/A ratio:N/A
+2026-03-31 10:45:00 | close:364.74 vwap:364.8233333333333 bbi:N/A ratio:N/A
+2026-03-31 10:50:00 | close:363.59 vwap:363.89000000000004 bbi:N/A ratio:N/A
+2026-03-31 10:55:00 | close:363.52 vwap:363.4166666666667 bbi:N/A ratio:N/A
+2026-03-31 11:00:00 | close:363.5 vwap:363.47333333333336 bbi:N/A ratio:N/A
+2026-03-31 11:05:00 | close:363.71 vwap:363.7366666666667 bbi:N/A ratio:N/A
+2026-03-31 11:10:00 | close:364.33 vwap:364.0333333333333 bbi:N/A ratio:N/A
+2026-03-31 11:15:00 | close:364.35 vwap:364.3733333333333 bbi:N/A ratio:N/A
+2026-03-31 11:20:00 | close:364.71 vwap:364.49 bbi:N/A ratio:N/A
+2026-03-31 11:25:00 | close:364.25 vwap:364.3066666666667 bbi:N/A ratio:N/A
+2026-03-31 11:30:00 | close:364.3 vwap:364.09999999999997 bbi:N/A ratio:N/A
+2026-03-31 11:35:00 | close:364.26 vwap:364.3733333333333 bbi:N/A ratio:N/A
+2026-03-31 11:40:00 | close:364.01 vwap:364.0 bbi:N/A ratio:N/A
+2026-03-31 11:45:00 | close:364.31 vwap:364.2 bbi:N/A ratio:N/A
+2026-03-31 11:50:00 | close:364.21 vwap:364.3533333333333 bbi:N/A ratio:N/A
+2026-03-31 11:55:00 | close:363.93 vwap:364.21914099260795 bbi:N/A ratio:N/A
+2026-03-31 12:00:00 | close:364.39 vwap:364.2298965997786 bbi:N/A ratio:N/A
+2026-03-31 12:05:00 | close:364.65 vwap:364.3516314400892 bbi:N/A ratio:N/A
+2026-03-31 12:10:00 | close:364.71 vwap:364.39150549960607 bbi:N/A ratio:N/A
+2026-03-31 12:15:00 | close:364.83 vwap:364.498475884828 bbi:N/A ratio:N/A
+2026-03-31 12:20:00 | close:364.96 vwap:364.53969098875905 bbi:N/A ratio:N/A
+2026-03-31 12:25:00 | close:365.05 vwap:364.58310242473306 bbi:N/A ratio:N/A
+2026-03-31 12:30:00 | close:364.87 vwap:364.6090609965141 bbi:N/A ratio:N/A
+2026-03-31 12:35:00 | close:366.09 vwap:364.78230620774195 bbi:N/A ratio:N/A
+2026-03-31 12:40:00 | close:366.81 vwap:365.33822671981636 bbi:N/A ratio:N/A
+2026-03-31 12:45:00 | close:366.94 vwap:365.52460347751116 bbi:N/A ratio:N/A
+2026-03-31 12:50:00 | close:367.18 vwap:365.681489847236 bbi:N/A ratio:N/A
+2026-03-31 12:55:00 | close:367.97 vwap:365.87846852279773 bbi:N/A ratio:N/A
+2026-03-31 13:00:00 | close:368.88 vwap:366.3112800536688 bbi:N/A ratio:N/A
+2026-03-31 13:05:00 | close:368.5 vwap:366.5484504704497 bbi:N/A ratio:N/A
+2026-03-31 13:10:00 | close:369.55 vwap:366.7527215683771 bbi:N/A ratio:N/A
+2026-03-31 13:15:00 | close:370.31 vwap:367.11101799715806 bbi:N/A ratio:N/A
+2026-03-31 13:20:00 | close:369.86 vwap:367.2992140516074 bbi:N/A ratio:N/A
+2026-03-31 13:25:00 | close:368.88 vwap:367.4246319258455 bbi:N/A ratio:N/A
+2026-03-31 13:30:00 | close:370.08 vwap:367.53415488900754 bbi:N/A ratio:N/A
+2026-03-31 13:35:00 | close:368.41 vwap:367.6057858009414 bbi:N/A ratio:N/A
+2026-03-31 13:40:00 | close:368.44 vwap:367.63784735392477 bbi:N/A ratio:N/A
+2026-03-31 13:45:00 | close:368.83 vwap:367.6634596642403 bbi:368.3911458333333 ratio:N/A
+2026-03-31 13:50:00 | close:368.68 vwap:367.68551834750855 bbi:368.4422916666667 ratio:N/A
+2026-03-31 13:55:00 | close:368.34 vwap:367.7018358817077 bbi:368.4651041666666 ratio:N/A
+2026-03-31 14:00:00 | close:369.06 vwap:367.734029874458 bbi:368.49416666666673 ratio:N/A
+2026-03-31 14:05:00 | close:369.61 vwap:367.7836778860815 bbi:368.69645833333334 ratio:N/A
+2026-03-31 14:10:00 | close:369.55 vwap:367.8231776403445 bbi:368.89395833333333 ratio:N/A
+2026-03-31 14:15:00 | close:369.55 vwap:367.86298511405255 bbi:368.998125 ratio:N/A
+2026-03-31 14:20:00 | close:369.54 vwap:367.92094965979777 bbi:369.0691666666667 ratio:N/A
+2026-03-31 14:25:00 | close:369.83 vwap:367.96146631499846 bbi:369.2241666666667 ratio:N/A
+2026-03-31 14:30:00 | close:369.83 vwap:367.99212700241674 bbi:369.32604166666664 ratio:1.0028251630010772
+2026-03-31 14:35:00 | close:370.03 vwap:368.0445419191738 bbi:369.45916666666665 ratio:1.003016237574454
+2026-03-31 14:40:00 | close:370.49 vwap:368.14574572431496 bbi:369.634375 ratio:1.003216067981376
+2026-03-31 14:45:00 | close:370.42 vwap:368.21964153592563 bbi:369.7891666666667 ratio:1.0033180577681546
+2026-03-31 14:50:00 | close:370.36 vwap:368.280946425827 bbi:369.91895833333336 ratio:1.003243389088765
+2026-03-31 14:55:00 | close:370.53 vwap:368.3748360400655 bbi:370.02375 ratio:1.003220816173316
+2026-03-31 15:00:00 | close:370.66 vwap:368.4609827978314 bbi:370.1302083333333 ratio:1.003266035055426
+2026-03-31 15:05:00 | close:370.72 vwap:368.5403996715592 bbi:370.23520833333333 ratio:1.0032581913442755
+2026-03-31 15:10:00 | close:371.18 vwap:368.6195833284292 bbi:370.3690625 ratio:1.0031777812804012
+2026-03-31 15:15:00 | close:371.23 vwap:368.71279321500924 bbi:370.4948958333333 ratio:1.0031326385948967
+2026-03-31 15:20:00 | close:371.25 vwap:368.77984429663735 bbi:370.62624999999997 ratio:1.0030489870929413
+2026-03-31 15:25:00 | close:371.09 vwap:368.84071615765885 bbi:370.6913541666667 ratio:1.002883831518088
+2026-03-31 15:30:00 | close:371.21 vwap:368.91839329419815 bbi:370.75312499999995 ratio:1.002728128665255
+2026-03-31 15:35:00 | close:371.37 vwap:368.99067888020437 bbi:370.8489583333333 ratio:1.00262043371572
+2026-03-31 15:40:00 | close:371.65 vwap:369.08524675743496 bbi:370.97281250000003 ratio:1.0025724079369045
+2026-03-31 15:45:00 | close:371.96 vwap:369.18396131411345 bbi:371.1304166666667 ratio:1.0025936770873678
+2026-03-31 15:50:00 | close:371.26 vwap:369.38828493896955 bbi:371.16729166666664 ratio:1.0025098292411785
+2026-03-31 15:55:00 | close:370.3 vwap:369.488442278775 bbi:371.0375 ratio:1.0021810559767077
+
+            **Longer‑term context (1‑hour timeframe):**
+            N/A
+
+            **Longer‑term context (1‑day timeframe):**
+            N/A
+            
+
+### ALL TSLA DATA:
+            **Intraday series (by minute, oldest → latest):**
+            2026-03-31 09:30:00 | close:364.32 vwap:363.32666666666665 bbi:N/A ratio:N/A
+2026-03-31 09:35:00 | close:364.54 vwap:364.18333333333334 bbi:N/A ratio:N/A
+2026-03-31 09:40:00 | close:362.78 vwap:363.5 bbi:N/A ratio:N/A
+2026-03-31 09:45:00 | close:364.9 vwap:364.22666666666663 bbi:N/A ratio:N/A
+2026-03-31 09:50:00 | close:365.27 vwap:364.7833333333333 bbi:N/A ratio:N/A
+2026-03-31 09:55:00 | close:364.36 vwap:364.4066666666667 bbi:N/A ratio:N/A
+2026-03-31 10:00:00 | close:363.34 vwap:363.6166666666666 bbi:N/A ratio:N/A
+2026-03-31 10:05:00 | close:362.43 vwap:362.6133333333334 bbi:N/A ratio:N/A
+2026-03-31 10:10:00 | close:363.93 vwap:363.40000000000003 bbi:N/A ratio:N/A
+2026-03-31 10:15:00 | close:364.46 vwap:364.2033333333334 bbi:N/A ratio:N/A
+2026-03-31 10:20:00 | close:365.66 vwap:365.09666666666664 bbi:N/A ratio:N/A
+2026-03-31 10:25:00 | close:365.79 vwap:365.5466666666666 bbi:N/A ratio:N/A
+2026-03-31 10:30:00 | close:365.02 vwap:365.34666666666664 bbi:N/A ratio:N/A
+2026-03-31 10:35:00 | close:364.59 vwap:364.59999999999997 bbi:N/A ratio:N/A
+2026-03-31 10:40:00 | close:364.14 vwap:364.3733333333333 bbi:N/A ratio:N/A
+2026-03-31 10:45:00 | close:363.25 vwap:363.6266666666667 bbi:N/A ratio:N/A
+2026-03-31 10:50:00 | close:362.74 vwap:362.8966666666667 bbi:N/A ratio:N/A
+2026-03-31 10:55:00 | close:362.83 vwap:362.49 bbi:N/A ratio:N/A
+2026-03-31 11:00:00 | close:364.08 vwap:363.75333333333333 bbi:N/A ratio:N/A
+2026-03-31 11:05:00 | close:364.62 vwap:364.7166666666667 bbi:N/A ratio:N/A
+2026-03-31 11:10:00 | close:365.73 vwap:365.3233333333333 bbi:N/A ratio:N/A
+2026-03-31 11:15:00 | close:365.27 vwap:365.4433333333333 bbi:N/A ratio:N/A
+2026-03-31 11:20:00 | close:365.29 vwap:365.0466666666667 bbi:N/A ratio:N/A
+2026-03-31 11:25:00 | close:364.14 vwap:364.5 bbi:N/A ratio:N/A
+2026-03-31 11:30:00 | close:363.7 vwap:363.67 bbi:N/A ratio:N/A
+2026-03-31 11:35:00 | close:364.33 vwap:364.16 bbi:N/A ratio:N/A
+2026-03-31 11:40:00 | close:363.55 vwap:363.8399999999999 bbi:N/A ratio:N/A
+2026-03-31 11:45:00 | close:363.16 vwap:363.23 bbi:N/A ratio:N/A
+2026-03-31 11:50:00 | close:363.39 vwap:363.37000000000006 bbi:N/A ratio:N/A
+2026-03-31 11:55:00 | close:362.53 vwap:363.0934852881988 bbi:N/A ratio:N/A
+2026-03-31 12:00:00 | close:363.15 vwap:363.1158123672805 bbi:N/A ratio:N/A
+2026-03-31 12:05:00 | close:364.22 vwap:363.31997054609667 bbi:N/A ratio:N/A
+2026-03-31 12:10:00 | close:364.16 vwap:363.4252128348486 bbi:N/A ratio:N/A
+2026-03-31 12:15:00 | close:364.39 vwap:363.55611515828105 bbi:N/A ratio:N/A
+2026-03-31 12:20:00 | close:365.22 vwap:363.76711766707496 bbi:N/A ratio:N/A
+2026-03-31 12:25:00 | close:365.17 vwap:363.943175247054 bbi:N/A ratio:N/A
+2026-03-31 12:30:00 | close:365.23 vwap:364.0418958461181 bbi:N/A ratio:N/A
+2026-03-31 12:35:00 | close:368.3 vwap:364.68607103540893 bbi:N/A ratio:N/A
+2026-03-31 12:40:00 | close:370.47 vwap:366.10945773626895 bbi:N/A ratio:N/A
+2026-03-31 12:45:00 | close:369.61 vwap:366.6924127285251 bbi:N/A ratio:N/A
+2026-03-31 12:50:00 | close:369.78 vwap:367.01156921294717 bbi:N/A ratio:N/A
+2026-03-31 12:55:00 | close:370.24 vwap:367.24869079868614 bbi:N/A ratio:N/A
+2026-03-31 13:00:00 | close:371.8 vwap:367.7199413955504 bbi:N/A ratio:N/A
+2026-03-31 13:05:00 | close:370.55 vwap:367.94871658986784 bbi:N/A ratio:N/A
+2026-03-31 13:10:00 | close:371.34 vwap:368.13196023051324 bbi:N/A ratio:N/A
+2026-03-31 13:15:00 | close:372.4 vwap:368.38177533557104 bbi:N/A ratio:N/A
+2026-03-31 13:20:00 | close:371.69 vwap:368.54081725181607 bbi:N/A ratio:N/A
+2026-03-31 13:25:00 | close:369.96 vwap:368.652225837073 bbi:N/A ratio:N/A
+2026-03-31 13:30:00 | close:371.11 vwap:368.7381704716403 bbi:N/A ratio:N/A
+2026-03-31 13:35:00 | close:369.6 vwap:368.7970619417706 bbi:N/A ratio:N/A
+2026-03-31 13:40:00 | close:369.19 vwap:368.8174270610699 bbi:N/A ratio:N/A
+2026-03-31 13:45:00 | close:369.53 vwap:368.8385903148421 bbi:369.5655208333334 ratio:N/A
+2026-03-31 13:50:00 | close:369.0 vwap:368.8471537021187 bbi:369.44562499999995 ratio:N/A
+2026-03-31 13:55:00 | close:368.29 vwap:368.83509214917433 bbi:369.32041666666663 ratio:N/A
+2026-03-31 14:00:00 | close:369.09 vwap:368.8374210631461 bbi:369.2049999999999 ratio:N/A
+2026-03-31 14:05:00 | close:370.06 vwap:368.86455098629034 bbi:369.363125 ratio:N/A
+2026-03-31 14:10:00 | close:370.52 vwap:368.8991535918314 bbi:369.6535416666667 ratio:N/A
+2026-03-31 14:15:00 | close:370.74 vwap:368.94923576620386 bbi:369.8730208333333 ratio:N/A
+2026-03-31 14:20:00 | close:370.63 vwap:368.9875669378432 bbi:370.0227083333333 ratio:N/A
+2026-03-31 14:25:00 | close:371.37 vwap:369.04329277060475 bbi:370.31583333333333 ratio:N/A
+2026-03-31 14:30:00 | close:371.47 vwap:369.1085628612222 bbi:370.54833333333335 ratio:1.003631471255956
+2026-03-31 14:35:00 | close:372.36 vwap:369.20338013828933 bbi:370.888125 ratio:1.0046282083128424
+2026-03-31 14:40:00 | close:372.47 vwap:369.28074233540895 bbi:371.15020833333335 ratio:1.0054799755866528
+2026-03-31 14:45:00 | close:372.94 vwap:369.4036390587984 bbi:371.47010416666666 ratio:1.0061550300734734
+2026-03-31 14:50:00 | close:372.84 vwap:369.4741408914992 bbi:371.71406249999995 ratio:1.0063972308445897
+2026-03-31 14:55:00 | close:372.34 vwap:369.5382653597546 bbi:371.84989583333333 ratio:1.0063448229634655
+2026-03-31 15:00:00 | close:372.36 vwap:369.59111161216623 bbi:371.91260416666665 ratio:1.0061384223741914
+2026-03-31 15:05:00 | close:371.96 vwap:369.64610479832857 bbi:371.8768749999999 ratio:1.0056479355638854
+2026-03-31 15:10:00 | close:372.5 vwap:369.7131016175816 bbi:371.9447916666667 ratio:1.0048893992446806
+2026-03-31 15:15:00 | close:372.42 vwap:369.7777663853842 bbi:371.9633333333333 ratio:1.0040649835022466
+2026-03-31 15:20:00 | close:372.86 vwap:369.8364484211948 bbi:372.09781250000003 ratio:1.0031789326574958
+2026-03-31 15:25:00 | close:372.16 vwap:369.88855216336225 bbi:372.10135416666674 ratio:1.0023826196964032
+2026-03-31 15:30:00 | close:372.36 vwap:369.9443580768693 bbi:372.1279166666667 ratio:1.001612077321482
+2026-03-31 15:35:00 | close:372.06 vwap:369.9826118731637 bbi:372.0847916666667 ratio:1.00108907411267
+2026-03-31 15:40:00 | close:372.13 vwap:370.0245699568253 bbi:372.0904166666667 ratio:1.0008542800494484
+2026-03-31 15:45:00 | close:372.5 vwap:370.077497499854 bbi:372.12718750000005 ratio:1.0007799330178513
+2026-03-31 15:50:00 | close:371.23 vwap:370.15079589237394 bbi:371.97979166666664 ratio:1.0007221509139634
+2026-03-31 15:55:00 | close:371.75 vwap:370.21631300775715 bbi:371.95479166666667 ratio:1.0006147942309107
+
+            **Longer‑term context (1‑hour timeframe):**
+            N/A
+
+            **Longer‑term context (1‑day timeframe):**
+            N/A
+            
+
+### ALL NVDA DATA:
+            **Intraday series (by minute, oldest → latest):**
+            2026-03-31 09:30:00 | close:168.66 vwap:168.1 bbi:N/A ratio:N/A
+2026-03-31 09:35:00 | close:168.49 vwap:168.39666666666668 bbi:N/A ratio:N/A
+2026-03-31 09:40:00 | close:168.26 vwap:168.36666666666667 bbi:N/A ratio:N/A
+2026-03-31 09:45:00 | close:169.03 vwap:168.79999999999998 bbi:N/A ratio:N/A
+2026-03-31 09:50:00 | close:169.33 vwap:169.11666666666667 bbi:N/A ratio:N/A
+2026-03-31 09:55:00 | close:170.11 vwap:169.77 bbi:N/A ratio:N/A
+2026-03-31 10:00:00 | close:169.76 vwap:169.82666666666668 bbi:N/A ratio:N/A
+2026-03-31 10:05:00 | close:169.37 vwap:169.49666666666667 bbi:N/A ratio:N/A
+2026-03-31 10:10:00 | close:169.92 vwap:169.70333333333335 bbi:N/A ratio:N/A
+2026-03-31 10:15:00 | close:170.6 vwap:170.44666666666672 bbi:N/A ratio:N/A
+2026-03-31 10:20:00 | close:170.76 vwap:170.67999999999998 bbi:N/A ratio:N/A
+2026-03-31 10:25:00 | close:170.98 vwap:170.86333333333334 bbi:N/A ratio:N/A
+2026-03-31 10:30:00 | close:171.02 vwap:171.0533333333333 bbi:N/A ratio:N/A
+2026-03-31 10:35:00 | close:170.63 vwap:170.73333333333335 bbi:N/A ratio:N/A
+2026-03-31 10:40:00 | close:170.39 vwap:170.51999999999998 bbi:N/A ratio:N/A
+2026-03-31 10:45:00 | close:170.19 vwap:170.32666666666665 bbi:N/A ratio:N/A
+2026-03-31 10:50:00 | close:169.87 vwap:169.96 bbi:N/A ratio:N/A
+2026-03-31 10:55:00 | close:170.04 vwap:169.89 bbi:N/A ratio:N/A
+2026-03-31 11:00:00 | close:170.18 vwap:170.18333333333334 bbi:N/A ratio:N/A
+2026-03-31 11:05:00 | close:170.06 vwap:170.22000000000003 bbi:N/A ratio:N/A
+2026-03-31 11:10:00 | close:170.65 vwap:170.46333333333334 bbi:N/A ratio:N/A
+2026-03-31 11:15:00 | close:170.4 vwap:170.50333333333333 bbi:N/A ratio:N/A
+2026-03-31 11:20:00 | close:170.63 vwap:170.47333333333333 bbi:N/A ratio:N/A
+2026-03-31 11:25:00 | close:170.31 vwap:170.43666666666667 bbi:N/A ratio:N/A
+2026-03-31 11:30:00 | close:170.26 vwap:170.21999999999997 bbi:N/A ratio:N/A
+2026-03-31 11:35:00 | close:170.32 vwap:170.4 bbi:N/A ratio:N/A
+2026-03-31 11:40:00 | close:170.11 vwap:170.16333333333333 bbi:N/A ratio:N/A
+2026-03-31 11:45:00 | close:170.03 vwap:169.98000000000002 bbi:N/A ratio:N/A
+2026-03-31 11:50:00 | close:170.36 vwap:170.21333333333334 bbi:N/A ratio:N/A
+2026-03-31 11:55:00 | close:169.84 vwap:170.1306239734157 bbi:N/A ratio:N/A
+2026-03-31 12:00:00 | close:170.16 vwap:170.12178313290661 bbi:N/A ratio:N/A
+2026-03-31 12:05:00 | close:170.75 vwap:170.23617063240633 bbi:N/A ratio:N/A
+2026-03-31 12:10:00 | close:170.65 vwap:170.3167004674533 bbi:N/A ratio:N/A
+2026-03-31 12:15:00 | close:171.02 vwap:170.4357939706925 bbi:N/A ratio:N/A
+2026-03-31 12:20:00 | close:171.22 vwap:170.54180834580234 bbi:N/A ratio:N/A
+2026-03-31 12:25:00 | close:171.05 vwap:170.60910086392872 bbi:N/A ratio:N/A
+2026-03-31 12:30:00 | close:170.95 vwap:170.63484966189083 bbi:N/A ratio:N/A
+2026-03-31 12:35:00 | close:172.34 vwap:170.84031078943363 bbi:N/A ratio:N/A
+2026-03-31 12:40:00 | close:173.26 vwap:171.40166359388857 bbi:N/A ratio:N/A
+2026-03-31 12:45:00 | close:173.11 vwap:171.65289712533917 bbi:N/A ratio:N/A
+2026-03-31 12:50:00 | close:173.27 vwap:171.79922552799616 bbi:N/A ratio:N/A
+2026-03-31 12:55:00 | close:172.92 vwap:171.8761590178389 bbi:N/A ratio:N/A
+2026-03-31 13:00:00 | close:173.5 vwap:171.98639511486164 bbi:N/A ratio:N/A
+2026-03-31 13:05:00 | close:172.99 vwap:172.0623549498815 bbi:N/A ratio:N/A
+2026-03-31 13:10:00 | close:173.37 vwap:172.109225170216 bbi:N/A ratio:N/A
+2026-03-31 13:15:00 | close:173.77 vwap:172.20176591148007 bbi:N/A ratio:N/A
+2026-03-31 13:20:00 | close:173.67 vwap:172.2684801379194 bbi:N/A ratio:N/A
+2026-03-31 13:25:00 | close:173.28 vwap:172.32428988520815 bbi:N/A ratio:N/A
+2026-03-31 13:30:00 | close:173.64 vwap:172.3782448597182 bbi:N/A ratio:N/A
+2026-03-31 13:35:00 | close:172.99 vwap:172.41628588405666 bbi:N/A ratio:N/A
+2026-03-31 13:40:00 | close:172.95 vwap:172.43886582934937 bbi:N/A ratio:N/A
+2026-03-31 13:45:00 | close:172.94 vwap:172.45098898991577 bbi:172.93229166666669 ratio:N/A
+2026-03-31 13:50:00 | close:172.8 vwap:172.46098396121616 bbi:172.89583333333334 ratio:N/A
+2026-03-31 13:55:00 | close:172.43 vwap:172.4623250671753 bbi:172.83385416666667 ratio:N/A
+2026-03-31 14:00:00 | close:173.02 vwap:172.4737763999289 bbi:172.83447916666668 ratio:N/A
+2026-03-31 14:05:00 | close:173.06 vwap:172.48455356120493 bbi:172.88458333333332 ratio:N/A
+2026-03-31 14:10:00 | close:173.03 vwap:172.49294350806534 bbi:172.955625 ratio:N/A
+2026-03-31 14:15:00 | close:173.09 vwap:172.50936783406647 bbi:172.97510416666668 ratio:N/A
+2026-03-31 14:20:00 | close:173.11 vwap:172.52245517901036 bbi:173.00020833333335 ratio:N/A
+2026-03-31 14:25:00 | close:173.27 vwap:172.538141838197 bbi:173.078125 ratio:N/A
+2026-03-31 14:30:00 | close:173.21 vwap:172.55211325303569 bbi:173.11062500000003 ratio:1.0016314413389662
+2026-03-31 14:35:00 | close:173.59 vwap:172.57641789938154 bbi:173.19822916666666 ratio:1.0021131700902322
+2026-03-31 14:40:00 | close:173.42 vwap:172.59493562491792 bbi:173.2384375 ratio:1.0024774670267207
+2026-03-31 14:45:00 | close:173.55 vwap:172.61432747037114 bbi:173.30322916666665 ratio:1.002683379293874
+2026-03-31 14:50:00 | close:173.67 vwap:172.63343161145895 bbi:173.35552083333334 ratio:1.002753271705697
+2026-03-31 14:55:00 | close:173.72 vwap:172.66977592308345 bbi:173.43447916666668 ratio:1.0028949027260028
+2026-03-31 15:00:00 | close:173.95 vwap:172.70506270554284 bbi:173.52270833333333 ratio:1.0031779149436504
+2026-03-31 15:05:00 | close:173.61 vwap:172.72621366692297 bbi:173.53645833333334 ratio:1.0032129387691402
+2026-03-31 15:10:00 | close:173.91 vwap:172.75491664068176 bbi:173.5966666666667 ratio:1.0031546999454524
+2026-03-31 15:15:00 | close:174.01 vwap:172.7801857581567 bbi:173.6425 ratio:1.0031219291798588
+2026-03-31 15:20:00 | close:174.2 vwap:172.81458627446236 bbi:173.74197916666665 ratio:1.0031258273112058
+2026-03-31 15:25:00 | close:173.94 vwap:172.84390149554957 bbi:173.77447916666665 ratio:1.003128421286628
+2026-03-31 15:30:00 | close:174.03 vwap:172.87049267508266 bbi:173.80062500000003 ratio:1.0029865725543932
+2026-03-31 15:35:00 | close:174.34 vwap:172.90049574945502 bbi:173.87239583333334 ratio:1.0029118453243964
+2026-03-31 15:40:00 | close:174.21 vwap:172.93872723053462 bbi:173.93697916666667 ratio:1.002839884018894
+2026-03-31 15:45:00 | close:174.26 vwap:172.96850567777605 bbi:173.99510416666664 ratio:1.0028443659073225
+2026-03-31 15:50:00 | close:174.22 vwap:173.01979653014496 bbi:174.01218749999998 ratio:1.0028496760783114
+2026-03-31 15:55:00 | close:174.36 vwap:173.10627207201279 bbi:174.075625 ratio:1.0027736069887827
+
+            **Longer‑term context (1‑hour timeframe):**
+            N/A
+
+            **Longer‑term context (1‑day timeframe):**
+            N/A
+            
+
+### ALL GOOGL DATA:
+            **Intraday series (by minute, oldest → latest):**
+            2026-03-31 09:30:00 | close:278.75 vwap:278.5466666666667 bbi:N/A ratio:N/A
+2026-03-31 09:35:00 | close:278.67 vwap:278.48 bbi:N/A ratio:N/A
+2026-03-31 09:40:00 | close:277.12 vwap:277.71666666666664 bbi:N/A ratio:N/A
+2026-03-31 09:45:00 | close:278.92 vwap:278.33666666666664 bbi:N/A ratio:N/A
+2026-03-31 09:50:00 | close:279.82 vwap:279.47 bbi:N/A ratio:N/A
+2026-03-31 09:55:00 | close:279.94 vwap:279.73333333333335 bbi:N/A ratio:N/A
+2026-03-31 10:00:00 | close:280.49 vwap:280.28333333333336 bbi:N/A ratio:N/A
+2026-03-31 10:05:00 | close:280.44 vwap:280.4166666666667 bbi:N/A ratio:N/A
+2026-03-31 10:10:00 | close:280.73 vwap:280.5933333333333 bbi:N/A ratio:N/A
+2026-03-31 10:15:00 | close:281.37 vwap:281.2233333333333 bbi:N/A ratio:N/A
+2026-03-31 10:20:00 | close:282.06 vwap:281.7133333333333 bbi:N/A ratio:N/A
+2026-03-31 10:25:00 | close:282.13 vwap:282.02333333333337 bbi:N/A ratio:N/A
+2026-03-31 10:30:00 | close:282.27 vwap:282.2933333333333 bbi:N/A ratio:N/A
+2026-03-31 10:35:00 | close:282.24 vwap:282.2033333333333 bbi:N/A ratio:N/A
+2026-03-31 10:40:00 | close:281.33 vwap:281.67333333333335 bbi:N/A ratio:N/A
+2026-03-31 10:45:00 | close:281.13 vwap:281.35 bbi:N/A ratio:N/A
+2026-03-31 10:50:00 | close:280.81 vwap:280.91 bbi:N/A ratio:N/A
+2026-03-31 10:55:00 | close:280.75 vwap:280.74 bbi:N/A ratio:N/A
+2026-03-31 11:00:00 | close:281.41 vwap:281.22 bbi:N/A ratio:N/A
+2026-03-31 11:05:00 | close:281.55 vwap:281.68 bbi:N/A ratio:N/A
+2026-03-31 11:10:00 | close:282.18 vwap:281.9166666666667 bbi:N/A ratio:N/A
+2026-03-31 11:15:00 | close:282.13 vwap:282.15333333333336 bbi:N/A ratio:N/A
+2026-03-31 11:20:00 | close:281.96 vwap:281.9666666666667 bbi:N/A ratio:N/A
+2026-03-31 11:25:00 | close:281.38 vwap:281.67 bbi:N/A ratio:N/A
+2026-03-31 11:30:00 | close:281.61 vwap:281.4066666666667 bbi:N/A ratio:N/A
+2026-03-31 11:35:00 | close:281.66 vwap:281.69 bbi:N/A ratio:N/A
+2026-03-31 11:40:00 | close:281.3 vwap:281.41333333333336 bbi:N/A ratio:N/A
+2026-03-31 11:45:00 | close:281.25 vwap:281.26666666666665 bbi:N/A ratio:N/A
+2026-03-31 11:50:00 | close:281.41 vwap:281.43333333333334 bbi:N/A ratio:N/A
+2026-03-31 11:55:00 | close:281.08 vwap:281.3222707838771 bbi:N/A ratio:N/A
+2026-03-31 12:00:00 | close:281.5 vwap:281.3298203010279 bbi:N/A ratio:N/A
+2026-03-31 12:05:00 | close:281.95 vwap:281.47451109052304 bbi:N/A ratio:N/A
+2026-03-31 12:10:00 | close:281.88 vwap:281.5517339385097 bbi:N/A ratio:N/A
+2026-03-31 12:15:00 | close:281.92 vwap:281.6650675036345 bbi:N/A ratio:N/A
+2026-03-31 12:20:00 | close:282.4 vwap:281.77063254491327 bbi:N/A ratio:N/A
+2026-03-31 12:25:00 | close:282.3 vwap:281.930489846165 bbi:N/A ratio:N/A
+2026-03-31 12:30:00 | close:282.02 vwap:281.9444495067811 bbi:N/A ratio:N/A
+2026-03-31 12:35:00 | close:283.45 vwap:282.074992628025 bbi:N/A ratio:N/A
+2026-03-31 12:40:00 | close:284.32 vwap:282.5759472767379 bbi:N/A ratio:N/A
+2026-03-31 12:45:00 | close:284.69 vwap:282.9833398193922 bbi:N/A ratio:N/A
+2026-03-31 12:50:00 | close:285.12 vwap:283.2081820768149 bbi:N/A ratio:N/A
+2026-03-31 12:55:00 | close:284.88 vwap:283.3826883763244 bbi:N/A ratio:N/A
+2026-03-31 13:00:00 | close:286.3 vwap:283.6622383280968 bbi:N/A ratio:N/A
+2026-03-31 13:05:00 | close:285.92 vwap:283.8893072612922 bbi:N/A ratio:N/A
+2026-03-31 13:10:00 | close:287.04 vwap:284.1055436402237 bbi:N/A ratio:N/A
+2026-03-31 13:15:00 | close:287.63 vwap:284.38760551299663 bbi:N/A ratio:N/A
+2026-03-31 13:20:00 | close:287.73 vwap:284.61117281846765 bbi:N/A ratio:N/A
+2026-03-31 13:25:00 | close:286.82 vwap:284.7362016968154 bbi:N/A ratio:N/A
+2026-03-31 13:30:00 | close:287.82 vwap:284.847590124289 bbi:N/A ratio:N/A
+2026-03-31 13:35:00 | close:287.31 vwap:284.9990377461645 bbi:N/A ratio:N/A
+2026-03-31 13:40:00 | close:286.73 vwap:285.0783185481236 bbi:N/A ratio:N/A
+2026-03-31 13:45:00 | close:286.83 vwap:285.1533681111364 bbi:286.3461458333333 ratio:N/A
+2026-03-31 13:50:00 | close:286.85 vwap:285.20016875886506 bbi:286.36385416666667 ratio:N/A
+2026-03-31 13:55:00 | close:286.8 vwap:285.24201894495445 bbi:286.4684375 ratio:N/A
+2026-03-31 14:00:00 | close:287.06 vwap:285.3007018548007 bbi:286.5296875 ratio:N/A
+2026-03-31 14:05:00 | close:287.35 vwap:285.32837781277874 bbi:286.6590625 ratio:N/A
+2026-03-31 14:10:00 | close:287.19 vwap:285.37944388498954 bbi:286.7691666666667 ratio:N/A
+2026-03-31 14:15:00 | close:287.0 vwap:285.4362340627875 bbi:286.81104166666665 ratio:N/A
+2026-03-31 14:20:00 | close:286.76 vwap:285.4653287208108 bbi:286.7833333333333 ratio:N/A
+2026-03-31 14:25:00 | close:287.02 vwap:285.4855812977922 bbi:286.83166666666665 ratio:N/A
+2026-03-31 14:30:00 | close:286.82 vwap:285.4998609161153 bbi:286.8358333333333 ratio:1.0020511353777708
+2026-03-31 14:35:00 | close:286.96 vwap:285.5166459602026 bbi:286.86552083333333 ratio:1.001857268404881
+2026-03-31 14:40:00 | close:286.6 vwap:285.5546603905629 bbi:286.82697916666666 ratio:1.0014508474889132
+2026-03-31 14:45:00 | close:286.98 vwap:285.570536091566 bbi:286.8664583333333 ratio:1.0011084630408258
+2026-03-31 14:50:00 | close:286.92 vwap:285.5887985130026 bbi:286.89 ratio:1.0006892818776072
+2026-03-31 14:55:00 | close:286.88 vwap:285.61320071802396 bbi:286.92999999999995 ratio:1.0005082229790159
+2026-03-31 15:00:00 | close:286.93 vwap:285.6317987069584 bbi:286.93427083333336 ratio:1.0005178450563903
+2026-03-31 15:05:00 | close:286.7 vwap:285.64883829972734 bbi:286.89968749999997 ratio:1.0005040430999188
+2026-03-31 15:10:00 | close:287.11 vwap:285.67694591542073 bbi:286.93916666666667 ratio:1.0004528740587528
+2026-03-31 15:15:00 | close:286.77 vwap:285.7072709699371 bbi:286.9033333333333 ratio:1.0004168093317365
+2026-03-31 15:20:00 | close:286.77 vwap:285.7306192068297 bbi:286.893125 ratio:1.0003680274240694
+2026-03-31 15:25:00 | close:286.69 vwap:285.76159873276293 bbi:286.8419791666667 ratio:1.0003979202838478
+2026-03-31 15:30:00 | close:287.0 vwap:285.8093976742354 bbi:286.8592708333333 ratio:1.000343951532092
+2026-03-31 15:35:00 | close:287.06 vwap:285.8352480342874 bbi:286.8979166666667 ratio:1.0003266763834002
+2026-03-31 15:40:00 | close:286.83 vwap:285.8673470300003 bbi:286.90375 ratio:1.0003252925756292
+2026-03-31 15:45:00 | close:287.47 vwap:285.9169114154142 bbi:286.98895833333336 ratio:1.0004316583874853
+2026-03-31 15:50:00 | close:287.52 vwap:286.00583087774925 bbi:287.0780208333333 ratio:1.0007141352844822
+2026-03-31 15:55:00 | close:287.56 vwap:286.14390498591683 bbi:287.1971875 ratio:1.001151091643326
+
+            **Longer‑term context (1‑hour timeframe):**
+            N/A
+
+            **Longer‑term context (1‑day timeframe):**
+            N/A
+            
+
+### ALL META DATA:
+            **Intraday series (by minute, oldest → latest):**
+            2026-03-31 09:30:00 | close:555.31 vwap:552.9266666666666 bbi:N/A ratio:N/A
+2026-03-31 09:35:00 | close:555.24 vwap:555.47 bbi:N/A ratio:N/A
+2026-03-31 09:40:00 | close:555.31 vwap:555.9966666666667 bbi:N/A ratio:N/A
+2026-03-31 09:45:00 | close:555.95 vwap:555.61 bbi:N/A ratio:N/A
+2026-03-31 09:50:00 | close:558.34 vwap:557.39 bbi:N/A ratio:N/A
+2026-03-31 09:55:00 | close:557.39 vwap:557.7366666666667 bbi:N/A ratio:N/A
+2026-03-31 10:00:00 | close:558.54 vwap:557.7633333333332 bbi:N/A ratio:N/A
+2026-03-31 10:05:00 | close:555.46 vwap:556.43 bbi:N/A ratio:N/A
+2026-03-31 10:10:00 | close:555.99 vwap:555.9 bbi:N/A ratio:N/A
+2026-03-31 10:15:00 | close:557.16 vwap:557.0066666666667 bbi:N/A ratio:N/A
+2026-03-31 10:20:00 | close:557.44 vwap:557.1166666666667 bbi:N/A ratio:N/A
+2026-03-31 10:25:00 | close:555.73 vwap:556.43 bbi:N/A ratio:N/A
+2026-03-31 10:30:00 | close:557.08 vwap:556.8766666666667 bbi:N/A ratio:N/A
+2026-03-31 10:35:00 | close:555.89 vwap:556.29 bbi:N/A ratio:N/A
+2026-03-31 10:40:00 | close:555.88 vwap:556.0006021123963 bbi:N/A ratio:N/A
+2026-03-31 10:45:00 | close:553.88 vwap:554.4966666666668 bbi:N/A ratio:N/A
+2026-03-31 10:50:00 | close:553.34 vwap:553.4900000000001 bbi:N/A ratio:N/A
+2026-03-31 10:55:00 | close:552.15 vwap:552.35 bbi:N/A ratio:N/A
+2026-03-31 11:00:00 | close:552.83 vwap:552.59 bbi:N/A ratio:N/A
+2026-03-31 11:05:00 | close:553.39 vwap:553.4733333333334 bbi:N/A ratio:N/A
+2026-03-31 11:10:00 | close:555.3 vwap:554.5866666666667 bbi:N/A ratio:N/A
+2026-03-31 11:15:00 | close:556.37 vwap:556.0266666666666 bbi:N/A ratio:N/A
+2026-03-31 11:20:00 | close:557.62 vwap:557.0333333333333 bbi:N/A ratio:N/A
+2026-03-31 11:25:00 | close:557.48 vwap:557.1166666666667 bbi:N/A ratio:N/A
+2026-03-31 11:30:00 | close:557.24 vwap:556.9033333333333 bbi:N/A ratio:N/A
+2026-03-31 11:35:00 | close:557.51 vwap:557.85 bbi:N/A ratio:N/A
+2026-03-31 11:40:00 | close:556.68 vwap:556.9133333333333 bbi:N/A ratio:N/A
+2026-03-31 11:45:00 | close:557.14 vwap:557.1033333333334 bbi:N/A ratio:N/A
+2026-03-31 11:50:00 | close:557.46 vwap:557.7066666666666 bbi:N/A ratio:N/A
+2026-03-31 11:55:00 | close:556.53 vwap:557.3869999665825 bbi:N/A ratio:N/A
+2026-03-31 12:00:00 | close:558.39 vwap:557.5286358726526 bbi:N/A ratio:N/A
+2026-03-31 12:05:00 | close:560.08 vwap:558.3098404906186 bbi:N/A ratio:N/A
+2026-03-31 12:10:00 | close:559.89 vwap:558.6532348711905 bbi:N/A ratio:N/A
+2026-03-31 12:15:00 | close:560.29 vwap:559.0062464314967 bbi:N/A ratio:N/A
+2026-03-31 12:20:00 | close:560.4 vwap:559.1637967831058 bbi:N/A ratio:N/A
+2026-03-31 12:25:00 | close:560.06 vwap:559.2504096675916 bbi:N/A ratio:N/A
+2026-03-31 12:30:00 | close:560.27 vwap:559.3424512909983 bbi:N/A ratio:N/A
+2026-03-31 12:35:00 | close:562.71 vwap:559.64381915706 bbi:N/A ratio:N/A
+2026-03-31 12:40:00 | close:564.99 vwap:560.8261696358485 bbi:N/A ratio:N/A
+2026-03-31 12:45:00 | close:565.83 vwap:561.5871602870471 bbi:N/A ratio:N/A
+2026-03-31 12:50:00 | close:565.84 vwap:562.0470168876427 bbi:N/A ratio:N/A
+2026-03-31 12:55:00 | close:566.48 vwap:562.3520611862099 bbi:N/A ratio:N/A
+2026-03-31 13:00:00 | close:568.34 vwap:562.8419461409368 bbi:N/A ratio:N/A
+2026-03-31 13:05:00 | close:567.08 vwap:563.218668283323 bbi:N/A ratio:N/A
+2026-03-31 13:10:00 | close:570.23 vwap:563.7345520042124 bbi:N/A ratio:N/A
+2026-03-31 13:15:00 | close:572.03 vwap:564.4262166643856 bbi:N/A ratio:N/A
+2026-03-31 13:20:00 | close:572.53 vwap:565.0588989392149 bbi:N/A ratio:N/A
+2026-03-31 13:25:00 | close:570.28 vwap:565.5293957911099 bbi:N/A ratio:N/A
+2026-03-31 13:30:00 | close:572.01 vwap:565.7273215019106 bbi:N/A ratio:N/A
+2026-03-31 13:35:00 | close:569.6 vwap:565.9115100649748 bbi:N/A ratio:N/A
+2026-03-31 13:40:00 | close:568.71 vwap:566.0411987183304 bbi:N/A ratio:N/A
+2026-03-31 13:45:00 | close:569.89 vwap:566.1863487588154 bbi:568.5795833333334 ratio:N/A
+2026-03-31 13:50:00 | close:570.0 vwap:566.2937722215477 bbi:568.7247916666665 ratio:N/A
+2026-03-31 13:55:00 | close:568.81 vwap:566.3897596282883 bbi:568.8483333333332 ratio:N/A
+2026-03-31 14:00:00 | close:569.13 vwap:566.4520223419561 bbi:568.7933333333334 ratio:N/A
+2026-03-31 14:05:00 | close:570.06 vwap:566.5410876208298 bbi:568.9835416666667 ratio:N/A
+2026-03-31 14:10:00 | close:570.82 vwap:566.6580433447542 bbi:569.3651041666667 ratio:N/A
+2026-03-31 14:15:00 | close:570.55 vwap:566.7245158841223 bbi:569.5869791666667 ratio:N/A
+2026-03-31 14:20:00 | close:569.95 vwap:566.7581839365799 bbi:569.6214583333333 ratio:N/A
+2026-03-31 14:25:00 | close:571.23 vwap:566.8203252698888 bbi:569.8926041666667 ratio:N/A
+2026-03-31 14:30:00 | close:570.7 vwap:566.9553113946748 bbi:570.051875 ratio:1.0027662526079082
+2026-03-31 14:35:00 | close:571.24 vwap:567.0098610500328 bbi:570.3315625 ratio:1.0029953180493127
+2026-03-31 14:40:00 | close:570.61 vwap:567.0907452098376 bbi:570.3692708333334 ratio:1.0030698797490059
+2026-03-31 14:45:00 | close:571.16 vwap:567.1303423133768 bbi:570.515 ratio:1.0030922444559334
+2026-03-31 14:50:00 | close:571.67 vwap:567.1875065041311 bbi:570.7180208333334 ratio:1.0029107182280645
+2026-03-31 14:55:00 | close:570.43 vwap:567.2462818642804 bbi:570.7445833333333 ratio:1.0025807174322556
+2026-03-31 15:00:00 | close:570.13 vwap:567.295588854658 bbi:570.6744791666667 ratio:1.0023091893915363
+2026-03-31 15:05:00 | close:568.84 vwap:567.3314103070214 bbi:570.3315625 ratio:1.0019582293198352
+2026-03-31 15:10:00 | close:570.02 vwap:567.3750024916495 bbi:570.2539583333333 ratio:1.0014852413123625
+2026-03-31 15:15:00 | close:570.1 vwap:567.4236117522302 bbi:570.1778125000001 ratio:1.001249799728711
+2026-03-31 15:20:00 | close:570.56 vwap:567.467052518925 bbi:570.2670833333333 ratio:1.0010984904728097
+2026-03-31 15:25:00 | close:570.08 vwap:567.5532418689456 bbi:570.2314583333334 ratio:1.001140310726548
+2026-03-31 15:30:00 | close:570.27 vwap:567.6282076443705 bbi:570.224375 ratio:1.0011878897192574
+2026-03-31 15:35:00 | close:570.52 vwap:567.673870937222 bbi:570.285625 ratio:1.0011889800161735
+2026-03-31 15:40:00 | close:569.24 vwap:567.7346224316387 bbi:570.1601041666667 ratio:1.0010738781969042
+2026-03-31 15:45:00 | close:570.1 vwap:567.7845169477791 bbi:570.1260416666667 ratio:1.0008088659364542
+2026-03-31 15:50:00 | close:569.9 vwap:567.8951747014897 bbi:570.0089583333333 ratio:1.0004875660565355
+2026-03-31 15:55:00 | close:572.02 vwap:568.3179531812117 bbi:570.3880208333334 ratio:1.0005381071645791
+
+            **Longer‑term context (1‑hour timeframe):**
+            N/A
+
+            **Longer‑term context (1‑day timeframe):**
+            N/A
+            
+
+### ALL AMZN DATA:
+            **Intraday series (by minute, oldest → latest):**
+            2026-03-31 09:30:00 | close:205.44 vwap:205.11999999999998 bbi:N/A ratio:N/A
+2026-03-31 09:35:00 | close:206.41 vwap:206.01999999999998 bbi:N/A ratio:N/A
+2026-03-31 09:40:00 | close:205.86 vwap:206.1166666666667 bbi:N/A ratio:N/A
+2026-03-31 09:45:00 | close:206.84 vwap:206.51 bbi:N/A ratio:N/A
+2026-03-31 09:50:00 | close:207.19 vwap:207.01666666666665 bbi:N/A ratio:N/A
+2026-03-31 09:55:00 | close:206.79 vwap:206.78333333333333 bbi:N/A ratio:N/A
+2026-03-31 10:00:00 | close:206.61 vwap:206.66666666666666 bbi:N/A ratio:N/A
+2026-03-31 10:05:00 | close:205.73 vwap:206.00666666666666 bbi:N/A ratio:N/A
+2026-03-31 10:10:00 | close:206.03 vwap:205.90666666666667 bbi:N/A ratio:N/A
+2026-03-31 10:15:00 | close:206.32 vwap:206.26999999999998 bbi:N/A ratio:N/A
+2026-03-31 10:20:00 | close:206.31 vwap:206.2266666666667 bbi:N/A ratio:N/A
+2026-03-31 10:25:00 | close:206.21 vwap:206.29 bbi:N/A ratio:N/A
+2026-03-31 10:30:00 | close:206.16 vwap:206.08666666666667 bbi:N/A ratio:N/A
+2026-03-31 10:35:00 | close:205.71 vwap:205.87333333333333 bbi:N/A ratio:N/A
+2026-03-31 10:40:00 | close:205.34 vwap:205.47333333333333 bbi:N/A ratio:N/A
+2026-03-31 10:45:00 | close:205.06 vwap:205.17 bbi:N/A ratio:N/A
+2026-03-31 10:50:00 | close:204.62 vwap:204.79 bbi:N/A ratio:N/A
+2026-03-31 10:55:00 | close:204.93 vwap:204.82000000000002 bbi:N/A ratio:N/A
+2026-03-31 11:00:00 | close:205.32 vwap:205.21333333333334 bbi:N/A ratio:N/A
+2026-03-31 11:05:00 | close:205.51 vwap:205.53666666666666 bbi:N/A ratio:N/A
+2026-03-31 11:10:00 | close:206.0 vwap:205.8166666666667 bbi:N/A ratio:N/A
+2026-03-31 11:15:00 | close:206.17 vwap:206.18999999999997 bbi:N/A ratio:N/A
+2026-03-31 11:20:00 | close:206.35 vwap:206.26666666666665 bbi:N/A ratio:N/A
+2026-03-31 11:25:00 | close:206.01 vwap:206.0666666666667 bbi:N/A ratio:N/A
+2026-03-31 11:30:00 | close:206.0 vwap:205.89000000000001 bbi:N/A ratio:N/A
+2026-03-31 11:35:00 | close:206.11 vwap:206.13666666666668 bbi:N/A ratio:N/A
+2026-03-31 11:40:00 | close:206.15 vwap:206.1466666666667 bbi:N/A ratio:N/A
+2026-03-31 11:45:00 | close:205.83 vwap:205.92666666666665 bbi:N/A ratio:N/A
+2026-03-31 11:50:00 | close:205.83 vwap:205.92 bbi:N/A ratio:N/A
+2026-03-31 11:55:00 | close:205.35 vwap:205.7030507119995 bbi:N/A ratio:N/A
+2026-03-31 12:00:00 | close:205.72 vwap:205.6838236596998 bbi:N/A ratio:N/A
+2026-03-31 12:05:00 | close:206.03 vwap:205.76219964285218 bbi:N/A ratio:N/A
+2026-03-31 12:10:00 | close:205.98 vwap:205.79796555551476 bbi:N/A ratio:N/A
+2026-03-31 12:15:00 | close:206.09 vwap:205.85862210078866 bbi:N/A ratio:N/A
+2026-03-31 12:20:00 | close:206.28 vwap:205.91188110647875 bbi:N/A ratio:N/A
+2026-03-31 12:25:00 | close:206.35 vwap:205.95869404333516 bbi:N/A ratio:N/A
+2026-03-31 12:30:00 | close:206.28 vwap:205.98842702322005 bbi:N/A ratio:N/A
+2026-03-31 12:35:00 | close:207.31 vwap:206.14201706064839 bbi:N/A ratio:N/A
+2026-03-31 12:40:00 | close:208.55 vwap:206.8340765929405 bbi:N/A ratio:N/A
+2026-03-31 12:45:00 | close:208.31 vwap:207.14743784145617 bbi:N/A ratio:N/A
+2026-03-31 12:50:00 | close:208.59 vwap:207.31466635308718 bbi:N/A ratio:N/A
+2026-03-31 12:55:00 | close:208.38 vwap:207.38453736014486 bbi:N/A ratio:N/A
+2026-03-31 13:00:00 | close:209.31 vwap:207.57521921637388 bbi:N/A ratio:N/A
+2026-03-31 13:05:00 | close:208.68 vwap:207.704906862869 bbi:N/A ratio:N/A
+2026-03-31 13:10:00 | close:209.28 vwap:207.77721325803617 bbi:N/A ratio:N/A
+2026-03-31 13:15:00 | close:210.05 vwap:208.02975372941717 bbi:N/A ratio:N/A
+2026-03-31 13:20:00 | close:210.02 vwap:208.15420829778265 bbi:N/A ratio:N/A
+2026-03-31 13:25:00 | close:209.16 vwap:208.23659953457397 bbi:N/A ratio:N/A
+2026-03-31 13:30:00 | close:209.77 vwap:208.30547069047745 bbi:N/A ratio:N/A
+2026-03-31 13:35:00 | close:209.05 vwap:208.3532114384282 bbi:N/A ratio:N/A
+2026-03-31 13:40:00 | close:208.92 vwap:208.3729157200986 bbi:N/A ratio:N/A
+2026-03-31 13:45:00 | close:209.05 vwap:208.38884715284578 bbi:208.84270833333335 ratio:N/A
+2026-03-31 13:50:00 | close:208.83 vwap:208.40269001568706 bbi:208.81104166666665 ratio:N/A
+2026-03-31 13:55:00 | close:208.34 vwap:208.4049660771134 bbi:208.75885416666668 ratio:N/A
+2026-03-31 14:00:00 | close:208.53 vwap:208.4078766528133 bbi:208.676875 ratio:N/A
+2026-03-31 14:05:00 | close:208.88 vwap:208.41813788741126 bbi:208.7078125 ratio:N/A
+2026-03-31 14:10:00 | close:208.73 vwap:208.4244603986091 bbi:208.74958333333333 ratio:N/A
+2026-03-31 14:15:00 | close:208.69 vwap:208.4289932969203 bbi:208.74666666666667 ratio:N/A
+2026-03-31 14:20:00 | close:208.52 vwap:208.4321805985356 bbi:208.69583333333335 ratio:N/A
+2026-03-31 14:25:00 | close:208.68 vwap:208.43744019183615 bbi:208.7201041666667 ratio:N/A
+2026-03-31 14:30:00 | close:208.69 vwap:208.44201586362877 bbi:208.729375 ratio:1.0007331310112018
+2026-03-31 14:35:00 | close:209.06 vwap:208.4549544243943 bbi:208.80031250000002 ratio:1.0006180797467956
+2026-03-31 14:40:00 | close:208.68 vwap:208.46138349046376 bbi:208.79458333333332 ratio:1.000577691973699
+2026-03-31 14:45:00 | close:208.68 vwap:208.46640835364857 bbi:208.78947916666667 ratio:1.0006183918660094
+2026-03-31 14:50:00 | close:208.88 vwap:208.47147143843435 bbi:208.79354166666667 ratio:1.0005655424773696
+2026-03-31 14:55:00 | close:208.92 vwap:208.48238242762878 bbi:208.84125000000003 ratio:1.000642084754674
+2026-03-31 15:00:00 | close:209.05 vwap:208.4931788008685 bbi:208.89520833333333 ratio:1.0008598727377316
+2026-03-31 15:05:00 | close:208.77 vwap:208.50170046961333 bbi:208.8726041666667 ratio:1.00093306618504
+2026-03-31 15:10:00 | close:208.96 vwap:208.51172763869195 bbi:208.88906250000002 ratio:1.0008820360115869
+2026-03-31 15:15:00 | close:208.96 vwap:208.52327860375152 bbi:208.88750000000002 ratio:1.0008041415797162
+2026-03-31 15:20:00 | close:209.13 vwap:208.53806524273838 bbi:208.93135416666667 ratio:1.0007502301596571
+2026-03-31 15:25:00 | close:209.03 vwap:208.55549309950916 bbi:208.94770833333334 ratio:1.0008237493757401
+2026-03-31 15:30:00 | close:209.14 vwap:208.56921276578845 bbi:208.96927083333335 ratio:1.0008661047548024
+2026-03-31 15:35:00 | close:209.13 vwap:208.58202566050818 bbi:208.9865625 ratio:1.000847433822266
+2026-03-31 15:40:00 | close:209.13 vwap:208.5972693687634 bbi:209.01354166666667 ratio:1.0007928915827178
+2026-03-31 15:45:00 | close:209.41 vwap:208.62232829953453 bbi:209.07375 ratio:1.0009313078212205
+2026-03-31 15:50:00 | close:208.69 vwap:208.65797966372162 bbi:209.01333333333332 ratio:1.0009365223654159
+2026-03-31 15:55:00 | close:208.29 vwap:208.61338534152986 bbi:208.89885416666667 ratio:1.0008882266717645
+
+            **Longer‑term context (1‑hour timeframe):**
+            N/A
+
+            **Longer‑term context (1‑day timeframe):**
+            N/A
+            

@@ -1,0 +1,138 @@
+2026-03-30 16:56:24,914 - __main__ - INFO - 📝 日志文件：/home/yangv/AI-Trader-Intraday/data/logs/trader_2026-03-30_premarket.log
+2026-03-30 16:56:24,915 - __main__ - INFO - 🚀 AI-Trader-Intraday 启动 | 模式：premarket | 日期：2026-03-30
+2026-03-30 16:56:24,915 - __main__ - INFO - ======================================================================
+2026-03-30 16:56:24,915 - __main__ - INFO - 🌅 盘前准备模式
+2026-03-30 16:56:24,915 - __main__ - INFO - ======================================================================
+2026-03-30 16:56:24,915 - src.monitor.performance_logger - INFO - 📝 日志初始化完成：2026-03-30
+2026-03-30 16:56:24,915 - __main__ - INFO - 📋 加载资产池：config/stock_pool_template.txt
+2026-03-30 16:56:24,915 - __main__ - ERROR - ❌ 盘前准备失败：name 'build_daily_pool' is not defined
+Traceback (most recent call last):
+  File "/home/yangv/AI-Trader-Intraday/main.py", line 89, in run_premarket
+    pool_config = build_daily_pool.parse_stock_pool_template(pool_path)
+NameError: name 'build_daily_pool' is not defined
+2026-03-30 16:56:24,916 - src.monitor.performance_logger - INFO - 🔒 日志会话已关闭
+2026-03-30 16:56:24,916 - __main__ - ERROR - ❌ 任务失败
+2026-03-30 17:06:57,569 - __main__ - INFO - 📝 日志文件：/home/yangv/AI-Trader-Intraday/data/logs/trader_2026-03-30_premarket.log
+2026-03-30 17:06:57,570 - __main__ - INFO - 🚀 AI-Trader-Intraday 启动 | 模式：premarket | 日期：2026-03-30
+2026-03-30 17:06:57,570 - __main__ - INFO - ======================================================================
+2026-03-30 17:06:57,570 - __main__ - INFO - 🌅 盘前准备模式
+2026-03-30 17:06:57,570 - __main__ - INFO - ======================================================================
+2026-03-30 17:06:57,570 - src.monitor.performance_logger - INFO - 📝 日志初始化完成：2026-03-30
+2026-03-30 17:06:57,570 - __main__ - INFO - 📋 加载资产池：config/stock_pool_template.txt
+2026-03-30 17:06:57,570 - src.data_prep.build_daily_pool - INFO - ✅ 解析: AAPL | ref=5-min | momentum=2/4
+2026-03-30 17:06:57,571 - src.data_prep.build_daily_pool - INFO - ✅ 解析: MSFT | ref=1-hour | momentum=2/4
+2026-03-30 17:06:57,571 - src.data_prep.build_daily_pool - INFO - ✅ 解析: TSLA | ref=5-min | momentum=2/4
+2026-03-30 17:06:57,571 - src.data_prep.build_daily_pool - INFO - ✅ 解析: NVDA | ref=1-day | momentum=2/4
+2026-03-30 17:06:57,571 - src.data_prep.build_daily_pool - INFO - ✅ 解析: AMD | ref=1-hour | momentum=2/4
+2026-03-30 17:06:57,571 - src.data_prep.build_daily_pool - INFO - ✅ 解析: GOOGL | ref=1-day | momentum=1/4
+2026-03-30 17:06:57,571 - src.data_prep.build_daily_pool - INFO - ✅ 解析: META | ref=1-hour | momentum=1/4
+2026-03-30 17:06:57,571 - src.data_prep.build_daily_pool - INFO - ✅ 解析: NFLX | ref=5-min | momentum=1/4
+2026-03-30 17:06:57,571 - src.data_prep.build_daily_pool - INFO - ✅ 解析: AMZN | ref=1-day | momentum=2/4
+2026-03-30 17:06:57,571 - src.data_prep.build_daily_pool - INFO - 📋 资产池加载完成: 9 只股票
+2026-03-30 17:06:57,571 - __main__ - INFO - ✅ 资产池加载完成：9 只股票
+2026-03-30 17:06:57,571 - src.data_prep.validate_pool - INFO - 🔍 验证 9 只股票是否在历史数据库中...
+2026-03-30 17:06:57,573 - src.data_prep.validate_pool - WARNING - ⚠️ AMD 在历史数据库中不存在，将跳过
+2026-03-30 17:06:57,573 - src.data_prep.validate_pool - WARNING - ⚠️ NFLX 在历史数据库中不存在，将跳过
+2026-03-30 17:06:57,574 - src.data_prep.validate_pool - INFO - ✅ 有效股票：7 | ⚠️ 缺失股票：2
+2026-03-30 17:06:57,574 - src.data_prep.validate_pool - WARNING - 缺失股票列表：AMD, NFLX
+2026-03-30 17:06:57,574 - __main__ - WARNING - ⚠️ 2 只股票将被跳过，详见警告日志
+2026-03-30 17:06:57,574 - __main__ - INFO - 🔍 构建多粒度上下文...
+2026-03-30 17:06:57,574 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: AAPL
+2026-03-30 17:06:57,583 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] AAPL 数据来自 historical DB
+2026-03-30 17:06:57,583 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: MSFT
+2026-03-30 17:06:57,584 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] MSFT 数据来自 historical DB
+2026-03-30 17:06:57,584 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: TSLA
+2026-03-30 17:06:57,585 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] TSLA 数据来自 historical DB
+2026-03-30 17:06:57,586 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: NVDA
+2026-03-30 17:06:57,586 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] NVDA 数据来自 historical DB
+2026-03-30 17:06:57,587 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: GOOGL
+2026-03-30 17:06:57,587 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] GOOGL 数据来自 historical DB
+2026-03-30 17:06:57,588 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: META
+2026-03-30 17:06:57,588 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] META 数据来自 historical DB
+2026-03-30 17:06:57,588 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: AMZN
+2026-03-30 17:06:57,589 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] AMZN 数据来自 historical DB
+2026-03-30 17:06:57,590 - src.data_prep.build_daily_pool - INFO - ✅ 上下文构建完成: 7 只股票
+2026-03-30 17:06:57,590 - src.monitor.performance_logger - INFO - 📝 日志初始化完成：2026-03-30
+2026-03-30 17:06:57,593 - __main__ - INFO - 📝 渲染 Prompt 模板...
+2026-03-30 17:06:57,594 - src.agent.prompts - INFO - ✅ 加载 Prompt 模板：/home/yangv/AI-Trader-Intraday/config/prompt_template.txt
+2026-03-30 17:06:57,594 - src.agent.prompts - WARNING - ⚠️ 模板中未找到 {ALL_ASSETS_DATA} 占位符，使用追加模式
+2026-03-30 17:06:57,594 - __main__ - INFO - ✅ Prompt 长度：8058 字符
+2026-03-30 17:06:57,596 - src.data_prep.build_daily_pool - INFO - 💾 上下文缓存保存: /home/yangv/AI-Trader-Intraday/cache/context_20260330.json
+2026-03-30 17:06:57,596 - __main__ - INFO - 💾 上下文缓存：/home/yangv/AI-Trader-Intraday/cache/context_20260330.json
+2026-03-30 17:06:57,612 - src.monitor.performance_logger - INFO - 📝 决策日志记录：ID=1 | NO_OP
+2026-03-30 17:06:57,612 - src.monitor.performance_logger - INFO - 🔒 日志会话已关闭
+2026-03-30 17:06:57,612 - __main__ - INFO - ======================================================================
+2026-03-30 17:06:57,612 - __main__ - INFO - ✅ 盘前准备完成
+2026-03-30 17:06:57,613 - __main__ - INFO - ======================================================================
+2026-03-30 17:06:57,613 - __main__ - INFO - ✅ 任务成功完成
+2026-03-30 17:43:32,334 - __main__ - INFO - 📝 日志文件：/home/yangv/AI-Trader-Intraday/data/logs/trader_2026-03-30_premarket.log
+2026-03-30 17:43:32,335 - __main__ - INFO - 🚀 AI-Trader-Intraday 启动 | 模式：premarket | 日期：2026-03-30
+2026-03-30 17:43:32,335 - __main__ - INFO - ======================================================================
+2026-03-30 17:43:32,335 - __main__ - INFO - 🌅 盘前准备模式
+2026-03-30 17:43:32,335 - __main__ - INFO - ======================================================================
+2026-03-30 17:43:32,335 - src.monitor.performance_logger - INFO - 📝 日志初始化完成：2026-03-30
+2026-03-30 17:43:32,335 - __main__ - INFO - 📋 加载资产池：config/stock_pool_template.txt
+2026-03-30 17:43:32,335 - src.data_prep.build_daily_pool - INFO - ✅ 解析: AAPL | ref=5-min | momentum=2/4
+2026-03-30 17:43:32,336 - src.data_prep.build_daily_pool - INFO - ✅ 解析: MSFT | ref=1-hour | momentum=2/4
+2026-03-30 17:43:32,336 - src.data_prep.build_daily_pool - INFO - ✅ 解析: TSLA | ref=5-min | momentum=2/4
+2026-03-30 17:43:32,336 - src.data_prep.build_daily_pool - INFO - ✅ 解析: NVDA | ref=1-day | momentum=2/4
+2026-03-30 17:43:32,336 - src.data_prep.build_daily_pool - INFO - ✅ 解析: AMD | ref=1-hour | momentum=2/4
+2026-03-30 17:43:32,336 - src.data_prep.build_daily_pool - INFO - ✅ 解析: GOOGL | ref=1-day | momentum=1/4
+2026-03-30 17:43:32,336 - src.data_prep.build_daily_pool - INFO - ✅ 解析: META | ref=1-hour | momentum=1/4
+2026-03-30 17:43:32,336 - src.data_prep.build_daily_pool - INFO - ✅ 解析: NFLX | ref=5-min | momentum=1/4
+2026-03-30 17:43:32,336 - src.data_prep.build_daily_pool - INFO - ✅ 解析: AMZN | ref=1-day | momentum=2/4
+2026-03-30 17:43:32,336 - src.data_prep.build_daily_pool - INFO - 📋 资产池加载完成: 9 只股票
+2026-03-30 17:43:32,336 - __main__ - INFO - ✅ 资产池加载完成：9 只股票
+2026-03-30 17:43:32,337 - src.data_prep.validate_pool - INFO - 🔍 验证 9 只股票是否在历史数据库中...
+2026-03-30 17:43:32,343 - src.data_prep.validate_pool - WARNING - ⚠️ AMD 在历史数据库中不存在，将跳过
+2026-03-30 17:43:32,343 - src.data_prep.validate_pool - WARNING - ⚠️ NFLX 在历史数据库中不存在，将跳过
+2026-03-30 17:43:32,343 - src.data_prep.validate_pool - INFO - ✅ 有效股票：7 | ⚠️ 缺失股票：2
+2026-03-30 17:43:32,343 - src.data_prep.validate_pool - WARNING - 缺失股票列表：AMD, NFLX
+2026-03-30 17:43:32,343 - __main__ - WARNING - ⚠️ 2 只股票将被跳过，详见警告日志
+2026-03-30 17:43:32,343 - __main__ - INFO - 🔍 构建多粒度上下文...
+2026-03-30 17:43:32,343 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: AAPL
+2026-03-30 17:43:32,354 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] AAPL 数据来自 historical DB
+2026-03-30 17:43:32,354 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: MSFT
+2026-03-30 17:43:32,356 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] MSFT 数据来自 historical DB
+2026-03-30 17:43:32,357 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: TSLA
+2026-03-30 17:43:32,359 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] TSLA 数据来自 historical DB
+2026-03-30 17:43:32,359 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: NVDA
+2026-03-30 17:43:32,362 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] NVDA 数据来自 historical DB
+2026-03-30 17:43:32,362 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: GOOGL
+2026-03-30 17:43:32,364 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] GOOGL 数据来自 historical DB
+2026-03-30 17:43:32,365 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: META
+2026-03-30 17:43:32,367 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] META 数据来自 historical DB
+2026-03-30 17:43:32,367 - src.data_prep.build_daily_pool - INFO - 🔍 获取数据: AMZN
+2026-03-30 17:43:32,369 - shared.ibkr_price_adapter - INFO - 📊 [HISTORICAL] AMZN 数据来自 historical DB
+2026-03-30 17:43:32,370 - src.data_prep.build_daily_pool - INFO - ✅ 上下文构建完成: 7 只股票
+2026-03-30 17:43:32,370 - __main__ - INFO - 🔍 获取 IBKR 账户信息...
+2026-03-30 17:43:32,370 - ib_insync.client - INFO - Connecting to 127.0.0.1:4002 with clientId 123...
+2026-03-30 17:43:32,371 - ib_insync.client - INFO - Connected
+2026-03-30 17:43:32,376 - ib_insync.client - INFO - Logged on to server version 176
+2026-03-30 17:43:32,422 - ib_insync.wrapper - INFO - Warning 2104, reqId -1: Market data farm connection is OK:usfarm
+2026-03-30 17:43:32,422 - ib_insync.wrapper - INFO - Warning 2106, reqId -1: HMDS data farm connection is OK:ushmds
+2026-03-30 17:43:32,422 - ib_insync.wrapper - INFO - Warning 2158, reqId -1: Sec-def data farm connection is OK:secdefil
+2026-03-30 17:43:32,422 - ib_insync.client - INFO - API connection ready
+2026-03-30 17:43:32,626 - ib_insync.ib - INFO - Synchronization complete
+2026-03-30 17:43:32,626 - __main__ - INFO - ✅ IBKR 连接成功：127.0.0.1:4002
+2026-03-30 17:43:32,626 - __main__ - INFO - 📡 等待账户数据同步...
+2026-03-30 17:43:37,855 - __main__ - INFO - 📋 获取到 80 条账户摘要记录
+2026-03-30 17:43:37,855 - __main__ - INFO - 📋 账户代码：DUO842974
+2026-03-30 17:43:37,855 - __main__ - INFO - 📊 获取到 0 个持仓
+2026-03-30 17:43:37,855 - __main__ - INFO - ✅ 账户信息获取完成 | 总值：$0.00 | 现金：$1,007,859.01 | 持仓：0 只
+2026-03-30 17:43:37,855 - ib_insync.ib - INFO - Disconnecting from 127.0.0.1:4002, 695 B sent in 7 messages, 27.7 kB received in 597 messages, session time 5.49 s.
+2026-03-30 17:43:37,855 - ib_insync.client - INFO - Disconnecting
+2026-03-30 17:43:37,855 - __main__ - INFO - 🔌 IBKR 账户查询连接已关闭
+2026-03-30 17:43:37,856 - src.monitor.performance_logger - INFO - 📝 日志初始化完成：2026-03-30
+2026-03-30 17:43:37,871 - __main__ - INFO - 📝 渲染 Prompt 模板...
+2026-03-30 17:43:37,873 - src.agent.prompts - INFO - ✅ 加载 Prompt 模板：/home/yangv/AI-Trader-Intraday/config/prompt_template.txt
+2026-03-30 17:43:37,873 - src.agent.prompts - WARNING - ⚠️ 模板中未找到 {ALL_ASSETS_DATA} 占位符，使用追加模式
+2026-03-30 17:43:37,873 - __main__ - INFO - ✅ Prompt 长度：38957 字符
+2026-03-30 17:43:37,878 - src.data_prep.build_daily_pool - INFO - 💾 上下文缓存保存: /home/yangv/AI-Trader-Intraday/cache/context_20260330.json
+2026-03-30 17:43:37,878 - __main__ - INFO - 💾 上下文缓存：/home/yangv/AI-Trader-Intraday/cache/context_20260330.json
+2026-03-30 17:43:37,897 - src.monitor.performance_logger - INFO - 📝 决策日志记录：ID=4 | NO_OP
+2026-03-30 17:43:37,898 - src.monitor.performance_logger - INFO - 🔒 日志会话已关闭
+2026-03-30 17:43:37,898 - __main__ - INFO - ======================================================================
+2026-03-30 17:43:37,898 - __main__ - INFO - ✅ 盘前准备完成
+2026-03-30 17:43:37,898 - __main__ - INFO - ======================================================================
+2026-03-30 17:43:37,898 - __main__ - INFO - ✅ 任务成功完成

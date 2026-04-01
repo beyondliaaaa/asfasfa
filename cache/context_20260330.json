@@ -1,0 +1,5328 @@
+{
+  "est_time": "2026-03-30 17:43:32 EST",
+  "daily_stock_pool": {
+    "AAPL": {
+      "momentum": {
+        "5-min": true,
+        "1-hour": false,
+        "1-day": true,
+        "1-week": false
+      },
+      "reference_level": "5-min",
+      "notes": "earnings catalyst"
+    },
+    "MSFT": {
+      "momentum": {
+        "5-min": false,
+        "1-hour": true,
+        "1-day": false,
+        "1-week": true
+      },
+      "reference_level": "1-hour",
+      "notes": "sector rotation"
+    },
+    "TSLA": {
+      "momentum": {
+        "5-min": true,
+        "1-hour": true,
+        "1-day": false,
+        "1-week": false
+      },
+      "reference_level": "5-min",
+      "notes": "high volatility"
+    },
+    "NVDA": {
+      "momentum": {
+        "5-min": false,
+        "1-hour": false,
+        "1-day": true,
+        "1-week": true
+      },
+      "reference_level": "1-day",
+      "notes": "trend following"
+    },
+    "GOOGL": {
+      "momentum": {
+        "5-min": false,
+        "1-hour": false,
+        "1-day": true,
+        "1-week": false
+      },
+      "reference_level": "1-day",
+      "notes": "tech momentum"
+    },
+    "META": {
+      "momentum": {
+        "5-min": false,
+        "1-hour": true,
+        "1-day": false,
+        "1-week": false
+      },
+      "reference_level": "1-hour",
+      "notes": "social recovery"
+    },
+    "AMZN": {
+      "momentum": {
+        "5-min": false,
+        "1-hour": false,
+        "1-day": true,
+        "1-week": true
+      },
+      "reference_level": "1-day",
+      "notes": "cloud growth"
+    }
+  },
+  "stock_data": {
+    "AAPL": {
+      "symbol": "AAPL",
+      "5min_series": [
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 11:50:00",
+          "indicators": {
+            "close": "252.57",
+            "vwap": "252.57000000000002",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 11:55:00",
+          "indicators": {
+            "close": "252.73",
+            "vwap": "252.64801299335352",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "252.79",
+            "vwap": "252.6839228419432",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:05:00",
+          "indicators": {
+            "close": "252.45",
+            "vwap": "252.6342283272201",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:10:00",
+          "indicators": {
+            "close": "252.72",
+            "vwap": "252.628186120919",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:15:00",
+          "indicators": {
+            "close": "252.26",
+            "vwap": "252.60242388653026",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:20:00",
+          "indicators": {
+            "close": "252.08",
+            "vwap": "252.56101509942636",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:25:00",
+          "indicators": {
+            "close": "251.78",
+            "vwap": "252.4003606428743",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:30:00",
+          "indicators": {
+            "close": "251.81",
+            "vwap": "252.3511250575991",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:35:00",
+          "indicators": {
+            "close": "251.82",
+            "vwap": "252.2900369699104",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:40:00",
+          "indicators": {
+            "close": "252.22",
+            "vwap": "252.27487909884076",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:45:00",
+          "indicators": {
+            "close": "252.59",
+            "vwap": "252.29427478665937",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:50:00",
+          "indicators": {
+            "close": "252.45",
+            "vwap": "252.30727185858518",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:55:00",
+          "indicators": {
+            "close": "252.42",
+            "vwap": "252.31483178302506",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "252.12",
+            "vwap": "252.30888911612354",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:05:00",
+          "indicators": {
+            "close": "252.31",
+            "vwap": "252.30853761438232",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:10:00",
+          "indicators": {
+            "close": "251.83",
+            "vwap": "252.27386104059786",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:15:00",
+          "indicators": {
+            "close": "251.39",
+            "vwap": "252.24206864140166",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:20:00",
+          "indicators": {
+            "close": "250.79",
+            "vwap": "252.10510467596472",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:25:00",
+          "indicators": {
+            "close": "250.41",
+            "vwap": "252.0068768269162",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:30:00",
+          "indicators": {
+            "close": "250.45",
+            "vwap": "251.91609119204563",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:35:00",
+          "indicators": {
+            "close": "250.04",
+            "vwap": "251.77936008173353",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:40:00",
+          "indicators": {
+            "close": "249.64",
+            "vwap": "251.65769740349123",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:45:00",
+          "indicators": {
+            "close": "249.43",
+            "vwap": "251.5188320244698",
+            "bbi": "250.66229166666665",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:50:00",
+          "indicators": {
+            "close": "249.83",
+            "vwap": "251.46515990796772",
+            "bbi": "250.52166666666668",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:55:00",
+          "indicators": {
+            "close": "249.81",
+            "vwap": "251.3818035496067",
+            "bbi": "250.4260416666667",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "249.81",
+            "vwap": "251.33840718702535",
+            "bbi": "250.351875",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:05:00",
+          "indicators": {
+            "close": "248.76",
+            "vwap": "251.2078279472515",
+            "bbi": "250.09697916666667",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:10:00",
+          "indicators": {
+            "close": "249.09",
+            "vwap": "251.10626057100038",
+            "bbi": "249.91916666666668",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:15:00",
+          "indicators": {
+            "close": "249.4",
+            "vwap": "251.05788854753592",
+            "bbi": "249.81250000000003",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:20:00",
+          "indicators": {
+            "close": "249.11",
+            "vwap": "251.0096369751358",
+            "bbi": "249.74572916666665",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:25:00",
+          "indicators": {
+            "close": "249.39",
+            "vwap": "250.9674635071875",
+            "bbi": "249.70708333333332",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:30:00",
+          "indicators": {
+            "close": "249.38",
+            "vwap": "250.93419510915487",
+            "bbi": "249.63989583333333",
+            "bbiboll_upper": "250.7665317913136",
+            "bbiboll_lower": "248.51325987535304",
+            "bbiboll_ratio": "1.0045130444964312"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:35:00",
+          "indicators": {
+            "close": "249.02",
+            "vwap": "250.8737747434565",
+            "bbi": "249.5928125",
+            "bbiboll_upper": "250.62771368372205",
+            "bbiboll_lower": "248.55791131627797",
+            "bbiboll_ratio": "1.004146358115669"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:40:00",
+          "indicators": {
+            "close": "248.9",
+            "vwap": "250.79293086175701",
+            "bbi": "249.4940625",
+            "bbiboll_upper": "250.4485161737427",
+            "bbiboll_lower": "248.53960882625734",
+            "bbiboll_ratio": "1.003825556665272"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:45:00",
+          "indicators": {
+            "close": "249.0",
+            "vwap": "250.72462939431605",
+            "bbi": "249.399375",
+            "bbiboll_upper": "250.25702967266434",
+            "bbiboll_lower": "248.54172032733564",
+            "bbiboll_ratio": "1.003438880601302"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:50:00",
+          "indicators": {
+            "close": "248.69",
+            "vwap": "250.675993041385",
+            "bbi": "249.29145833333337",
+            "bbiboll_upper": "250.01682812722476",
+            "bbiboll_lower": "248.56608853944198",
+            "bbiboll_ratio": "1.0029097258235036"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:55:00",
+          "indicators": {
+            "close": "248.66",
+            "vwap": "250.6309579261983",
+            "bbi": "249.17791666666668",
+            "bbiboll_upper": "249.88598179358482",
+            "bbiboll_lower": "248.46985153974853",
+            "bbiboll_ratio": "1.0028416046509665"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "248.64",
+            "vwap": "250.5856571267325",
+            "bbi": "249.05645833333332",
+            "bbiboll_upper": "249.81970185459124",
+            "bbiboll_lower": "248.2932148120754",
+            "bbiboll_ratio": "1.0030645401703915"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:05:00",
+          "indicators": {
+            "close": "248.43",
+            "vwap": "250.52420881457002",
+            "bbi": "248.96291666666667",
+            "bbiboll_upper": "249.79183778556347",
+            "bbiboll_lower": "248.13399554776987",
+            "bbiboll_ratio": "1.003329496336222"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:10:00",
+          "indicators": {
+            "close": "249.02",
+            "vwap": "250.46222817333347",
+            "bbi": "248.96718750000002",
+            "bbiboll_upper": "249.80673396320958",
+            "bbiboll_lower": "248.12764103679046",
+            "bbiboll_ratio": "1.003372116910826"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:15:00",
+          "indicators": {
+            "close": "248.97",
+            "vwap": "250.42734030730807",
+            "bbi": "248.95927083333336",
+            "bbiboll_upper": "249.760859209431",
+            "bbiboll_lower": "248.15768245723572",
+            "bbiboll_ratio": "1.0032197570848216"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:20:00",
+          "indicators": {
+            "close": "248.76",
+            "vwap": "250.3869283291505",
+            "bbi": "248.96124999999998",
+            "bbiboll_upper": "249.69163255470255",
+            "bbiboll_lower": "248.2308674452974",
+            "bbiboll_ratio": "1.002933719824682"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:25:00",
+          "indicators": {
+            "close": "248.41",
+            "vwap": "250.34134002519528",
+            "bbi": "248.85875000000001",
+            "bbiboll_upper": "249.50803242726445",
+            "bbiboll_lower": "248.20946757273558",
+            "bbiboll_ratio": "1.0026090399765506"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:30:00",
+          "indicators": {
+            "close": "248.61",
+            "vwap": "250.29462575485624",
+            "bbi": "248.79229166666667",
+            "bbiboll_upper": "249.3665516977778",
+            "bbiboll_lower": "248.21803163555555",
+            "bbiboll_ratio": "1.002308190608576"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:35:00",
+          "indicators": {
+            "close": "248.58",
+            "vwap": "250.25480605993084",
+            "bbi": "248.75916666666666",
+            "bbiboll_upper": "249.25104673599506",
+            "bbiboll_lower": "248.26728659733826",
+            "bbiboll_ratio": "1.0019773344472869"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:40:00",
+          "indicators": {
+            "close": "248.31",
+            "vwap": "250.19923726962207",
+            "bbi": "248.69510416666665",
+            "bbiboll_upper": "249.1297893838785",
+            "bbiboll_lower": "248.26041894945482",
+            "bbiboll_ratio": "1.0017478639906017"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:45:00",
+          "indicators": {
+            "close": "248.31",
+            "vwap": "250.13412608715967",
+            "bbi": "248.6165625",
+            "bbiboll_upper": "249.04306581040086",
+            "bbiboll_lower": "248.1900591895991",
+            "bbiboll_ratio": "1.0017155064252845"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:50:00",
+          "indicators": {
+            "close": "248.75",
+            "vwap": "250.05714165793552",
+            "bbi": "248.62031249999998",
+            "bbiboll_upper": "249.04957114836284",
+            "bbiboll_lower": "248.19105385163712",
+            "bbiboll_ratio": "1.0017265630633574"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:55:00",
+          "indicators": {
+            "close": "248.61",
+            "vwap": "249.87537036359473",
+            "bbi": "248.64010416666667",
+            "bbiboll_upper": "249.07058702399024",
+            "bbiboll_lower": "248.2096213093431",
+            "bbiboll_ratio": "1.0017313492478068"
+          }
+        }
+      ],
+      "hourly_series": [
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 11:00:00",
+          "indicators": {
+            "close": "252.73",
+            "vwap": "252.66333333333333",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "252.42",
+            "vwap": "252.38504331866622",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "249.81",
+            "vwap": "251.4138650878593",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "248.66",
+            "vwap": "250.64206293887588",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "248.61",
+            "vwap": "249.8769857698232",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "2hour_series": [
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 10:00:00",
+          "indicators": {
+            "close": "252.73",
+            "vwap": "252.66333333333333",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "249.81",
+            "vwap": "250.81983392135874",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "248.61",
+            "vwap": "249.66893422230405",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "daily_series": [
+        {
+          "symbol": "AAPL",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "253.9",
+            "high": "255.5",
+            "low": "248.07",
+            "close": "248.8",
+            "volume": "24399931"
+          },
+          "indicators": {
+            "close": "248.8",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "latest": {
+        "daily": {
+          "symbol": "AAPL",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "253.9",
+            "high": "255.5",
+            "low": "248.07",
+            "close": "248.8",
+            "volume": "24399931"
+          },
+          "indicators": {
+            "close": "248.8",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      }
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "5min_series": [
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 11:50:00",
+          "indicators": {
+            "close": "360.43",
+            "vwap": "360.34666666666664",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 11:55:00",
+          "indicators": {
+            "close": "360.22",
+            "vwap": "360.28848112309123",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "360.54",
+            "vwap": "360.35850237011584",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:05:00",
+          "indicators": {
+            "close": "359.91",
+            "vwap": "360.30577773000476",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:10:00",
+          "indicators": {
+            "close": "360.08",
+            "vwap": "360.25694434989816",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:15:00",
+          "indicators": {
+            "close": "360.41",
+            "vwap": "360.2588561166602",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:20:00",
+          "indicators": {
+            "close": "360.05",
+            "vwap": "360.24151769055925",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:25:00",
+          "indicators": {
+            "close": "359.97",
+            "vwap": "360.1878435098731",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:30:00",
+          "indicators": {
+            "close": "359.87",
+            "vwap": "360.1628256502394",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:35:00",
+          "indicators": {
+            "close": "359.51",
+            "vwap": "360.11285977608946",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:40:00",
+          "indicators": {
+            "close": "359.65",
+            "vwap": "360.0650561917879",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:45:00",
+          "indicators": {
+            "close": "359.97",
+            "vwap": "360.0493570892088",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:50:00",
+          "indicators": {
+            "close": "359.71",
+            "vwap": "360.0313380435946",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:55:00",
+          "indicators": {
+            "close": "359.7",
+            "vwap": "359.9995869257942",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "359.27",
+            "vwap": "359.9561293502194",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:05:00",
+          "indicators": {
+            "close": "359.8",
+            "vwap": "359.935510949288",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:10:00",
+          "indicators": {
+            "close": "359.33",
+            "vwap": "359.9138106930602",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:15:00",
+          "indicators": {
+            "close": "359.03",
+            "vwap": "359.88036992685204",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:20:00",
+          "indicators": {
+            "close": "359.13",
+            "vwap": "359.8196977806014",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:25:00",
+          "indicators": {
+            "close": "358.94",
+            "vwap": "359.78423602509287",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:30:00",
+          "indicators": {
+            "close": "359.39",
+            "vwap": "359.7644950017953",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:35:00",
+          "indicators": {
+            "close": "359.24",
+            "vwap": "359.7447718718722",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:40:00",
+          "indicators": {
+            "close": "358.96",
+            "vwap": "359.71535480485556",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:45:00",
+          "indicators": {
+            "close": "358.59",
+            "vwap": "359.68040973310804",
+            "bbi": "359.22083333333336",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:50:00",
+          "indicators": {
+            "close": "358.53",
+            "vwap": "359.6476453512674",
+            "bbi": "359.09229166666665",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:55:00",
+          "indicators": {
+            "close": "358.85",
+            "vwap": "359.6181175559501",
+            "bbi": "359.0473958333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "358.8",
+            "vwap": "359.5902593704575",
+            "bbi": "359.01239583333336",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:05:00",
+          "indicators": {
+            "close": "358.3",
+            "vwap": "359.5484806905901",
+            "bbi": "358.9060416666667",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:10:00",
+          "indicators": {
+            "close": "358.69",
+            "vwap": "359.5216132150406",
+            "bbi": "358.8536458333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:15:00",
+          "indicators": {
+            "close": "358.69",
+            "vwap": "359.4986906361616",
+            "bbi": "358.82364583333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:20:00",
+          "indicators": {
+            "close": "358.48",
+            "vwap": "359.4650635450406",
+            "bbi": "358.80666666666673",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:25:00",
+          "indicators": {
+            "close": "358.81",
+            "vwap": "359.44308479675925",
+            "bbi": "358.80020833333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:30:00",
+          "indicators": {
+            "close": "359.31",
+            "vwap": "359.432512145687",
+            "bbi": "358.86562499999997",
+            "bbiboll_upper": "359.2942881654049",
+            "bbiboll_lower": "358.436961834595",
+            "bbiboll_ratio": "1.0011944949182718"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:35:00",
+          "indicators": {
+            "close": "358.84",
+            "vwap": "359.4204413786967",
+            "bbi": "358.9028125",
+            "bbiboll_upper": "359.21583414967995",
+            "bbiboll_lower": "358.58979085032",
+            "bbiboll_ratio": "1.000872162710288"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:40:00",
+          "indicators": {
+            "close": "358.73",
+            "vwap": "359.402375219775",
+            "bbi": "358.88343749999996",
+            "bbiboll_upper": "359.1315181880387",
+            "bbiboll_lower": "358.63535681196123",
+            "bbiboll_ratio": "1.0006912569991162"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:45:00",
+          "indicators": {
+            "close": "358.2",
+            "vwap": "359.3742081696742",
+            "bbi": "358.7439583333333",
+            "bbiboll_upper": "358.965329300833",
+            "bbiboll_lower": "358.5225873658336",
+            "bbiboll_ratio": "1.0006170723223553"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:50:00",
+          "indicators": {
+            "close": "357.81",
+            "vwap": "359.31172693456807",
+            "bbi": "358.5954166666666",
+            "bbiboll_upper": "358.8751799361986",
+            "bbiboll_lower": "358.3156533971346",
+            "bbiboll_ratio": "1.0007801640972787"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:55:00",
+          "indicators": {
+            "close": "357.81",
+            "vwap": "359.2648196943108",
+            "bbi": "358.4357291666667",
+            "bbiboll_upper": "358.8769376566583",
+            "bbiboll_lower": "357.9945206766751",
+            "bbiboll_ratio": "1.0012309277621887"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "357.38",
+            "vwap": "359.2218432996205",
+            "bbi": "358.23770833333333",
+            "bbiboll_upper": "358.89682732984505",
+            "bbiboll_lower": "357.5785893368216",
+            "bbiboll_ratio": "1.0018398928453909"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:05:00",
+          "indicators": {
+            "close": "357.08",
+            "vwap": "359.14604679622795",
+            "bbi": "358.0497916666667",
+            "bbiboll_upper": "358.9424119006753",
+            "bbiboll_lower": "357.15717143265806",
+            "bbiboll_ratio": "1.0024930058745563"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:10:00",
+          "indicators": {
+            "close": "357.09",
+            "vwap": "359.06920918497866",
+            "bbi": "357.8647916666667",
+            "bbiboll_upper": "358.99014196947763",
+            "bbiboll_lower": "356.73944136385575",
+            "bbiboll_ratio": "1.0031446242519972"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:15:00",
+          "indicators": {
+            "close": "357.62",
+            "vwap": "359.00960042896327",
+            "bbi": "357.8236458333333",
+            "bbiboll_upper": "359.0934855131749",
+            "bbiboll_lower": "356.5538061534916",
+            "bbiboll_ratio": "1.0035487863773909"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:20:00",
+          "indicators": {
+            "close": "357.87",
+            "vwap": "358.9657828761526",
+            "bbi": "357.8661458333333",
+            "bbiboll_upper": "359.15507249747293",
+            "bbiboll_lower": "356.57721916919365",
+            "bbiboll_ratio": "1.0036017004657936"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:25:00",
+          "indicators": {
+            "close": "357.5",
+            "vwap": "358.91980220723894",
+            "bbi": "357.84510416666666",
+            "bbiboll_upper": "359.06097768141376",
+            "bbiboll_lower": "356.62923065191956",
+            "bbiboll_ratio": "1.0033977648445926"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:30:00",
+          "indicators": {
+            "close": "357.63",
+            "vwap": "358.87173119089306",
+            "bbi": "357.80302083333333",
+            "bbiboll_upper": "358.8645434848239",
+            "bbiboll_lower": "356.74149818184276",
+            "bbiboll_ratio": "1.0029667794559651"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:35:00",
+          "indicators": {
+            "close": "357.23",
+            "vwap": "358.83130025840256",
+            "bbi": "357.70145833333333",
+            "bbiboll_upper": "358.60568203125206",
+            "bbiboll_lower": "356.7972346354146",
+            "bbiboll_ratio": "1.0025278725508469"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:40:00",
+          "indicators": {
+            "close": "357.09",
+            "vwap": "358.76014573800137",
+            "bbi": "357.61364583333335",
+            "bbiboll_upper": "358.3617980884769",
+            "bbiboll_lower": "356.8654935781898",
+            "bbiboll_ratio": "1.002092068532229"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:45:00",
+          "indicators": {
+            "close": "357.1",
+            "vwap": "358.68410537048845",
+            "bbi": "357.509375",
+            "bbiboll_upper": "358.12918039988415",
+            "bbiboll_lower": "356.8895696001158",
+            "bbiboll_ratio": "1.0017336759347477"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:50:00",
+          "indicators": {
+            "close": "357.24",
+            "vwap": "358.6031381847708",
+            "bbi": "357.45864583333326",
+            "bbiboll_upper": "358.0040183885285",
+            "bbiboll_lower": "356.91327327813804",
+            "bbiboll_ratio": "1.0015256941230888"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:55:00",
+          "indicators": {
+            "close": "356.64",
+            "vwap": "358.45074181562825",
+            "bbi": "357.3379166666667",
+            "bbiboll_upper": "357.91390656413114",
+            "bbiboll_lower": "356.7619267692022",
+            "bbiboll_ratio": "1.001611891351574"
+          }
+        }
+      ],
+      "hourly_series": [
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 11:00:00",
+          "indicators": {
+            "close": "360.22",
+            "vwap": "360.27666666666664",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "359.7",
+            "vwap": "359.92938748758553",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "358.85",
+            "vwap": "359.5830219520443",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "357.81",
+            "vwap": "359.15116584115975",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "356.64",
+            "vwap": "358.3233483060271",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "2hour_series": [
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 10:00:00",
+          "indicators": {
+            "close": "360.22",
+            "vwap": "360.27666666666664",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "358.85",
+            "vwap": "359.4170197063424",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "356.64",
+            "vwap": "358.2818991685812",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "daily_series": [
+        {
+          "symbol": "MSFT",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "361.9",
+            "high": "362.45",
+            "low": "356.51",
+            "close": "356.77",
+            "volume": "23882803"
+          },
+          "indicators": {
+            "close": "356.77",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "latest": {
+        "daily": {
+          "symbol": "MSFT",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "361.9",
+            "high": "362.45",
+            "low": "356.51",
+            "close": "356.77",
+            "volume": "23882803"
+          },
+          "indicators": {
+            "close": "356.77",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      }
+    },
+    "TSLA": {
+      "symbol": "TSLA",
+      "5min_series": [
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 11:50:00",
+          "indicators": {
+            "close": "367.11",
+            "vwap": "367.3",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 11:55:00",
+          "indicators": {
+            "close": "366.84",
+            "vwap": "367.0679436928364",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "366.37",
+            "vwap": "366.8813022034919",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:05:00",
+          "indicators": {
+            "close": "365.41",
+            "vwap": "366.57653458872676",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:10:00",
+          "indicators": {
+            "close": "365.45",
+            "vwap": "366.2882839798927",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:15:00",
+          "indicators": {
+            "close": "365.31",
+            "vwap": "366.17992270931074",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:20:00",
+          "indicators": {
+            "close": "364.75",
+            "vwap": "366.0288248095829",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:25:00",
+          "indicators": {
+            "close": "364.45",
+            "vwap": "365.8208974674719",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:30:00",
+          "indicators": {
+            "close": "364.11",
+            "vwap": "365.629881109594",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:35:00",
+          "indicators": {
+            "close": "363.44",
+            "vwap": "365.3729154977742",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:40:00",
+          "indicators": {
+            "close": "364.06",
+            "vwap": "365.21527076640484",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:45:00",
+          "indicators": {
+            "close": "364.36",
+            "vwap": "365.1314295165559",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:50:00",
+          "indicators": {
+            "close": "363.85",
+            "vwap": "365.0310818359842",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:55:00",
+          "indicators": {
+            "close": "363.81",
+            "vwap": "364.97083216713486",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "363.4",
+            "vwap": "364.86358827911204",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:05:00",
+          "indicators": {
+            "close": "364.21",
+            "vwap": "364.7856053982381",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:10:00",
+          "indicators": {
+            "close": "363.72",
+            "vwap": "364.72803609706716",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:15:00",
+          "indicators": {
+            "close": "362.94",
+            "vwap": "364.6453525948565",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:20:00",
+          "indicators": {
+            "close": "362.97",
+            "vwap": "364.5158356884331",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:25:00",
+          "indicators": {
+            "close": "361.79",
+            "vwap": "364.3311138823538",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:30:00",
+          "indicators": {
+            "close": "362.18",
+            "vwap": "364.2071500427694",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:35:00",
+          "indicators": {
+            "close": "361.87",
+            "vwap": "364.09728548284846",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:40:00",
+          "indicators": {
+            "close": "360.79",
+            "vwap": "363.90567233868364",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:45:00",
+          "indicators": {
+            "close": "360.59",
+            "vwap": "363.7313146978612",
+            "bbi": "362.3414583333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:50:00",
+          "indicators": {
+            "close": "360.19",
+            "vwap": "363.53661382057084",
+            "bbi": "361.9372916666667",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:55:00",
+          "indicators": {
+            "close": "359.75",
+            "vwap": "363.34117230759256",
+            "bbi": "361.6071875",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "360.28",
+            "vwap": "363.2110666564278",
+            "bbi": "361.37375",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:05:00",
+          "indicators": {
+            "close": "359.99",
+            "vwap": "363.08668808602766",
+            "bbi": "361.13437500000003",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:10:00",
+          "indicators": {
+            "close": "360.38",
+            "vwap": "362.9717404624725",
+            "bbi": "361.0473958333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:15:00",
+          "indicators": {
+            "close": "360.92",
+            "vwap": "362.86532636679897",
+            "bbi": "361.02666666666664",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:20:00",
+          "indicators": {
+            "close": "360.41",
+            "vwap": "362.78775540717265",
+            "bbi": "360.9722916666667",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:25:00",
+          "indicators": {
+            "close": "360.72",
+            "vwap": "362.7270949258963",
+            "bbi": "360.9798958333334",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:30:00",
+          "indicators": {
+            "close": "360.79",
+            "vwap": "362.67790605175554",
+            "bbi": "360.92677083333336",
+            "bbiboll_upper": "362.3737137223094",
+            "bbiboll_lower": "359.47982794435734",
+            "bbiboll_ratio": "1.0040089652691464"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:35:00",
+          "indicators": {
+            "close": "361.14",
+            "vwap": "362.63451817494786",
+            "bbi": "360.9963541666667",
+            "bbiboll_upper": "362.00315662079595",
+            "bbiboll_lower": "359.9895517125375",
+            "bbiboll_ratio": "1.0027889546321136"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:40:00",
+          "indicators": {
+            "close": "361.47",
+            "vwap": "362.59716267121166",
+            "bbi": "361.0914583333334",
+            "bbiboll_upper": "361.7322585202538",
+            "bbiboll_lower": "360.45065814641293",
+            "bbiboll_ratio": "1.0017746201748392"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:45:00",
+          "indicators": {
+            "close": "361.13",
+            "vwap": "362.562230214119",
+            "bbi": "361.10614583333336",
+            "bbiboll_upper": "361.4855747847987",
+            "bbiboll_lower": "360.726716881868",
+            "bbiboll_ratio": "1.0010507407748204"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:50:00",
+          "indicators": {
+            "close": "360.71",
+            "vwap": "362.5238302798502",
+            "bbi": "361.06093749999997",
+            "bbiboll_upper": "361.25890323953035",
+            "bbiboll_lower": "360.8629717604696",
+            "bbiboll_ratio": "1.0005482889976998"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:55:00",
+          "indicators": {
+            "close": "360.69",
+            "vwap": "362.47871543867166",
+            "bbi": "360.98177083333337",
+            "bbiboll_upper": "361.1537717625794",
+            "bbiboll_lower": "360.8097699040873",
+            "bbiboll_ratio": "1.0004764809282447"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "359.94",
+            "vwap": "362.4270468066915",
+            "bbi": "360.8040625",
+            "bbiboll_upper": "361.0668167688001",
+            "bbiboll_lower": "360.5413082311999",
+            "bbiboll_ratio": "1.0007282464254408"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:05:00",
+          "indicators": {
+            "close": "360.01",
+            "vwap": "362.35897177612645",
+            "bbi": "360.6553125",
+            "bbiboll_upper": "361.06685041424515",
+            "bbiboll_lower": "360.2437745857548",
+            "bbiboll_ratio": "1.0011410837439008"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:10:00",
+          "indicators": {
+            "close": "360.27",
+            "vwap": "362.2925897907724",
+            "bbi": "360.53208333333333",
+            "bbiboll_upper": "361.10718824903375",
+            "bbiboll_lower": "359.9569784176329",
+            "bbiboll_ratio": "1.0015951559993863"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:15:00",
+          "indicators": {
+            "close": "361.63",
+            "vwap": "362.2467674545219",
+            "bbi": "360.69489583333336",
+            "bbiboll_upper": "361.29986745586024",
+            "bbiboll_lower": "360.0899242108065",
+            "bbiboll_ratio": "1.0016772392110767"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:20:00",
+          "indicators": {
+            "close": "361.81",
+            "vwap": "362.2305574363645",
+            "bbi": "360.9078125",
+            "bbiboll_upper": "361.51174092285396",
+            "bbiboll_lower": "360.303884077146",
+            "bbiboll_ratio": "1.0016733592400524"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:25:00",
+          "indicators": {
+            "close": "361.37",
+            "vwap": "362.21064151501554",
+            "bbi": "361.03697916666664",
+            "bbiboll_upper": "361.64969292259326",
+            "bbiboll_lower": "360.42426541074",
+            "bbiboll_ratio": "1.001697094179496"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:30:00",
+          "indicators": {
+            "close": "361.97",
+            "vwap": "362.1976097104006",
+            "bbi": "361.1722916666667",
+            "bbiboll_upper": "361.81597582254983",
+            "bbiboll_lower": "360.52860751078356",
+            "bbiboll_ratio": "1.001782208022971"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:35:00",
+          "indicators": {
+            "close": "361.69",
+            "vwap": "362.1884639535841",
+            "bbi": "361.241875",
+            "bbiboll_upper": "361.94056273093287",
+            "bbiboll_lower": "360.5431872690671",
+            "bbiboll_ratio": "1.0019341271853737"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:40:00",
+          "indicators": {
+            "close": "361.57",
+            "vwap": "362.1696124151318",
+            "bbi": "361.3229166666667",
+            "bbiboll_upper": "362.1164196219885",
+            "bbiboll_lower": "360.5294137113449",
+            "bbiboll_ratio": "1.002196104699481"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:45:00",
+          "indicators": {
+            "close": "361.12",
+            "vwap": "362.1412745993814",
+            "bbi": "361.23614583333335",
+            "bbiboll_upper": "362.0797556828048",
+            "bbiboll_lower": "360.39253598386193",
+            "bbiboll_ratio": "1.002335341740305"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:50:00",
+          "indicators": {
+            "close": "361.21",
+            "vwap": "362.10307830932766",
+            "bbi": "361.1921875",
+            "bbiboll_upper": "362.0441666068082",
+            "bbiboll_lower": "360.3402083931918",
+            "bbiboll_ratio": "1.0023587971619907"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:55:00",
+          "indicators": {
+            "close": "361.76",
+            "vwap": "362.08909683945404",
+            "bbi": "361.2675",
+            "bbiboll_upper": "362.0687840342323",
+            "bbiboll_lower": "360.4662159657677",
+            "bbiboll_ratio": "1.002217979846602"
+          }
+        }
+      ],
+      "hourly_series": [
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 11:00:00",
+          "indicators": {
+            "close": "366.84",
+            "vwap": "367.08666666666664",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "363.81",
+            "vwap": "364.96960950895465",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "359.75",
+            "vwap": "363.001669362884",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "360.69",
+            "vwap": "362.27561667146944",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "361.76",
+            "vwap": "361.95864319574616",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "2hour_series": [
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 10:00:00",
+          "indicators": {
+            "close": "366.84",
+            "vwap": "367.08666666666664",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "359.75",
+            "vwap": "362.3954694127191",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "361.76",
+            "vwap": "361.79211467914274",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "daily_series": [
+        {
+          "symbol": "TSLA",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "369.8",
+            "high": "369.86",
+            "low": "359.47",
+            "close": "361.83",
+            "volume": "47143399"
+          },
+          "indicators": {
+            "close": "361.83",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "latest": {
+        "daily": {
+          "symbol": "TSLA",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "369.8",
+            "high": "369.86",
+            "low": "359.47",
+            "close": "361.83",
+            "volume": "47143399"
+          },
+          "indicators": {
+            "close": "361.83",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      }
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "5min_series": [
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 11:50:00",
+          "indicators": {
+            "close": "169.55",
+            "vwap": "169.56666666666666",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 11:55:00",
+          "indicators": {
+            "close": "169.55",
+            "vwap": "169.5751482770957",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "169.53",
+            "vwap": "169.52373155010883",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:05:00",
+          "indicators": {
+            "close": "169.3",
+            "vwap": "169.49120510737413",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:10:00",
+          "indicators": {
+            "close": "169.34",
+            "vwap": "169.45320829873265",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:15:00",
+          "indicators": {
+            "close": "168.98",
+            "vwap": "169.38304117200485",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:20:00",
+          "indicators": {
+            "close": "168.97",
+            "vwap": "169.33657988533614",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:25:00",
+          "indicators": {
+            "close": "168.82",
+            "vwap": "169.26939728102124",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:30:00",
+          "indicators": {
+            "close": "168.63",
+            "vwap": "169.20291501219566",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:35:00",
+          "indicators": {
+            "close": "168.45",
+            "vwap": "169.12279629616674",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:40:00",
+          "indicators": {
+            "close": "168.88",
+            "vwap": "169.0846475635769",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:45:00",
+          "indicators": {
+            "close": "169.14",
+            "vwap": "169.08147654895168",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:50:00",
+          "indicators": {
+            "close": "168.93",
+            "vwap": "169.07665065492412",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:55:00",
+          "indicators": {
+            "close": "168.87",
+            "vwap": "169.068405850718",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "168.72",
+            "vwap": "169.0525585181809",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:05:00",
+          "indicators": {
+            "close": "168.96",
+            "vwap": "169.04342287189633",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:10:00",
+          "indicators": {
+            "close": "168.69",
+            "vwap": "169.02823645638236",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:15:00",
+          "indicators": {
+            "close": "168.47",
+            "vwap": "169.00445849651675",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:20:00",
+          "indicators": {
+            "close": "168.36",
+            "vwap": "168.96097894768934",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:25:00",
+          "indicators": {
+            "close": "167.84",
+            "vwap": "168.89612624403802",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:30:00",
+          "indicators": {
+            "close": "168.07",
+            "vwap": "168.85884428590938",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:35:00",
+          "indicators": {
+            "close": "168.1",
+            "vwap": "168.83276825904906",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:40:00",
+          "indicators": {
+            "close": "167.91",
+            "vwap": "168.79711112331228",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:45:00",
+          "indicators": {
+            "close": "167.79",
+            "vwap": "168.75678781838968",
+            "bbi": "168.2703125",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:50:00",
+          "indicators": {
+            "close": "167.81",
+            "vwap": "168.7210090796265",
+            "bbi": "168.18177083333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:55:00",
+          "indicators": {
+            "close": "167.88",
+            "vwap": "168.6821756042723",
+            "bbi": "168.14291666666668",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "167.95",
+            "vwap": "168.655601855024",
+            "bbi": "168.11875",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:05:00",
+          "indicators": {
+            "close": "167.9",
+            "vwap": "168.6269823416736",
+            "bbi": "168.08124999999998",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:10:00",
+          "indicators": {
+            "close": "168.02",
+            "vwap": "168.6026711875401",
+            "bbi": "168.06979166666667",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:15:00",
+          "indicators": {
+            "close": "168.18",
+            "vwap": "168.5844195231281",
+            "bbi": "168.09083333333334",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:20:00",
+          "indicators": {
+            "close": "167.99",
+            "vwap": "168.56852265960111",
+            "bbi": "168.08791666666667",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:25:00",
+          "indicators": {
+            "close": "168.0",
+            "vwap": "168.55359024954384",
+            "bbi": "168.0860416666667",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:30:00",
+          "indicators": {
+            "close": "167.93",
+            "vwap": "168.53848429483259",
+            "bbi": "168.05416666666667",
+            "bbiboll_upper": "168.24986920499197",
+            "bbiboll_lower": "167.85846412834138",
+            "bbiboll_ratio": "1.00116452059599"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:35:00",
+          "indicators": {
+            "close": "167.95",
+            "vwap": "168.52315084987526",
+            "bbi": "168.04458333333335",
+            "bbiboll_upper": "168.16934039326088",
+            "bbiboll_lower": "167.91982627340582",
+            "bbiboll_ratio": "1.0007424045301125"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:40:00",
+          "indicators": {
+            "close": "167.98",
+            "vwap": "168.5066144538595",
+            "bbi": "168.03333333333333",
+            "bbiboll_upper": "168.13269466188297",
+            "bbiboll_lower": "167.9339720047837",
+            "bbiboll_ratio": "1.000591319154233"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:45:00",
+          "indicators": {
+            "close": "167.72",
+            "vwap": "168.47872094115493",
+            "bbi": "167.98041666666666",
+            "bbiboll_upper": "168.09661408607786",
+            "bbiboll_lower": "167.86421924725545",
+            "bbiboll_ratio": "1.0006917319394546"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:50:00",
+          "indicators": {
+            "close": "167.4",
+            "vwap": "168.44273781192726",
+            "bbi": "167.88552083333335",
+            "bbiboll_upper": "168.07852320191876",
+            "bbiboll_lower": "167.69251846474793",
+            "bbiboll_ratio": "1.00114960699188"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:55:00",
+          "indicators": {
+            "close": "167.47",
+            "vwap": "168.4168198107658",
+            "bbi": "167.7978125",
+            "bbiboll_upper": "168.09269351561161",
+            "bbiboll_lower": "167.50293148438837",
+            "bbiboll_ratio": "1.0017573591170124"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "167.38",
+            "vwap": "168.3935545246868",
+            "bbi": "167.72072916666667",
+            "bbiboll_upper": "168.1169568608449",
+            "bbiboll_lower": "167.32450147248844",
+            "bbiboll_ratio": "1.0023624253015528"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:05:00",
+          "indicators": {
+            "close": "167.39",
+            "vwap": "168.36298969758138",
+            "bbi": "167.66958333333332",
+            "bbiboll_upper": "168.14049181392394",
+            "bbiboll_lower": "167.1986748527427",
+            "bbiboll_ratio": "1.0028085504313233"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:10:00",
+          "indicators": {
+            "close": "167.45",
+            "vwap": "168.3298255326079",
+            "bbi": "167.62104166666666",
+            "bbiboll_upper": "168.14648183949055",
+            "bbiboll_lower": "167.09560149384276",
+            "bbiboll_ratio": "1.003134691012533"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:15:00",
+          "indicators": {
+            "close": "167.71",
+            "vwap": "168.3074820968975",
+            "bbi": "167.63041666666666",
+            "bbiboll_upper": "168.16301608540667",
+            "bbiboll_lower": "167.09781724792666",
+            "bbiboll_ratio": "1.0031772242134258"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:20:00",
+          "indicators": {
+            "close": "167.71",
+            "vwap": "168.29123608977423",
+            "bbi": "167.65739583333334",
+            "bbiboll_upper": "168.16570715457823",
+            "bbiboll_lower": "167.14908451208845",
+            "bbiboll_ratio": "1.0030318455008702"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:25:00",
+          "indicators": {
+            "close": "167.43",
+            "vwap": "168.26812515924138",
+            "bbi": "167.63791666666665",
+            "bbiboll_upper": "168.09793159320606",
+            "bbiboll_lower": "167.17790174012725",
+            "bbiboll_ratio": "1.0027440983262403"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:30:00",
+          "indicators": {
+            "close": "167.4",
+            "vwap": "168.24454467767268",
+            "bbi": "167.59489583333334",
+            "bbiboll_upper": "167.97951935422273",
+            "bbiboll_lower": "167.21027231244395",
+            "bbiboll_ratio": "1.0022949596345219"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:35:00",
+          "indicators": {
+            "close": "167.37",
+            "vwap": "168.21736593916816",
+            "bbi": "167.54604166666667",
+            "bbiboll_upper": "167.84793688287812",
+            "bbiboll_lower": "167.24414645045522",
+            "bbiboll_ratio": "1.0018018642112243"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:40:00",
+          "indicators": {
+            "close": "167.5",
+            "vwap": "168.1932208088207",
+            "bbi": "167.5396875",
+            "bbiboll_upper": "167.77197274141",
+            "bbiboll_lower": "167.30740225859003",
+            "bbiboll_ratio": "1.0013864490550037"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:45:00",
+          "indicators": {
+            "close": "167.45",
+            "vwap": "168.15847787132853",
+            "bbi": "167.52385416666667",
+            "bbiboll_upper": "167.71329175086643",
+            "bbiboll_lower": "167.3344165824669",
+            "bbiboll_ratio": "1.001130809610023"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:50:00",
+          "indicators": {
+            "close": "167.45",
+            "vwap": "168.11978630066517",
+            "bbi": "167.51697916666666",
+            "bbiboll_upper": "167.68966614074336",
+            "bbiboll_lower": "167.34429219258996",
+            "bbiboll_ratio": "1.0010308625127777"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:55:00",
+          "indicators": {
+            "close": "167.42",
+            "vwap": "168.07887404636082",
+            "bbi": "167.50406249999997",
+            "bbiboll_upper": "167.67548179486764",
+            "bbiboll_lower": "167.3326432051323",
+            "bbiboll_ratio": "1.0010233739546923"
+          }
+        }
+      ],
+      "hourly_series": [
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 11:00:00",
+          "indicators": {
+            "close": "169.55",
+            "vwap": "169.56666666666666",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "168.87",
+            "vwap": "169.05016320975446",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "167.88",
+            "vwap": "168.67862352104981",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "167.47",
+            "vwap": "168.35793291304142",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "167.42",
+            "vwap": "168.03440397412209",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "2hour_series": [
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 10:00:00",
+          "indicators": {
+            "close": "169.55",
+            "vwap": "169.56666666666666",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "167.88",
+            "vwap": "168.46833657466905",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "167.42",
+            "vwap": "167.9604933659864",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "daily_series": [
+        {
+          "symbol": "NVDA",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "170.0",
+            "high": "170.97",
+            "low": "167.01",
+            "close": "167.52",
+            "volume": "126291295"
+          },
+          "indicators": {
+            "close": "167.52",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "latest": {
+        "daily": {
+          "symbol": "NVDA",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "170.0",
+            "high": "170.97",
+            "low": "167.01",
+            "close": "167.52",
+            "volume": "126291295"
+          },
+          "indicators": {
+            "close": "167.52",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      }
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "5min_series": [
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 11:50:00",
+          "indicators": {
+            "close": "277.71",
+            "vwap": "277.6566666666667",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 11:55:00",
+          "indicators": {
+            "close": "277.69",
+            "vwap": "277.6794208998432",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "277.31",
+            "vwap": "277.5936301913618",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:05:00",
+          "indicators": {
+            "close": "276.91",
+            "vwap": "277.42019545241675",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:10:00",
+          "indicators": {
+            "close": "277.11",
+            "vwap": "277.31839852218667",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:15:00",
+          "indicators": {
+            "close": "276.88",
+            "vwap": "277.23351461428143",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:20:00",
+          "indicators": {
+            "close": "276.78",
+            "vwap": "277.16002589631165",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:25:00",
+          "indicators": {
+            "close": "276.67",
+            "vwap": "277.09518234837174",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:30:00",
+          "indicators": {
+            "close": "276.67",
+            "vwap": "277.06839157136454",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:35:00",
+          "indicators": {
+            "close": "276.3",
+            "vwap": "277.01622783015046",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:40:00",
+          "indicators": {
+            "close": "276.73",
+            "vwap": "276.9777538710976",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:45:00",
+          "indicators": {
+            "close": "276.94",
+            "vwap": "276.9744225998446",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:50:00",
+          "indicators": {
+            "close": "276.95",
+            "vwap": "276.9743677035457",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:55:00",
+          "indicators": {
+            "close": "276.73",
+            "vwap": "276.9652395906673",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "276.31",
+            "vwap": "276.9275388998402",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:05:00",
+          "indicators": {
+            "close": "276.54",
+            "vwap": "276.9053274102413",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:10:00",
+          "indicators": {
+            "close": "276.41",
+            "vwap": "276.88868206810594",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:15:00",
+          "indicators": {
+            "close": "275.81",
+            "vwap": "276.84824047010335",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:20:00",
+          "indicators": {
+            "close": "275.25",
+            "vwap": "276.74714544132155",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:25:00",
+          "indicators": {
+            "close": "274.69",
+            "vwap": "276.58675923675736",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:30:00",
+          "indicators": {
+            "close": "274.89",
+            "vwap": "276.47026513705345",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:35:00",
+          "indicators": {
+            "close": "274.59",
+            "vwap": "276.3855901632806",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:40:00",
+          "indicators": {
+            "close": "274.19",
+            "vwap": "276.24866023932236",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:45:00",
+          "indicators": {
+            "close": "274.41",
+            "vwap": "276.1718564251937",
+            "bbi": "275.2251041666667",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:50:00",
+          "indicators": {
+            "close": "274.36",
+            "vwap": "276.1097111990751",
+            "bbi": "275.08000000000004",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:55:00",
+          "indicators": {
+            "close": "274.41",
+            "vwap": "276.0522720282883",
+            "bbi": "275.00416666666666",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "274.36",
+            "vwap": "276.0011377526284",
+            "bbi": "274.9065625",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:05:00",
+          "indicators": {
+            "close": "274.15",
+            "vwap": "275.94895257793706",
+            "bbi": "274.7921875",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:10:00",
+          "indicators": {
+            "close": "274.36",
+            "vwap": "275.8948742783981",
+            "bbi": "274.72375",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:15:00",
+          "indicators": {
+            "close": "274.72",
+            "vwap": "275.848638617868",
+            "bbi": "274.7214583333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:20:00",
+          "indicators": {
+            "close": "274.96",
+            "vwap": "275.81348138119665",
+            "bbi": "274.7889583333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:25:00",
+          "indicators": {
+            "close": "275.27",
+            "vwap": "275.7981356278829",
+            "bbi": "274.89812500000005",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:30:00",
+          "indicators": {
+            "close": "275.43",
+            "vwap": "275.784801394952",
+            "bbi": "275.0002083333333",
+            "bbiboll_upper": "275.4941233780502",
+            "bbiboll_lower": "274.50629328861646",
+            "bbiboll_ratio": "1.0017960533474148"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:35:00",
+          "indicators": {
+            "close": "275.48",
+            "vwap": "275.7762092363455",
+            "bbi": "275.10895833333336",
+            "bbiboll_upper": "275.5377218272092",
+            "bbiboll_lower": "274.6801948394575",
+            "bbiboll_ratio": "1.0015585224722356"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:40:00",
+          "indicators": {
+            "close": "275.4",
+            "vwap": "275.7683806080331",
+            "bbi": "275.1744791666667",
+            "bbiboll_upper": "275.6492672555903",
+            "bbiboll_lower": "274.69969107774307",
+            "bbiboll_ratio": "1.0017254074228157"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:45:00",
+          "indicators": {
+            "close": "275.32",
+            "vwap": "275.7572037896563",
+            "bbi": "275.19239583333336",
+            "bbiboll_upper": "275.7328132388842",
+            "bbiboll_lower": "274.6519784277825",
+            "bbiboll_ratio": "1.0019637802996495"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:50:00",
+          "indicators": {
+            "close": "275.16",
+            "vwap": "275.7487470803293",
+            "bbi": "275.1720833333334",
+            "bbiboll_upper": "275.75747184559384",
+            "bbiboll_lower": "274.5866948210729",
+            "bbiboll_ratio": "1.002127354291065"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:55:00",
+          "indicators": {
+            "close": "274.88",
+            "vwap": "275.73389155884087",
+            "bbi": "275.10302083333335",
+            "bbiboll_upper": "275.6748730917231",
+            "bbiboll_lower": "274.5311685749436",
+            "bbiboll_ratio": "1.0020786840386466"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "274.85",
+            "vwap": "275.71795783585475",
+            "bbi": "275.0346875",
+            "bbiboll_upper": "275.5341719173344",
+            "bbiboll_lower": "274.53520308266565",
+            "bbiboll_ratio": "1.0018160778986627"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:05:00",
+          "indicators": {
+            "close": "275.05",
+            "vwap": "275.7080227640458",
+            "bbi": "275.0108333333333",
+            "bbiboll_upper": "275.4012092316852",
+            "bbiboll_lower": "274.62045743498146",
+            "bbiboll_ratio": "1.001419492801866"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:10:00",
+          "indicators": {
+            "close": "275.18",
+            "vwap": "275.6942746392448",
+            "bbi": "275.0309375",
+            "bbiboll_upper": "275.31297474889766",
+            "bbiboll_lower": "274.7489002511023",
+            "bbiboll_ratio": "1.0010254746300957"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:15:00",
+          "indicators": {
+            "close": "275.46",
+            "vwap": "275.6871348916779",
+            "bbi": "275.099375",
+            "bbiboll_upper": "275.31334025315454",
+            "bbiboll_lower": "274.8854097468455",
+            "bbiboll_ratio": "1.0007777744066286"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:20:00",
+          "indicators": {
+            "close": "275.07",
+            "vwap": "275.6771194714554",
+            "bbi": "275.09770833333334",
+            "bbiboll_upper": "275.2882372965056",
+            "bbiboll_lower": "274.9071793701611",
+            "bbiboll_ratio": "1.000692586515266"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:25:00",
+          "indicators": {
+            "close": "274.78",
+            "vwap": "275.6602985380376",
+            "bbi": "275.0509375",
+            "bbiboll_upper": "275.2473441740145",
+            "bbiboll_lower": "274.8545308259855",
+            "bbiboll_ratio": "1.000714073821379"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:30:00",
+          "indicators": {
+            "close": "274.92",
+            "vwap": "275.6347899517056",
+            "bbi": "274.99854166666665",
+            "bbiboll_upper": "275.1961437439491",
+            "bbiboll_lower": "274.8009395893842",
+            "bbiboll_ratio": "1.0007185568188284"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:35:00",
+          "indicators": {
+            "close": "274.61",
+            "vwap": "275.6087776668289",
+            "bbi": "274.9239583333333",
+            "bbiboll_upper": "275.13143839847373",
+            "bbiboll_lower": "274.7164782681929",
+            "bbiboll_ratio": "1.0007546816450565"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:40:00",
+          "indicators": {
+            "close": "274.52",
+            "vwap": "275.5674877927489",
+            "bbi": "274.8598958333333",
+            "bbiboll_upper": "275.0963613825075",
+            "bbiboll_lower": "274.62343028415916",
+            "bbiboll_ratio": "1.0008603130276872"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:45:00",
+          "indicators": {
+            "close": "274.5",
+            "vwap": "275.52727627375674",
+            "bbi": "274.76874999999995",
+            "bbiboll_upper": "275.0875570550788",
+            "bbiboll_lower": "274.44994294492113",
+            "bbiboll_ratio": "1.0011602740671157"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:50:00",
+          "indicators": {
+            "close": "274.27",
+            "vwap": "275.4619358905001",
+            "bbi": "274.6876041666667",
+            "bbiboll_upper": "275.1087282463051",
+            "bbiboll_lower": "274.2664800870283",
+            "bbiboll_ratio": "1.0015331018700897"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:55:00",
+          "indicators": {
+            "close": "274.23",
+            "vwap": "275.3366226844536",
+            "bbi": "274.6251041666667",
+            "bbiboll_upper": "275.14136502145044",
+            "bbiboll_lower": "274.10884331188294",
+            "bbiboll_ratio": "1.0018798749529847"
+          }
+        }
+      ],
+      "hourly_series": [
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 11:00:00",
+          "indicators": {
+            "close": "277.69",
+            "vwap": "277.6666666666667",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "276.73",
+            "vwap": "276.9828944227242",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "274.41",
+            "vwap": "276.05159121898924",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "274.88",
+            "vwap": "275.71060197517716",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "274.23",
+            "vwap": "275.32435935004526",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "2hour_series": [
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 10:00:00",
+          "indicators": {
+            "close": "277.69",
+            "vwap": "277.6666666666667",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "274.41",
+            "vwap": "275.5060450913477",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "274.23",
+            "vwap": "275.0535257343547",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "daily_series": [
+        {
+          "symbol": "GOOGL",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "277.28",
+            "high": "279.37",
+            "low": "273.95",
+            "close": "274.34",
+            "volume": "16660268"
+          },
+          "indicators": {
+            "close": "274.34",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "latest": {
+        "daily": {
+          "symbol": "GOOGL",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "277.28",
+            "high": "279.37",
+            "low": "273.95",
+            "close": "274.34",
+            "volume": "16660268"
+          },
+          "indicators": {
+            "close": "274.34",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      }
+    },
+    "META": {
+      "symbol": "META",
+      "5min_series": [
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 11:50:00",
+          "indicators": {
+            "close": "528.89",
+            "vwap": "529.2933333333334",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 11:55:00",
+          "indicators": {
+            "close": "529.71",
+            "vwap": "529.3297676979838",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "529.04",
+            "vwap": "529.3155515664334",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:05:00",
+          "indicators": {
+            "close": "527.96",
+            "vwap": "529.0915611062193",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:10:00",
+          "indicators": {
+            "close": "528.0",
+            "vwap": "528.9082972466123",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:15:00",
+          "indicators": {
+            "close": "527.62",
+            "vwap": "528.6376028797357",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:20:00",
+          "indicators": {
+            "close": "526.52",
+            "vwap": "528.2929531017478",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:25:00",
+          "indicators": {
+            "close": "527.07",
+            "vwap": "528.1208555824539",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:30:00",
+          "indicators": {
+            "close": "527.85",
+            "vwap": "528.0823942515526",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:35:00",
+          "indicators": {
+            "close": "527.79",
+            "vwap": "528.0490668919699",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:40:00",
+          "indicators": {
+            "close": "529.15",
+            "vwap": "528.0914053477889",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:45:00",
+          "indicators": {
+            "close": "530.0",
+            "vwap": "528.2884139058907",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:50:00",
+          "indicators": {
+            "close": "529.05",
+            "vwap": "528.3636324469894",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:55:00",
+          "indicators": {
+            "close": "527.97",
+            "vwap": "528.3600217702383",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "527.42",
+            "vwap": "528.2901929334271",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:05:00",
+          "indicators": {
+            "close": "528.3",
+            "vwap": "528.2983297030348",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:10:00",
+          "indicators": {
+            "close": "528.0",
+            "vwap": "528.288264514883",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:15:00",
+          "indicators": {
+            "close": "526.34",
+            "vwap": "528.2161562275678",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:20:00",
+          "indicators": {
+            "close": "525.71",
+            "vwap": "528.0811604307454",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:25:00",
+          "indicators": {
+            "close": "524.34",
+            "vwap": "527.7698736380364",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:30:00",
+          "indicators": {
+            "close": "523.72",
+            "vwap": "527.4424853705318",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:35:00",
+          "indicators": {
+            "close": "523.8",
+            "vwap": "527.2720955593198",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:40:00",
+          "indicators": {
+            "close": "522.86",
+            "vwap": "527.1331840920083",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:45:00",
+          "indicators": {
+            "close": "523.54",
+            "vwap": "526.9506551403323",
+            "bbi": "525.1065624999999",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:50:00",
+          "indicators": {
+            "close": "522.72",
+            "vwap": "526.8318026455366",
+            "bbi": "524.6958333333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:55:00",
+          "indicators": {
+            "close": "521.13",
+            "vwap": "526.4858287126917",
+            "bbi": "524.1860416666667",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "521.08",
+            "vwap": "526.1769658741669",
+            "bbi": "523.6560416666666",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:05:00",
+          "indicators": {
+            "close": "522.17",
+            "vwap": "526.0086783789117",
+            "bbi": "523.3542708333334",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:10:00",
+          "indicators": {
+            "close": "523.06",
+            "vwap": "525.896611089243",
+            "bbi": "523.3690625",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:15:00",
+          "indicators": {
+            "close": "523.18",
+            "vwap": "525.8303978753221",
+            "bbi": "523.4169791666667",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:20:00",
+          "indicators": {
+            "close": "523.75",
+            "vwap": "525.7680033946947",
+            "bbi": "523.5218749999999",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:25:00",
+          "indicators": {
+            "close": "524.12",
+            "vwap": "525.7202089508019",
+            "bbi": "523.6994791666666",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:30:00",
+          "indicators": {
+            "close": "524.79",
+            "vwap": "525.6886297595169",
+            "bbi": "523.9786458333333",
+            "bbiboll_upper": "525.7766593204906",
+            "bbiboll_lower": "522.180632346176",
+            "bbiboll_ratio": "1.0034314632885424"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:35:00",
+          "indicators": {
+            "close": "524.57",
+            "vwap": "525.6602311397422",
+            "bbi": "524.1294791666667",
+            "bbiboll_upper": "525.4452599142437",
+            "bbiboll_lower": "522.8136984190896",
+            "bbiboll_ratio": "1.0025104116442163"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:40:00",
+          "indicators": {
+            "close": "524.24",
+            "vwap": "525.6319072360719",
+            "bbi": "524.16625",
+            "bbiboll_upper": "525.1839293539033",
+            "bbiboll_lower": "523.1485706460967",
+            "bbiboll_ratio": "1.0019415201835358"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:45:00",
+          "indicators": {
+            "close": "524.82",
+            "vwap": "525.5962910283673",
+            "bbi": "524.2097916666667",
+            "bbiboll_upper": "525.2378941951276",
+            "bbiboll_lower": "523.1816891382057",
+            "bbiboll_ratio": "1.0019612425116904"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:50:00",
+          "indicators": {
+            "close": "525.08",
+            "vwap": "525.583343615734",
+            "bbi": "524.3155208333333",
+            "bbiboll_upper": "525.4662779196659",
+            "bbiboll_lower": "523.1647637470006",
+            "bbiboll_ratio": "1.002194779747324"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:55:00",
+          "indicators": {
+            "close": "524.56",
+            "vwap": "525.5562650997716",
+            "bbi": "524.3964583333334",
+            "bbiboll_upper": "525.5536455210867",
+            "bbiboll_lower": "523.2392711455801",
+            "bbiboll_ratio": "1.0022067029045756"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "523.99",
+            "vwap": "525.5260161621467",
+            "bbi": "524.3188541666667",
+            "bbiboll_upper": "525.3694499570435",
+            "bbiboll_lower": "523.26825837629",
+            "bbiboll_ratio": "1.002003734525333"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:05:00",
+          "indicators": {
+            "close": "523.87",
+            "vwap": "525.5056163068456",
+            "bbi": "524.1781249999999",
+            "bbiboll_upper": "525.0232821657189",
+            "bbiboll_lower": "523.3329678342809",
+            "bbiboll_ratio": "1.0016123472640508"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:10:00",
+          "indicators": {
+            "close": "524.09",
+            "vwap": "525.4865942995476",
+            "bbi": "524.1134375000001",
+            "bbiboll_upper": "524.709563535332",
+            "bbiboll_lower": "523.5173114646683",
+            "bbiboll_ratio": "1.0011373988771883"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:15:00",
+          "indicators": {
+            "close": "524.28",
+            "vwap": "525.4645161805179",
+            "bbi": "524.1165625",
+            "bbiboll_upper": "524.4848225558712",
+            "bbiboll_lower": "523.7483024441287",
+            "bbiboll_ratio": "1.000702630067851"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:20:00",
+          "indicators": {
+            "close": "525.8",
+            "vwap": "525.4541389864385",
+            "bbi": "524.3510416666667",
+            "bbiboll_upper": "524.6693011629714",
+            "bbiboll_lower": "524.032782170362",
+            "bbiboll_ratio": "1.0006069588329471"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:25:00",
+          "indicators": {
+            "close": "526.4",
+            "vwap": "525.4696375600187",
+            "bbi": "524.6891666666667",
+            "bbiboll_upper": "525.2099305995431",
+            "bbiboll_lower": "524.1684027337902",
+            "bbiboll_ratio": "1.0009925189349436"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:30:00",
+          "indicators": {
+            "close": "526.89",
+            "vwap": "525.499665444815",
+            "bbi": "525.1042708333334",
+            "bbiboll_upper": "526.0204219105167",
+            "bbiboll_lower": "524.1881197561502",
+            "bbiboll_ratio": "1.0017447031533935"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:35:00",
+          "indicators": {
+            "close": "526.04",
+            "vwap": "525.5116415895499",
+            "bbi": "525.2686458333334",
+            "bbiboll_upper": "526.4890433042334",
+            "bbiboll_lower": "524.0482483624334",
+            "bbiboll_ratio": "1.0023233777241052"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:40:00",
+          "indicators": {
+            "close": "526.2",
+            "vwap": "525.5223842791348",
+            "bbi": "525.4155208333333",
+            "bbiboll_upper": "526.9004644305716",
+            "bbiboll_lower": "523.930577236095",
+            "bbiboll_ratio": "1.0028262271256911"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:45:00",
+          "indicators": {
+            "close": "525.88",
+            "vwap": "525.5309661465312",
+            "bbi": "525.4444791666667",
+            "bbiboll_upper": "527.11090711474",
+            "bbiboll_lower": "523.7780512185934",
+            "bbiboll_ratio": "1.003171463426005"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:50:00",
+          "indicators": {
+            "close": "525.06",
+            "vwap": "525.5150861028757",
+            "bbi": "525.3559375",
+            "bbiboll_upper": "527.0747708758186",
+            "bbiboll_lower": "523.6371041241814",
+            "bbiboll_ratio": "1.0032717501661788"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:55:00",
+          "indicators": {
+            "close": "525.71",
+            "vwap": "525.5197671591408",
+            "bbi": "525.3580208333333",
+            "bbiboll_upper": "527.0106115314871",
+            "bbiboll_lower": "523.7054301351794",
+            "bbiboll_ratio": "1.0031456466497504"
+          }
+        }
+      ],
+      "hourly_series": [
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 11:00:00",
+          "indicators": {
+            "close": "529.71",
+            "vwap": "529.3766666666667",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "527.97",
+            "vwap": "528.3382030483982",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "521.13",
+            "vwap": "526.1911236648452",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "524.56",
+            "vwap": "525.3430853508255",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "525.71",
+            "vwap": "525.3705247591437",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "2hour_series": [
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 10:00:00",
+          "indicators": {
+            "close": "529.71",
+            "vwap": "529.3766666666667",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "521.13",
+            "vwap": "524.5496199711337",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "META",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "525.71",
+            "vwap": "524.4712541010055",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "daily_series": [
+        {
+          "symbol": "META",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "540.2",
+            "high": "543.6",
+            "low": "520.26",
+            "close": "525.72",
+            "volume": "19594516"
+          },
+          "indicators": {
+            "close": "525.72",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "latest": {
+        "daily": {
+          "symbol": "META",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "540.2",
+            "high": "543.6",
+            "low": "520.26",
+            "close": "525.72",
+            "volume": "19594516"
+          },
+          "indicators": {
+            "close": "525.72",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      }
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "5min_series": [
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 11:50:00",
+          "indicators": {
+            "close": "201.44",
+            "vwap": "201.42",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 11:55:00",
+          "indicators": {
+            "close": "201.0",
+            "vwap": "201.2927812115246",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "200.87",
+            "vwap": "201.16542701855232",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:05:00",
+          "indicators": {
+            "close": "200.8",
+            "vwap": "201.0709535549453",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:10:00",
+          "indicators": {
+            "close": "200.95",
+            "vwap": "201.0311340168139",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:15:00",
+          "indicators": {
+            "close": "200.53",
+            "vwap": "200.9792666902119",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:20:00",
+          "indicators": {
+            "close": "200.76",
+            "vwap": "200.95289716799542",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:25:00",
+          "indicators": {
+            "close": "200.73",
+            "vwap": "200.91053888844687",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:30:00",
+          "indicators": {
+            "close": "200.73",
+            "vwap": "200.89824738137892",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:35:00",
+          "indicators": {
+            "close": "200.59",
+            "vwap": "200.88352486003674",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:40:00",
+          "indicators": {
+            "close": "200.91",
+            "vwap": "200.87786033582503",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:45:00",
+          "indicators": {
+            "close": "201.42",
+            "vwap": "200.90820235090297",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:50:00",
+          "indicators": {
+            "close": "201.12",
+            "vwap": "200.93148357328488",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:55:00",
+          "indicators": {
+            "close": "201.3",
+            "vwap": "200.9442568769535",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "201.03",
+            "vwap": "200.95499641483022",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:05:00",
+          "indicators": {
+            "close": "201.54",
+            "vwap": "200.9900146047492",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:10:00",
+          "indicators": {
+            "close": "201.32",
+            "vwap": "201.00376179842834",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:15:00",
+          "indicators": {
+            "close": "201.14",
+            "vwap": "201.00978548633398",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:20:00",
+          "indicators": {
+            "close": "201.09",
+            "vwap": "201.01213371431135",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:25:00",
+          "indicators": {
+            "close": "200.83",
+            "vwap": "201.00649743961753",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:30:00",
+          "indicators": {
+            "close": "200.87",
+            "vwap": "201.00076828023208",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:35:00",
+          "indicators": {
+            "close": "200.82",
+            "vwap": "200.99038029175463",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:40:00",
+          "indicators": {
+            "close": "200.69",
+            "vwap": "200.9818488937655",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:45:00",
+          "indicators": {
+            "close": "200.62",
+            "vwap": "200.97009590456238",
+            "bbi": "200.88083333333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:50:00",
+          "indicators": {
+            "close": "200.49",
+            "vwap": "200.94836726849238",
+            "bbi": "200.8053125",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:55:00",
+          "indicators": {
+            "close": "200.65",
+            "vwap": "200.93841698208308",
+            "bbi": "200.77729166666666",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "200.54",
+            "vwap": "200.92351174236697",
+            "bbi": "200.74322916666668",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:05:00",
+          "indicators": {
+            "close": "200.31",
+            "vwap": "200.89671276696475",
+            "bbi": "200.67625",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:10:00",
+          "indicators": {
+            "close": "200.42",
+            "vwap": "200.87663688017358",
+            "bbi": "200.62156249999998",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:15:00",
+          "indicators": {
+            "close": "200.63",
+            "vwap": "200.8629722466241",
+            "bbi": "200.61989583333335",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:20:00",
+          "indicators": {
+            "close": "200.43",
+            "vwap": "200.8486632438748",
+            "bbi": "200.61020833333333",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:25:00",
+          "indicators": {
+            "close": "200.45",
+            "vwap": "200.83422649981787",
+            "bbi": "200.59354166666668",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:30:00",
+          "indicators": {
+            "close": "200.52",
+            "vwap": "200.82628349702105",
+            "bbi": "200.57406250000003",
+            "bbiboll_upper": "200.88881129926799",
+            "bbiboll_lower": "200.25931370073206",
+            "bbiboll_ratio": "1.0015692397877616"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:35:00",
+          "indicators": {
+            "close": "200.12",
+            "vwap": "200.8085934663768",
+            "bbi": "200.52083333333334",
+            "bbiboll_upper": "200.8009481430822",
+            "bbiboll_lower": "200.2407185235845",
+            "bbiboll_ratio": "1.0013969361940722"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:40:00",
+          "indicators": {
+            "close": "200.18",
+            "vwap": "200.7879532972371",
+            "bbi": "200.47010416666666",
+            "bbiboll_upper": "200.74991964599897",
+            "bbiboll_lower": "200.19028868733434",
+            "bbiboll_ratio": "1.0013957965477969"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:45:00",
+          "indicators": {
+            "close": "199.86",
+            "vwap": "200.74351580404397",
+            "bbi": "200.35093750000001",
+            "bbiboll_upper": "200.68013044462623",
+            "bbiboll_lower": "200.0217445553738",
+            "bbiboll_ratio": "1.0016430816283364"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:50:00",
+          "indicators": {
+            "close": "199.8",
+            "vwap": "200.71130857945664",
+            "bbi": "200.26989583333332",
+            "bbiboll_upper": "200.66187825259968",
+            "bbiboll_lower": "199.87791341406697",
+            "bbiboll_ratio": "1.0019572708001634"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:55:00",
+          "indicators": {
+            "close": "199.59",
+            "vwap": "200.6773596318384",
+            "bbi": "200.145",
+            "bbiboll_upper": "200.64802906262685",
+            "bbiboll_lower": "199.64197093737317",
+            "bbiboll_ratio": "1.0025133231538477"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "199.74",
+            "vwap": "200.6544309308635",
+            "bbi": "200.07239583333333",
+            "bbiboll_upper": "200.67766406043282",
+            "bbiboll_lower": "199.46712760623384",
+            "bbiboll_ratio": "1.00302524605945"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:05:00",
+          "indicators": {
+            "close": "199.78",
+            "vwap": "200.6278215038659",
+            "bbi": "200.0271875",
+            "bbiboll_upper": "200.69707438086851",
+            "bbiboll_lower": "199.35730061913148",
+            "bbiboll_ratio": "1.003348979152489"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:10:00",
+          "indicators": {
+            "close": "200.0",
+            "vwap": "200.59575463624716",
+            "bbi": "200.03135416666666",
+            "bbiboll_upper": "200.71297033116335",
+            "bbiboll_lower": "199.34973800216997",
+            "bbiboll_ratio": "1.0034075466185604"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:15:00",
+          "indicators": {
+            "close": "200.14",
+            "vwap": "200.58043387242793",
+            "bbi": "200.05572916666668",
+            "bbiboll_upper": "200.70003301417705",
+            "bbiboll_lower": "199.4114253191563",
+            "bbiboll_ratio": "1.0032206218246997"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:20:00",
+          "indicators": {
+            "close": "200.19",
+            "vwap": "200.56376035256454",
+            "bbi": "200.09177083333333",
+            "bbiboll_upper": "200.6517484300764",
+            "bbiboll_lower": "199.53179323659026",
+            "bbiboll_ratio": "1.002798603832686"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:25:00",
+          "indicators": {
+            "close": "200.11",
+            "vwap": "200.55072353956803",
+            "bbi": "200.10802083333334",
+            "bbiboll_upper": "200.56075311645688",
+            "bbiboll_lower": "199.6552885502098",
+            "bbiboll_ratio": "1.0022624394626372"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:30:00",
+          "indicators": {
+            "close": "200.22",
+            "vwap": "200.54018026870452",
+            "bbi": "200.12166666666667",
+            "bbiboll_upper": "200.43740581681672",
+            "bbiboll_lower": "199.80592751651662",
+            "bbiboll_ratio": "1.0015777359613738"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:35:00",
+          "indicators": {
+            "close": "199.9",
+            "vwap": "200.5273240806041",
+            "bbi": "200.08833333333334",
+            "bbiboll_upper": "200.29892801102613",
+            "bbiboll_lower": "199.87773865564054",
+            "bbiboll_ratio": "1.0010525085305297"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:40:00",
+          "indicators": {
+            "close": "199.78",
+            "vwap": "200.49874391391015",
+            "bbi": "200.03385416666666",
+            "bbiboll_upper": "200.15561310802343",
+            "bbiboll_lower": "199.91209522530988",
+            "bbiboll_ratio": "1.0006086916730372"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:45:00",
+          "indicators": {
+            "close": "199.57",
+            "vwap": "200.45776036716077",
+            "bbi": "199.93895833333335",
+            "bbiboll_upper": "200.09779895775603",
+            "bbiboll_lower": "199.78011770891067",
+            "bbiboll_ratio": "1.000794445593529"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:50:00",
+          "indicators": {
+            "close": "199.3",
+            "vwap": "200.40242876811655",
+            "bbi": "199.8290625",
+            "bbiboll_upper": "200.09550615064114",
+            "bbiboll_lower": "199.56261884935884",
+            "bbiboll_ratio": "1.0013333578574997"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:55:00",
+          "indicators": {
+            "close": "199.34",
+            "vwap": "200.30239827112524",
+            "bbi": "199.74145833333333",
+            "bbiboll_upper": "200.1255920426029",
+            "bbiboll_lower": "199.35732462406375",
+            "bbiboll_ratio": "1.001923154624357"
+          }
+        }
+      ],
+      "hourly_series": [
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 11:00:00",
+          "indicators": {
+            "close": "201.0",
+            "vwap": "201.17999999999998",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "201.3",
+            "vwap": "201.08535900218098",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 13:00:00",
+          "indicators": {
+            "close": "200.65",
+            "vwap": "201.0354356776568",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "199.59",
+            "vwap": "200.63555708742427",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 15:00:00",
+          "indicators": {
+            "close": "199.34",
+            "vwap": "200.23568607387898",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "2hour_series": [
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 10:00:00",
+          "indicators": {
+            "close": "201.0",
+            "vwap": "201.17999999999998",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 12:00:00",
+          "indicators": {
+            "close": "200.65",
+            "vwap": "200.98705279376975",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "datetime": "2026-03-27 14:00:00",
+          "indicators": {
+            "close": "199.34",
+            "vwap": "200.2285195927124",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "daily_series": [
+        {
+          "symbol": "AMZN",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "206.54",
+            "high": "206.64",
+            "low": "199.14",
+            "close": "199.34",
+            "volume": "32048687"
+          },
+          "indicators": {
+            "close": "199.34",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      ],
+      "latest": {
+        "daily": {
+          "symbol": "AMZN",
+          "date": "2026-03-27 00:00:00.000000",
+          "ohlcv": {
+            "open": "206.54",
+            "high": "206.64",
+            "low": "199.14",
+            "close": "199.34",
+            "volume": "32048687"
+          },
+          "indicators": {
+            "close": "199.34",
+            "vwap": "N/A",
+            "bbi": "N/A",
+            "bbiboll_upper": "N/A",
+            "bbiboll_lower": "N/A",
+            "bbiboll_ratio": "N/A"
+          }
+        }
+      }
+    }
+  },
+  "prompt_ready": {
+    "daily_stock_pool_str": "\"AAPL\":{\"5-min level strong momentum: True; \n                1-hour level strong momentum: False;\n                2-hour level strong momentum: False;\n                1-day level strong momentum: True;\n                1-week level strong momentum: False;\n                Most suitable reference level: 5-min\"}\n\"MSFT\":{\"5-min level strong momentum: False; \n                1-hour level strong momentum: True;\n                2-hour level strong momentum: False;\n                1-day level strong momentum: False;\n                1-week level strong momentum: True;\n                Most suitable reference level: 1-hour\"}\n\"TSLA\":{\"5-min level strong momentum: True; \n                1-hour level strong momentum: True;\n                2-hour level strong momentum: False;\n                1-day level strong momentum: False;\n                1-week level strong momentum: False;\n                Most suitable reference level: 5-min\"}\n\"NVDA\":{\"5-min level strong momentum: False; \n                1-hour level strong momentum: False;\n                2-hour level strong momentum: False;\n                1-day level strong momentum: True;\n                1-week level strong momentum: True;\n                Most suitable reference level: 1-day\"}\n\"GOOGL\":{\"5-min level strong momentum: False; \n                1-hour level strong momentum: False;\n                2-hour level strong momentum: False;\n                1-day level strong momentum: True;\n                1-week level strong momentum: False;\n                Most suitable reference level: 1-day\"}\n\"META\":{\"5-min level strong momentum: False; \n                1-hour level strong momentum: True;\n                2-hour level strong momentum: False;\n                1-day level strong momentum: False;\n                1-week level strong momentum: False;\n                Most suitable reference level: 1-hour\"}\n\"AMZN\":{\"5-min level strong momentum: False; \n                1-hour level strong momentum: False;\n                2-hour level strong momentum: False;\n                1-day level strong momentum: True;\n                1-week level strong momentum: True;\n                Most suitable reference level: 1-day\"}",
+    "AAPL_5min_series": "2026-03-27 11:50:00 | close:252.57 vwap:252.57000000000002 bbi:N/A ratio:N/A\n2026-03-27 11:55:00 | close:252.73 vwap:252.64801299335352 bbi:N/A ratio:N/A\n2026-03-27 12:00:00 | close:252.79 vwap:252.6839228419432 bbi:N/A ratio:N/A\n2026-03-27 12:05:00 | close:252.45 vwap:252.6342283272201 bbi:N/A ratio:N/A\n2026-03-27 12:10:00 | close:252.72 vwap:252.628186120919 bbi:N/A ratio:N/A\n2026-03-27 12:15:00 | close:252.26 vwap:252.60242388653026 bbi:N/A ratio:N/A\n2026-03-27 12:20:00 | close:252.08 vwap:252.56101509942636 bbi:N/A ratio:N/A\n2026-03-27 12:25:00 | close:251.78 vwap:252.4003606428743 bbi:N/A ratio:N/A\n2026-03-27 12:30:00 | close:251.81 vwap:252.3511250575991 bbi:N/A ratio:N/A\n2026-03-27 12:35:00 | close:251.82 vwap:252.2900369699104 bbi:N/A ratio:N/A\n2026-03-27 12:40:00 | close:252.22 vwap:252.27487909884076 bbi:N/A ratio:N/A\n2026-03-27 12:45:00 | close:252.59 vwap:252.29427478665937 bbi:N/A ratio:N/A\n2026-03-27 12:50:00 | close:252.45 vwap:252.30727185858518 bbi:N/A ratio:N/A\n2026-03-27 12:55:00 | close:252.42 vwap:252.31483178302506 bbi:N/A ratio:N/A\n2026-03-27 13:00:00 | close:252.12 vwap:252.30888911612354 bbi:N/A ratio:N/A\n2026-03-27 13:05:00 | close:252.31 vwap:252.30853761438232 bbi:N/A ratio:N/A\n2026-03-27 13:10:00 | close:251.83 vwap:252.27386104059786 bbi:N/A ratio:N/A\n2026-03-27 13:15:00 | close:251.39 vwap:252.24206864140166 bbi:N/A ratio:N/A\n2026-03-27 13:20:00 | close:250.79 vwap:252.10510467596472 bbi:N/A ratio:N/A\n2026-03-27 13:25:00 | close:250.41 vwap:252.0068768269162 bbi:N/A ratio:N/A\n2026-03-27 13:30:00 | close:250.45 vwap:251.91609119204563 bbi:N/A ratio:N/A\n2026-03-27 13:35:00 | close:250.04 vwap:251.77936008173353 bbi:N/A ratio:N/A\n2026-03-27 13:40:00 | close:249.64 vwap:251.65769740349123 bbi:N/A ratio:N/A\n2026-03-27 13:45:00 | close:249.43 vwap:251.5188320244698 bbi:250.66229166666665 ratio:N/A\n2026-03-27 13:50:00 | close:249.83 vwap:251.46515990796772 bbi:250.52166666666668 ratio:N/A\n2026-03-27 13:55:00 | close:249.81 vwap:251.3818035496067 bbi:250.4260416666667 ratio:N/A\n2026-03-27 14:00:00 | close:249.81 vwap:251.33840718702535 bbi:250.351875 ratio:N/A\n2026-03-27 14:05:00 | close:248.76 vwap:251.2078279472515 bbi:250.09697916666667 ratio:N/A\n2026-03-27 14:10:00 | close:249.09 vwap:251.10626057100038 bbi:249.91916666666668 ratio:N/A\n2026-03-27 14:15:00 | close:249.4 vwap:251.05788854753592 bbi:249.81250000000003 ratio:N/A\n2026-03-27 14:20:00 | close:249.11 vwap:251.0096369751358 bbi:249.74572916666665 ratio:N/A\n2026-03-27 14:25:00 | close:249.39 vwap:250.9674635071875 bbi:249.70708333333332 ratio:N/A\n2026-03-27 14:30:00 | close:249.38 vwap:250.93419510915487 bbi:249.63989583333333 ratio:1.0045130444964312\n2026-03-27 14:35:00 | close:249.02 vwap:250.8737747434565 bbi:249.5928125 ratio:1.004146358115669\n2026-03-27 14:40:00 | close:248.9 vwap:250.79293086175701 bbi:249.4940625 ratio:1.003825556665272\n2026-03-27 14:45:00 | close:249.0 vwap:250.72462939431605 bbi:249.399375 ratio:1.003438880601302\n2026-03-27 14:50:00 | close:248.69 vwap:250.675993041385 bbi:249.29145833333337 ratio:1.0029097258235036\n2026-03-27 14:55:00 | close:248.66 vwap:250.6309579261983 bbi:249.17791666666668 ratio:1.0028416046509665\n2026-03-27 15:00:00 | close:248.64 vwap:250.5856571267325 bbi:249.05645833333332 ratio:1.0030645401703915\n2026-03-27 15:05:00 | close:248.43 vwap:250.52420881457002 bbi:248.96291666666667 ratio:1.003329496336222\n2026-03-27 15:10:00 | close:249.02 vwap:250.46222817333347 bbi:248.96718750000002 ratio:1.003372116910826\n2026-03-27 15:15:00 | close:248.97 vwap:250.42734030730807 bbi:248.95927083333336 ratio:1.0032197570848216\n2026-03-27 15:20:00 | close:248.76 vwap:250.3869283291505 bbi:248.96124999999998 ratio:1.002933719824682\n2026-03-27 15:25:00 | close:248.41 vwap:250.34134002519528 bbi:248.85875000000001 ratio:1.0026090399765506\n2026-03-27 15:30:00 | close:248.61 vwap:250.29462575485624 bbi:248.79229166666667 ratio:1.002308190608576\n2026-03-27 15:35:00 | close:248.58 vwap:250.25480605993084 bbi:248.75916666666666 ratio:1.0019773344472869\n2026-03-27 15:40:00 | close:248.31 vwap:250.19923726962207 bbi:248.69510416666665 ratio:1.0017478639906017\n2026-03-27 15:45:00 | close:248.31 vwap:250.13412608715967 bbi:248.6165625 ratio:1.0017155064252845\n2026-03-27 15:50:00 | close:248.75 vwap:250.05714165793552 bbi:248.62031249999998 ratio:1.0017265630633574\n2026-03-27 15:55:00 | close:248.61 vwap:249.87537036359473 bbi:248.64010416666667 ratio:1.0017313492478068",
+    "MSFT_5min_series": "2026-03-27 11:50:00 | close:360.43 vwap:360.34666666666664 bbi:N/A ratio:N/A\n2026-03-27 11:55:00 | close:360.22 vwap:360.28848112309123 bbi:N/A ratio:N/A\n2026-03-27 12:00:00 | close:360.54 vwap:360.35850237011584 bbi:N/A ratio:N/A\n2026-03-27 12:05:00 | close:359.91 vwap:360.30577773000476 bbi:N/A ratio:N/A\n2026-03-27 12:10:00 | close:360.08 vwap:360.25694434989816 bbi:N/A ratio:N/A\n2026-03-27 12:15:00 | close:360.41 vwap:360.2588561166602 bbi:N/A ratio:N/A\n2026-03-27 12:20:00 | close:360.05 vwap:360.24151769055925 bbi:N/A ratio:N/A\n2026-03-27 12:25:00 | close:359.97 vwap:360.1878435098731 bbi:N/A ratio:N/A\n2026-03-27 12:30:00 | close:359.87 vwap:360.1628256502394 bbi:N/A ratio:N/A\n2026-03-27 12:35:00 | close:359.51 vwap:360.11285977608946 bbi:N/A ratio:N/A\n2026-03-27 12:40:00 | close:359.65 vwap:360.0650561917879 bbi:N/A ratio:N/A\n2026-03-27 12:45:00 | close:359.97 vwap:360.0493570892088 bbi:N/A ratio:N/A\n2026-03-27 12:50:00 | close:359.71 vwap:360.0313380435946 bbi:N/A ratio:N/A\n2026-03-27 12:55:00 | close:359.7 vwap:359.9995869257942 bbi:N/A ratio:N/A\n2026-03-27 13:00:00 | close:359.27 vwap:359.9561293502194 bbi:N/A ratio:N/A\n2026-03-27 13:05:00 | close:359.8 vwap:359.935510949288 bbi:N/A ratio:N/A\n2026-03-27 13:10:00 | close:359.33 vwap:359.9138106930602 bbi:N/A ratio:N/A\n2026-03-27 13:15:00 | close:359.03 vwap:359.88036992685204 bbi:N/A ratio:N/A\n2026-03-27 13:20:00 | close:359.13 vwap:359.8196977806014 bbi:N/A ratio:N/A\n2026-03-27 13:25:00 | close:358.94 vwap:359.78423602509287 bbi:N/A ratio:N/A\n2026-03-27 13:30:00 | close:359.39 vwap:359.7644950017953 bbi:N/A ratio:N/A\n2026-03-27 13:35:00 | close:359.24 vwap:359.7447718718722 bbi:N/A ratio:N/A\n2026-03-27 13:40:00 | close:358.96 vwap:359.71535480485556 bbi:N/A ratio:N/A\n2026-03-27 13:45:00 | close:358.59 vwap:359.68040973310804 bbi:359.22083333333336 ratio:N/A\n2026-03-27 13:50:00 | close:358.53 vwap:359.6476453512674 bbi:359.09229166666665 ratio:N/A\n2026-03-27 13:55:00 | close:358.85 vwap:359.6181175559501 bbi:359.0473958333333 ratio:N/A\n2026-03-27 14:00:00 | close:358.8 vwap:359.5902593704575 bbi:359.01239583333336 ratio:N/A\n2026-03-27 14:05:00 | close:358.3 vwap:359.5484806905901 bbi:358.9060416666667 ratio:N/A\n2026-03-27 14:10:00 | close:358.69 vwap:359.5216132150406 bbi:358.8536458333333 ratio:N/A\n2026-03-27 14:15:00 | close:358.69 vwap:359.4986906361616 bbi:358.82364583333333 ratio:N/A\n2026-03-27 14:20:00 | close:358.48 vwap:359.4650635450406 bbi:358.80666666666673 ratio:N/A\n2026-03-27 14:25:00 | close:358.81 vwap:359.44308479675925 bbi:358.80020833333333 ratio:N/A\n2026-03-27 14:30:00 | close:359.31 vwap:359.432512145687 bbi:358.86562499999997 ratio:1.0011944949182718\n2026-03-27 14:35:00 | close:358.84 vwap:359.4204413786967 bbi:358.9028125 ratio:1.000872162710288\n2026-03-27 14:40:00 | close:358.73 vwap:359.402375219775 bbi:358.88343749999996 ratio:1.0006912569991162\n2026-03-27 14:45:00 | close:358.2 vwap:359.3742081696742 bbi:358.7439583333333 ratio:1.0006170723223553\n2026-03-27 14:50:00 | close:357.81 vwap:359.31172693456807 bbi:358.5954166666666 ratio:1.0007801640972787\n2026-03-27 14:55:00 | close:357.81 vwap:359.2648196943108 bbi:358.4357291666667 ratio:1.0012309277621887\n2026-03-27 15:00:00 | close:357.38 vwap:359.2218432996205 bbi:358.23770833333333 ratio:1.0018398928453909\n2026-03-27 15:05:00 | close:357.08 vwap:359.14604679622795 bbi:358.0497916666667 ratio:1.0024930058745563\n2026-03-27 15:10:00 | close:357.09 vwap:359.06920918497866 bbi:357.8647916666667 ratio:1.0031446242519972\n2026-03-27 15:15:00 | close:357.62 vwap:359.00960042896327 bbi:357.8236458333333 ratio:1.0035487863773909\n2026-03-27 15:20:00 | close:357.87 vwap:358.9657828761526 bbi:357.8661458333333 ratio:1.0036017004657936\n2026-03-27 15:25:00 | close:357.5 vwap:358.91980220723894 bbi:357.84510416666666 ratio:1.0033977648445926\n2026-03-27 15:30:00 | close:357.63 vwap:358.87173119089306 bbi:357.80302083333333 ratio:1.0029667794559651\n2026-03-27 15:35:00 | close:357.23 vwap:358.83130025840256 bbi:357.70145833333333 ratio:1.0025278725508469\n2026-03-27 15:40:00 | close:357.09 vwap:358.76014573800137 bbi:357.61364583333335 ratio:1.002092068532229\n2026-03-27 15:45:00 | close:357.1 vwap:358.68410537048845 bbi:357.509375 ratio:1.0017336759347477\n2026-03-27 15:50:00 | close:357.24 vwap:358.6031381847708 bbi:357.45864583333326 ratio:1.0015256941230888\n2026-03-27 15:55:00 | close:356.64 vwap:358.45074181562825 bbi:357.3379166666667 ratio:1.001611891351574",
+    "TSLA_5min_series": "2026-03-27 11:50:00 | close:367.11 vwap:367.3 bbi:N/A ratio:N/A\n2026-03-27 11:55:00 | close:366.84 vwap:367.0679436928364 bbi:N/A ratio:N/A\n2026-03-27 12:00:00 | close:366.37 vwap:366.8813022034919 bbi:N/A ratio:N/A\n2026-03-27 12:05:00 | close:365.41 vwap:366.57653458872676 bbi:N/A ratio:N/A\n2026-03-27 12:10:00 | close:365.45 vwap:366.2882839798927 bbi:N/A ratio:N/A\n2026-03-27 12:15:00 | close:365.31 vwap:366.17992270931074 bbi:N/A ratio:N/A\n2026-03-27 12:20:00 | close:364.75 vwap:366.0288248095829 bbi:N/A ratio:N/A\n2026-03-27 12:25:00 | close:364.45 vwap:365.8208974674719 bbi:N/A ratio:N/A\n2026-03-27 12:30:00 | close:364.11 vwap:365.629881109594 bbi:N/A ratio:N/A\n2026-03-27 12:35:00 | close:363.44 vwap:365.3729154977742 bbi:N/A ratio:N/A\n2026-03-27 12:40:00 | close:364.06 vwap:365.21527076640484 bbi:N/A ratio:N/A\n2026-03-27 12:45:00 | close:364.36 vwap:365.1314295165559 bbi:N/A ratio:N/A\n2026-03-27 12:50:00 | close:363.85 vwap:365.0310818359842 bbi:N/A ratio:N/A\n2026-03-27 12:55:00 | close:363.81 vwap:364.97083216713486 bbi:N/A ratio:N/A\n2026-03-27 13:00:00 | close:363.4 vwap:364.86358827911204 bbi:N/A ratio:N/A\n2026-03-27 13:05:00 | close:364.21 vwap:364.7856053982381 bbi:N/A ratio:N/A\n2026-03-27 13:10:00 | close:363.72 vwap:364.72803609706716 bbi:N/A ratio:N/A\n2026-03-27 13:15:00 | close:362.94 vwap:364.6453525948565 bbi:N/A ratio:N/A\n2026-03-27 13:20:00 | close:362.97 vwap:364.5158356884331 bbi:N/A ratio:N/A\n2026-03-27 13:25:00 | close:361.79 vwap:364.3311138823538 bbi:N/A ratio:N/A\n2026-03-27 13:30:00 | close:362.18 vwap:364.2071500427694 bbi:N/A ratio:N/A\n2026-03-27 13:35:00 | close:361.87 vwap:364.09728548284846 bbi:N/A ratio:N/A\n2026-03-27 13:40:00 | close:360.79 vwap:363.90567233868364 bbi:N/A ratio:N/A\n2026-03-27 13:45:00 | close:360.59 vwap:363.7313146978612 bbi:362.3414583333333 ratio:N/A\n2026-03-27 13:50:00 | close:360.19 vwap:363.53661382057084 bbi:361.9372916666667 ratio:N/A\n2026-03-27 13:55:00 | close:359.75 vwap:363.34117230759256 bbi:361.6071875 ratio:N/A\n2026-03-27 14:00:00 | close:360.28 vwap:363.2110666564278 bbi:361.37375 ratio:N/A\n2026-03-27 14:05:00 | close:359.99 vwap:363.08668808602766 bbi:361.13437500000003 ratio:N/A\n2026-03-27 14:10:00 | close:360.38 vwap:362.9717404624725 bbi:361.0473958333333 ratio:N/A\n2026-03-27 14:15:00 | close:360.92 vwap:362.86532636679897 bbi:361.02666666666664 ratio:N/A\n2026-03-27 14:20:00 | close:360.41 vwap:362.78775540717265 bbi:360.9722916666667 ratio:N/A\n2026-03-27 14:25:00 | close:360.72 vwap:362.7270949258963 bbi:360.9798958333334 ratio:N/A\n2026-03-27 14:30:00 | close:360.79 vwap:362.67790605175554 bbi:360.92677083333336 ratio:1.0040089652691464\n2026-03-27 14:35:00 | close:361.14 vwap:362.63451817494786 bbi:360.9963541666667 ratio:1.0027889546321136\n2026-03-27 14:40:00 | close:361.47 vwap:362.59716267121166 bbi:361.0914583333334 ratio:1.0017746201748392\n2026-03-27 14:45:00 | close:361.13 vwap:362.562230214119 bbi:361.10614583333336 ratio:1.0010507407748204\n2026-03-27 14:50:00 | close:360.71 vwap:362.5238302798502 bbi:361.06093749999997 ratio:1.0005482889976998\n2026-03-27 14:55:00 | close:360.69 vwap:362.47871543867166 bbi:360.98177083333337 ratio:1.0004764809282447\n2026-03-27 15:00:00 | close:359.94 vwap:362.4270468066915 bbi:360.8040625 ratio:1.0007282464254408\n2026-03-27 15:05:00 | close:360.01 vwap:362.35897177612645 bbi:360.6553125 ratio:1.0011410837439008\n2026-03-27 15:10:00 | close:360.27 vwap:362.2925897907724 bbi:360.53208333333333 ratio:1.0015951559993863\n2026-03-27 15:15:00 | close:361.63 vwap:362.2467674545219 bbi:360.69489583333336 ratio:1.0016772392110767\n2026-03-27 15:20:00 | close:361.81 vwap:362.2305574363645 bbi:360.9078125 ratio:1.0016733592400524\n2026-03-27 15:25:00 | close:361.37 vwap:362.21064151501554 bbi:361.03697916666664 ratio:1.001697094179496\n2026-03-27 15:30:00 | close:361.97 vwap:362.1976097104006 bbi:361.1722916666667 ratio:1.001782208022971\n2026-03-27 15:35:00 | close:361.69 vwap:362.1884639535841 bbi:361.241875 ratio:1.0019341271853737\n2026-03-27 15:40:00 | close:361.57 vwap:362.1696124151318 bbi:361.3229166666667 ratio:1.002196104699481\n2026-03-27 15:45:00 | close:361.12 vwap:362.1412745993814 bbi:361.23614583333335 ratio:1.002335341740305\n2026-03-27 15:50:00 | close:361.21 vwap:362.10307830932766 bbi:361.1921875 ratio:1.0023587971619907\n2026-03-27 15:55:00 | close:361.76 vwap:362.08909683945404 bbi:361.2675 ratio:1.002217979846602",
+    "NVDA_5min_series": "2026-03-27 11:50:00 | close:169.55 vwap:169.56666666666666 bbi:N/A ratio:N/A\n2026-03-27 11:55:00 | close:169.55 vwap:169.5751482770957 bbi:N/A ratio:N/A\n2026-03-27 12:00:00 | close:169.53 vwap:169.52373155010883 bbi:N/A ratio:N/A\n2026-03-27 12:05:00 | close:169.3 vwap:169.49120510737413 bbi:N/A ratio:N/A\n2026-03-27 12:10:00 | close:169.34 vwap:169.45320829873265 bbi:N/A ratio:N/A\n2026-03-27 12:15:00 | close:168.98 vwap:169.38304117200485 bbi:N/A ratio:N/A\n2026-03-27 12:20:00 | close:168.97 vwap:169.33657988533614 bbi:N/A ratio:N/A\n2026-03-27 12:25:00 | close:168.82 vwap:169.26939728102124 bbi:N/A ratio:N/A\n2026-03-27 12:30:00 | close:168.63 vwap:169.20291501219566 bbi:N/A ratio:N/A\n2026-03-27 12:35:00 | close:168.45 vwap:169.12279629616674 bbi:N/A ratio:N/A\n2026-03-27 12:40:00 | close:168.88 vwap:169.0846475635769 bbi:N/A ratio:N/A\n2026-03-27 12:45:00 | close:169.14 vwap:169.08147654895168 bbi:N/A ratio:N/A\n2026-03-27 12:50:00 | close:168.93 vwap:169.07665065492412 bbi:N/A ratio:N/A\n2026-03-27 12:55:00 | close:168.87 vwap:169.068405850718 bbi:N/A ratio:N/A\n2026-03-27 13:00:00 | close:168.72 vwap:169.0525585181809 bbi:N/A ratio:N/A\n2026-03-27 13:05:00 | close:168.96 vwap:169.04342287189633 bbi:N/A ratio:N/A\n2026-03-27 13:10:00 | close:168.69 vwap:169.02823645638236 bbi:N/A ratio:N/A\n2026-03-27 13:15:00 | close:168.47 vwap:169.00445849651675 bbi:N/A ratio:N/A\n2026-03-27 13:20:00 | close:168.36 vwap:168.96097894768934 bbi:N/A ratio:N/A\n2026-03-27 13:25:00 | close:167.84 vwap:168.89612624403802 bbi:N/A ratio:N/A\n2026-03-27 13:30:00 | close:168.07 vwap:168.85884428590938 bbi:N/A ratio:N/A\n2026-03-27 13:35:00 | close:168.1 vwap:168.83276825904906 bbi:N/A ratio:N/A\n2026-03-27 13:40:00 | close:167.91 vwap:168.79711112331228 bbi:N/A ratio:N/A\n2026-03-27 13:45:00 | close:167.79 vwap:168.75678781838968 bbi:168.2703125 ratio:N/A\n2026-03-27 13:50:00 | close:167.81 vwap:168.7210090796265 bbi:168.18177083333333 ratio:N/A\n2026-03-27 13:55:00 | close:167.88 vwap:168.6821756042723 bbi:168.14291666666668 ratio:N/A\n2026-03-27 14:00:00 | close:167.95 vwap:168.655601855024 bbi:168.11875 ratio:N/A\n2026-03-27 14:05:00 | close:167.9 vwap:168.6269823416736 bbi:168.08124999999998 ratio:N/A\n2026-03-27 14:10:00 | close:168.02 vwap:168.6026711875401 bbi:168.06979166666667 ratio:N/A\n2026-03-27 14:15:00 | close:168.18 vwap:168.5844195231281 bbi:168.09083333333334 ratio:N/A\n2026-03-27 14:20:00 | close:167.99 vwap:168.56852265960111 bbi:168.08791666666667 ratio:N/A\n2026-03-27 14:25:00 | close:168.0 vwap:168.55359024954384 bbi:168.0860416666667 ratio:N/A\n2026-03-27 14:30:00 | close:167.93 vwap:168.53848429483259 bbi:168.05416666666667 ratio:1.00116452059599\n2026-03-27 14:35:00 | close:167.95 vwap:168.52315084987526 bbi:168.04458333333335 ratio:1.0007424045301125\n2026-03-27 14:40:00 | close:167.98 vwap:168.5066144538595 bbi:168.03333333333333 ratio:1.000591319154233\n2026-03-27 14:45:00 | close:167.72 vwap:168.47872094115493 bbi:167.98041666666666 ratio:1.0006917319394546\n2026-03-27 14:50:00 | close:167.4 vwap:168.44273781192726 bbi:167.88552083333335 ratio:1.00114960699188\n2026-03-27 14:55:00 | close:167.47 vwap:168.4168198107658 bbi:167.7978125 ratio:1.0017573591170124\n2026-03-27 15:00:00 | close:167.38 vwap:168.3935545246868 bbi:167.72072916666667 ratio:1.0023624253015528\n2026-03-27 15:05:00 | close:167.39 vwap:168.36298969758138 bbi:167.66958333333332 ratio:1.0028085504313233\n2026-03-27 15:10:00 | close:167.45 vwap:168.3298255326079 bbi:167.62104166666666 ratio:1.003134691012533\n2026-03-27 15:15:00 | close:167.71 vwap:168.3074820968975 bbi:167.63041666666666 ratio:1.0031772242134258\n2026-03-27 15:20:00 | close:167.71 vwap:168.29123608977423 bbi:167.65739583333334 ratio:1.0030318455008702\n2026-03-27 15:25:00 | close:167.43 vwap:168.26812515924138 bbi:167.63791666666665 ratio:1.0027440983262403\n2026-03-27 15:30:00 | close:167.4 vwap:168.24454467767268 bbi:167.59489583333334 ratio:1.0022949596345219\n2026-03-27 15:35:00 | close:167.37 vwap:168.21736593916816 bbi:167.54604166666667 ratio:1.0018018642112243\n2026-03-27 15:40:00 | close:167.5 vwap:168.1932208088207 bbi:167.5396875 ratio:1.0013864490550037\n2026-03-27 15:45:00 | close:167.45 vwap:168.15847787132853 bbi:167.52385416666667 ratio:1.001130809610023\n2026-03-27 15:50:00 | close:167.45 vwap:168.11978630066517 bbi:167.51697916666666 ratio:1.0010308625127777\n2026-03-27 15:55:00 | close:167.42 vwap:168.07887404636082 bbi:167.50406249999997 ratio:1.0010233739546923",
+    "GOOGL_5min_series": "2026-03-27 11:50:00 | close:277.71 vwap:277.6566666666667 bbi:N/A ratio:N/A\n2026-03-27 11:55:00 | close:277.69 vwap:277.6794208998432 bbi:N/A ratio:N/A\n2026-03-27 12:00:00 | close:277.31 vwap:277.5936301913618 bbi:N/A ratio:N/A\n2026-03-27 12:05:00 | close:276.91 vwap:277.42019545241675 bbi:N/A ratio:N/A\n2026-03-27 12:10:00 | close:277.11 vwap:277.31839852218667 bbi:N/A ratio:N/A\n2026-03-27 12:15:00 | close:276.88 vwap:277.23351461428143 bbi:N/A ratio:N/A\n2026-03-27 12:20:00 | close:276.78 vwap:277.16002589631165 bbi:N/A ratio:N/A\n2026-03-27 12:25:00 | close:276.67 vwap:277.09518234837174 bbi:N/A ratio:N/A\n2026-03-27 12:30:00 | close:276.67 vwap:277.06839157136454 bbi:N/A ratio:N/A\n2026-03-27 12:35:00 | close:276.3 vwap:277.01622783015046 bbi:N/A ratio:N/A\n2026-03-27 12:40:00 | close:276.73 vwap:276.9777538710976 bbi:N/A ratio:N/A\n2026-03-27 12:45:00 | close:276.94 vwap:276.9744225998446 bbi:N/A ratio:N/A\n2026-03-27 12:50:00 | close:276.95 vwap:276.9743677035457 bbi:N/A ratio:N/A\n2026-03-27 12:55:00 | close:276.73 vwap:276.9652395906673 bbi:N/A ratio:N/A\n2026-03-27 13:00:00 | close:276.31 vwap:276.9275388998402 bbi:N/A ratio:N/A\n2026-03-27 13:05:00 | close:276.54 vwap:276.9053274102413 bbi:N/A ratio:N/A\n2026-03-27 13:10:00 | close:276.41 vwap:276.88868206810594 bbi:N/A ratio:N/A\n2026-03-27 13:15:00 | close:275.81 vwap:276.84824047010335 bbi:N/A ratio:N/A\n2026-03-27 13:20:00 | close:275.25 vwap:276.74714544132155 bbi:N/A ratio:N/A\n2026-03-27 13:25:00 | close:274.69 vwap:276.58675923675736 bbi:N/A ratio:N/A\n2026-03-27 13:30:00 | close:274.89 vwap:276.47026513705345 bbi:N/A ratio:N/A\n2026-03-27 13:35:00 | close:274.59 vwap:276.3855901632806 bbi:N/A ratio:N/A\n2026-03-27 13:40:00 | close:274.19 vwap:276.24866023932236 bbi:N/A ratio:N/A\n2026-03-27 13:45:00 | close:274.41 vwap:276.1718564251937 bbi:275.2251041666667 ratio:N/A\n2026-03-27 13:50:00 | close:274.36 vwap:276.1097111990751 bbi:275.08000000000004 ratio:N/A\n2026-03-27 13:55:00 | close:274.41 vwap:276.0522720282883 bbi:275.00416666666666 ratio:N/A\n2026-03-27 14:00:00 | close:274.36 vwap:276.0011377526284 bbi:274.9065625 ratio:N/A\n2026-03-27 14:05:00 | close:274.15 vwap:275.94895257793706 bbi:274.7921875 ratio:N/A\n2026-03-27 14:10:00 | close:274.36 vwap:275.8948742783981 bbi:274.72375 ratio:N/A\n2026-03-27 14:15:00 | close:274.72 vwap:275.848638617868 bbi:274.7214583333333 ratio:N/A\n2026-03-27 14:20:00 | close:274.96 vwap:275.81348138119665 bbi:274.7889583333333 ratio:N/A\n2026-03-27 14:25:00 | close:275.27 vwap:275.7981356278829 bbi:274.89812500000005 ratio:N/A\n2026-03-27 14:30:00 | close:275.43 vwap:275.784801394952 bbi:275.0002083333333 ratio:1.0017960533474148\n2026-03-27 14:35:00 | close:275.48 vwap:275.7762092363455 bbi:275.10895833333336 ratio:1.0015585224722356\n2026-03-27 14:40:00 | close:275.4 vwap:275.7683806080331 bbi:275.1744791666667 ratio:1.0017254074228157\n2026-03-27 14:45:00 | close:275.32 vwap:275.7572037896563 bbi:275.19239583333336 ratio:1.0019637802996495\n2026-03-27 14:50:00 | close:275.16 vwap:275.7487470803293 bbi:275.1720833333334 ratio:1.002127354291065\n2026-03-27 14:55:00 | close:274.88 vwap:275.73389155884087 bbi:275.10302083333335 ratio:1.0020786840386466\n2026-03-27 15:00:00 | close:274.85 vwap:275.71795783585475 bbi:275.0346875 ratio:1.0018160778986627\n2026-03-27 15:05:00 | close:275.05 vwap:275.7080227640458 bbi:275.0108333333333 ratio:1.001419492801866\n2026-03-27 15:10:00 | close:275.18 vwap:275.6942746392448 bbi:275.0309375 ratio:1.0010254746300957\n2026-03-27 15:15:00 | close:275.46 vwap:275.6871348916779 bbi:275.099375 ratio:1.0007777744066286\n2026-03-27 15:20:00 | close:275.07 vwap:275.6771194714554 bbi:275.09770833333334 ratio:1.000692586515266\n2026-03-27 15:25:00 | close:274.78 vwap:275.6602985380376 bbi:275.0509375 ratio:1.000714073821379\n2026-03-27 15:30:00 | close:274.92 vwap:275.6347899517056 bbi:274.99854166666665 ratio:1.0007185568188284\n2026-03-27 15:35:00 | close:274.61 vwap:275.6087776668289 bbi:274.9239583333333 ratio:1.0007546816450565\n2026-03-27 15:40:00 | close:274.52 vwap:275.5674877927489 bbi:274.8598958333333 ratio:1.0008603130276872\n2026-03-27 15:45:00 | close:274.5 vwap:275.52727627375674 bbi:274.76874999999995 ratio:1.0011602740671157\n2026-03-27 15:50:00 | close:274.27 vwap:275.4619358905001 bbi:274.6876041666667 ratio:1.0015331018700897\n2026-03-27 15:55:00 | close:274.23 vwap:275.3366226844536 bbi:274.6251041666667 ratio:1.0018798749529847",
+    "META_5min_series": "2026-03-27 11:50:00 | close:528.89 vwap:529.2933333333334 bbi:N/A ratio:N/A\n2026-03-27 11:55:00 | close:529.71 vwap:529.3297676979838 bbi:N/A ratio:N/A\n2026-03-27 12:00:00 | close:529.04 vwap:529.3155515664334 bbi:N/A ratio:N/A\n2026-03-27 12:05:00 | close:527.96 vwap:529.0915611062193 bbi:N/A ratio:N/A\n2026-03-27 12:10:00 | close:528.0 vwap:528.9082972466123 bbi:N/A ratio:N/A\n2026-03-27 12:15:00 | close:527.62 vwap:528.6376028797357 bbi:N/A ratio:N/A\n2026-03-27 12:20:00 | close:526.52 vwap:528.2929531017478 bbi:N/A ratio:N/A\n2026-03-27 12:25:00 | close:527.07 vwap:528.1208555824539 bbi:N/A ratio:N/A\n2026-03-27 12:30:00 | close:527.85 vwap:528.0823942515526 bbi:N/A ratio:N/A\n2026-03-27 12:35:00 | close:527.79 vwap:528.0490668919699 bbi:N/A ratio:N/A\n2026-03-27 12:40:00 | close:529.15 vwap:528.0914053477889 bbi:N/A ratio:N/A\n2026-03-27 12:45:00 | close:530.0 vwap:528.2884139058907 bbi:N/A ratio:N/A\n2026-03-27 12:50:00 | close:529.05 vwap:528.3636324469894 bbi:N/A ratio:N/A\n2026-03-27 12:55:00 | close:527.97 vwap:528.3600217702383 bbi:N/A ratio:N/A\n2026-03-27 13:00:00 | close:527.42 vwap:528.2901929334271 bbi:N/A ratio:N/A\n2026-03-27 13:05:00 | close:528.3 vwap:528.2983297030348 bbi:N/A ratio:N/A\n2026-03-27 13:10:00 | close:528.0 vwap:528.288264514883 bbi:N/A ratio:N/A\n2026-03-27 13:15:00 | close:526.34 vwap:528.2161562275678 bbi:N/A ratio:N/A\n2026-03-27 13:20:00 | close:525.71 vwap:528.0811604307454 bbi:N/A ratio:N/A\n2026-03-27 13:25:00 | close:524.34 vwap:527.7698736380364 bbi:N/A ratio:N/A\n2026-03-27 13:30:00 | close:523.72 vwap:527.4424853705318 bbi:N/A ratio:N/A\n2026-03-27 13:35:00 | close:523.8 vwap:527.2720955593198 bbi:N/A ratio:N/A\n2026-03-27 13:40:00 | close:522.86 vwap:527.1331840920083 bbi:N/A ratio:N/A\n2026-03-27 13:45:00 | close:523.54 vwap:526.9506551403323 bbi:525.1065624999999 ratio:N/A\n2026-03-27 13:50:00 | close:522.72 vwap:526.8318026455366 bbi:524.6958333333333 ratio:N/A\n2026-03-27 13:55:00 | close:521.13 vwap:526.4858287126917 bbi:524.1860416666667 ratio:N/A\n2026-03-27 14:00:00 | close:521.08 vwap:526.1769658741669 bbi:523.6560416666666 ratio:N/A\n2026-03-27 14:05:00 | close:522.17 vwap:526.0086783789117 bbi:523.3542708333334 ratio:N/A\n2026-03-27 14:10:00 | close:523.06 vwap:525.896611089243 bbi:523.3690625 ratio:N/A\n2026-03-27 14:15:00 | close:523.18 vwap:525.8303978753221 bbi:523.4169791666667 ratio:N/A\n2026-03-27 14:20:00 | close:523.75 vwap:525.7680033946947 bbi:523.5218749999999 ratio:N/A\n2026-03-27 14:25:00 | close:524.12 vwap:525.7202089508019 bbi:523.6994791666666 ratio:N/A\n2026-03-27 14:30:00 | close:524.79 vwap:525.6886297595169 bbi:523.9786458333333 ratio:1.0034314632885424\n2026-03-27 14:35:00 | close:524.57 vwap:525.6602311397422 bbi:524.1294791666667 ratio:1.0025104116442163\n2026-03-27 14:40:00 | close:524.24 vwap:525.6319072360719 bbi:524.16625 ratio:1.0019415201835358\n2026-03-27 14:45:00 | close:524.82 vwap:525.5962910283673 bbi:524.2097916666667 ratio:1.0019612425116904\n2026-03-27 14:50:00 | close:525.08 vwap:525.583343615734 bbi:524.3155208333333 ratio:1.002194779747324\n2026-03-27 14:55:00 | close:524.56 vwap:525.5562650997716 bbi:524.3964583333334 ratio:1.0022067029045756\n2026-03-27 15:00:00 | close:523.99 vwap:525.5260161621467 bbi:524.3188541666667 ratio:1.002003734525333\n2026-03-27 15:05:00 | close:523.87 vwap:525.5056163068456 bbi:524.1781249999999 ratio:1.0016123472640508\n2026-03-27 15:10:00 | close:524.09 vwap:525.4865942995476 bbi:524.1134375000001 ratio:1.0011373988771883\n2026-03-27 15:15:00 | close:524.28 vwap:525.4645161805179 bbi:524.1165625 ratio:1.000702630067851\n2026-03-27 15:20:00 | close:525.8 vwap:525.4541389864385 bbi:524.3510416666667 ratio:1.0006069588329471\n2026-03-27 15:25:00 | close:526.4 vwap:525.4696375600187 bbi:524.6891666666667 ratio:1.0009925189349436\n2026-03-27 15:30:00 | close:526.89 vwap:525.499665444815 bbi:525.1042708333334 ratio:1.0017447031533935\n2026-03-27 15:35:00 | close:526.04 vwap:525.5116415895499 bbi:525.2686458333334 ratio:1.0023233777241052\n2026-03-27 15:40:00 | close:526.2 vwap:525.5223842791348 bbi:525.4155208333333 ratio:1.0028262271256911\n2026-03-27 15:45:00 | close:525.88 vwap:525.5309661465312 bbi:525.4444791666667 ratio:1.003171463426005\n2026-03-27 15:50:00 | close:525.06 vwap:525.5150861028757 bbi:525.3559375 ratio:1.0032717501661788\n2026-03-27 15:55:00 | close:525.71 vwap:525.5197671591408 bbi:525.3580208333333 ratio:1.0031456466497504",
+    "AMZN_5min_series": "2026-03-27 11:50:00 | close:201.44 vwap:201.42 bbi:N/A ratio:N/A\n2026-03-27 11:55:00 | close:201.0 vwap:201.2927812115246 bbi:N/A ratio:N/A\n2026-03-27 12:00:00 | close:200.87 vwap:201.16542701855232 bbi:N/A ratio:N/A\n2026-03-27 12:05:00 | close:200.8 vwap:201.0709535549453 bbi:N/A ratio:N/A\n2026-03-27 12:10:00 | close:200.95 vwap:201.0311340168139 bbi:N/A ratio:N/A\n2026-03-27 12:15:00 | close:200.53 vwap:200.9792666902119 bbi:N/A ratio:N/A\n2026-03-27 12:20:00 | close:200.76 vwap:200.95289716799542 bbi:N/A ratio:N/A\n2026-03-27 12:25:00 | close:200.73 vwap:200.91053888844687 bbi:N/A ratio:N/A\n2026-03-27 12:30:00 | close:200.73 vwap:200.89824738137892 bbi:N/A ratio:N/A\n2026-03-27 12:35:00 | close:200.59 vwap:200.88352486003674 bbi:N/A ratio:N/A\n2026-03-27 12:40:00 | close:200.91 vwap:200.87786033582503 bbi:N/A ratio:N/A\n2026-03-27 12:45:00 | close:201.42 vwap:200.90820235090297 bbi:N/A ratio:N/A\n2026-03-27 12:50:00 | close:201.12 vwap:200.93148357328488 bbi:N/A ratio:N/A\n2026-03-27 12:55:00 | close:201.3 vwap:200.9442568769535 bbi:N/A ratio:N/A\n2026-03-27 13:00:00 | close:201.03 vwap:200.95499641483022 bbi:N/A ratio:N/A\n2026-03-27 13:05:00 | close:201.54 vwap:200.9900146047492 bbi:N/A ratio:N/A\n2026-03-27 13:10:00 | close:201.32 vwap:201.00376179842834 bbi:N/A ratio:N/A\n2026-03-27 13:15:00 | close:201.14 vwap:201.00978548633398 bbi:N/A ratio:N/A\n2026-03-27 13:20:00 | close:201.09 vwap:201.01213371431135 bbi:N/A ratio:N/A\n2026-03-27 13:25:00 | close:200.83 vwap:201.00649743961753 bbi:N/A ratio:N/A\n2026-03-27 13:30:00 | close:200.87 vwap:201.00076828023208 bbi:N/A ratio:N/A\n2026-03-27 13:35:00 | close:200.82 vwap:200.99038029175463 bbi:N/A ratio:N/A\n2026-03-27 13:40:00 | close:200.69 vwap:200.9818488937655 bbi:N/A ratio:N/A\n2026-03-27 13:45:00 | close:200.62 vwap:200.97009590456238 bbi:200.88083333333333 ratio:N/A\n2026-03-27 13:50:00 | close:200.49 vwap:200.94836726849238 bbi:200.8053125 ratio:N/A\n2026-03-27 13:55:00 | close:200.65 vwap:200.93841698208308 bbi:200.77729166666666 ratio:N/A\n2026-03-27 14:00:00 | close:200.54 vwap:200.92351174236697 bbi:200.74322916666668 ratio:N/A\n2026-03-27 14:05:00 | close:200.31 vwap:200.89671276696475 bbi:200.67625 ratio:N/A\n2026-03-27 14:10:00 | close:200.42 vwap:200.87663688017358 bbi:200.62156249999998 ratio:N/A\n2026-03-27 14:15:00 | close:200.63 vwap:200.8629722466241 bbi:200.61989583333335 ratio:N/A\n2026-03-27 14:20:00 | close:200.43 vwap:200.8486632438748 bbi:200.61020833333333 ratio:N/A\n2026-03-27 14:25:00 | close:200.45 vwap:200.83422649981787 bbi:200.59354166666668 ratio:N/A\n2026-03-27 14:30:00 | close:200.52 vwap:200.82628349702105 bbi:200.57406250000003 ratio:1.0015692397877616\n2026-03-27 14:35:00 | close:200.12 vwap:200.8085934663768 bbi:200.52083333333334 ratio:1.0013969361940722\n2026-03-27 14:40:00 | close:200.18 vwap:200.7879532972371 bbi:200.47010416666666 ratio:1.0013957965477969\n2026-03-27 14:45:00 | close:199.86 vwap:200.74351580404397 bbi:200.35093750000001 ratio:1.0016430816283364\n2026-03-27 14:50:00 | close:199.8 vwap:200.71130857945664 bbi:200.26989583333332 ratio:1.0019572708001634\n2026-03-27 14:55:00 | close:199.59 vwap:200.6773596318384 bbi:200.145 ratio:1.0025133231538477\n2026-03-27 15:00:00 | close:199.74 vwap:200.6544309308635 bbi:200.07239583333333 ratio:1.00302524605945\n2026-03-27 15:05:00 | close:199.78 vwap:200.6278215038659 bbi:200.0271875 ratio:1.003348979152489\n2026-03-27 15:10:00 | close:200.0 vwap:200.59575463624716 bbi:200.03135416666666 ratio:1.0034075466185604\n2026-03-27 15:15:00 | close:200.14 vwap:200.58043387242793 bbi:200.05572916666668 ratio:1.0032206218246997\n2026-03-27 15:20:00 | close:200.19 vwap:200.56376035256454 bbi:200.09177083333333 ratio:1.002798603832686\n2026-03-27 15:25:00 | close:200.11 vwap:200.55072353956803 bbi:200.10802083333334 ratio:1.0022624394626372\n2026-03-27 15:30:00 | close:200.22 vwap:200.54018026870452 bbi:200.12166666666667 ratio:1.0015777359613738\n2026-03-27 15:35:00 | close:199.9 vwap:200.5273240806041 bbi:200.08833333333334 ratio:1.0010525085305297\n2026-03-27 15:40:00 | close:199.78 vwap:200.49874391391015 bbi:200.03385416666666 ratio:1.0006086916730372\n2026-03-27 15:45:00 | close:199.57 vwap:200.45776036716077 bbi:199.93895833333335 ratio:1.000794445593529\n2026-03-27 15:50:00 | close:199.3 vwap:200.40242876811655 bbi:199.8290625 ratio:1.0013333578574997\n2026-03-27 15:55:00 | close:199.34 vwap:200.30239827112524 bbi:199.74145833333333 ratio:1.001923154624357"
+  },
+  "total_value": 0.0,
+  "available_cash": 1007859.01,
+  "return": 0.0,
+  "positions": {
+    "CASH": {
+      "available": 1007859.01,
+      "total": 1007859.01
+    }
+  },
+  "current_prices": {},
+  "trades_today": 0,
+  "trades_remaining": 20
+}

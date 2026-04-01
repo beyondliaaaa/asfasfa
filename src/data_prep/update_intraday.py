@@ -21,7 +21,7 @@ from config import settings
 from shared.intraday_db import (
     get_session, IntradayBar, 
     Intraday2HourBar,  # 新增
-    HourlyBar
+    IntradayHourlyBar
 )
 
 logger = logging.getLogger(__name__)
@@ -170,7 +170,7 @@ def update_intraday_bars(session, df: pd.DataFrame, symbol: str, bar_size: str =
         TableClass = Intraday2HourBar
         datetime_col = 'datetime'
     elif bar_size == '1 hour':
-        TableClass = HourlyBar
+        TableClass = IntradayHourlyBar
         datetime_col = 'datetime'
     else:
         logger.error(f"未知的 bar_size: {bar_size}")

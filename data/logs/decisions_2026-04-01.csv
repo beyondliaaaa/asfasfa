@@ -1,0 +1,3 @@
+id,date,time,llm_model,prompt_tokens,completion_tokens,total_tokens,api_latency_sec,parsed_action,parsed_symbol,parsed_qty,parsed_price,simulate_mode,risk_check_passed,executed,notes
+163,2026-04-01,14:34:15,unknown,0,0,13395,0.00,NO_OP,,0,,True,True,False,
+164,2026-04-01,14:41:39,unknown,0,0,13395,0.00,NO_OP,,0,,True,True,False,

@@ -17,6 +17,7 @@ import argparse
 import logging
 import signal
 import time
+import pytz
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional, Dict, Any, List
@@ -28,13 +29,11 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from config import settings
 from src.monitor.performance_logger import PerformanceLogger
 
-# 延迟导入（避免循环依赖）
-def import_modules():
-    global build_daily_pool, prompts, intraday_agent, parser, risk_checker, ibkr_executor
-    
-    from src.data_prep import build_daily_pool
-    from src.agent import prompts, intraday_agent, parser
-    from src.execution import risk_checker, ibkr_executor
+# ✅ 直接导入所有需要的模块（修复 NameError）
+from src.data_prep import build_daily_pool
+from src.agent import prompts, intraday_agent, parser
+from src.execution import risk_checker, ibkr_executor
+from src.data_prep import update_intraday
 
 logger = logging.getLogger(__name__)
 
@@ -66,16 +65,45 @@ def setup_logging(mode: str, date_str: str):
     logger.info(f"📝 日志文件：{log_file}")
     logger.info(f"🚀 AI-Trader-Intraday 启动 | 模式：{mode} | 日期：{date_str}")
 
-
+def save_prompt_log(prompt: str, cycle: int, date_str: str, keep_last_n: int = 5):
+    """
+    保存 Prompt 到日志文件
+    同时清理旧文件，只保留最近 N 个
+    """
+    from pathlib import Path
+    from config import settings
+    
+    if not getattr(settings, 'SAVE_PROMPT_LOGS', True):
+        return None
+    
+    if keep_last_n is None:
+        keep_last_n = getattr(settings, 'PROMPT_LOG_KEEP_LAST', 5)
+        
+    prompt_dir = PROJECT_ROOT / "data" / "prompts"
+    prompt_dir.mkdir(exist_ok=True)
+    
+    # 按日期和循环编号保存
+    prompt_file = prompt_dir / f"prompt_{date_str.replace('-', '')}_premarket.txt"
+    
+    try:
+        with open(prompt_file, 'w', encoding='utf-8') as f:
+            f.write(f"# AI-Trader-Intraday Prompt Log\n")
+            f.write(f"# Mode: premarket\n")
+            f.write(f"# Date: {date_str}\n")
+            f.write(f"# Generated: {datetime.now().isoformat()}\n")
+            f.write(f"# Length: {len(prompt)} chars (~{len(prompt)//4} tokens)\n")
+            f.write(f"{'='*70}\n\n")
+            f.write(prompt)
+        
+        logger.info(f"📝 Prompt 已保存：{prompt_file}")
+        return str(prompt_file)
+    except Exception as e:
+        logger.error(f"❌ 保存 Prompt 失败：{e}")
+        return None
+    
 # ================= 盘前准备模式 =================
 def run_premarket(pool_path: str):
-    """
-    盘前准备流程：
-    1. 解析资产池模板
-    2. 查询多粒度历史数据
-    3. 构建 Prompt 上下文
-    4. 保存缓存供盘中使用
-    """
+    """盘前准备流程"""
     logger.info("=" * 70)
     logger.info("🌅 盘前准备模式")
     logger.info("=" * 70)
@@ -92,6 +120,19 @@ def run_premarket(pool_path: str):
             return False
         
         logger.info(f"✅ 资产池加载完成：{len(pool_config)} 只股票")
+        
+        # ✅ 新增：验证股票是否在历史数据库中
+        from src.data_prep.validate_pool import validate_stock_pool
+        valid_pool, missing_symbols = validate_stock_pool(pool_config)
+        
+        if not valid_pool:
+            logger.error("❌ 有效股票池为空，无法继续")
+            return False
+        
+        if missing_symbols:
+            logger.warning(f"⚠️ {len(missing_symbols)} 只股票将被跳过，详见警告日志")
+        
+        pool_config = valid_pool  # 使用验证后的资产池
         
         # 2. 初始化适配器
         adapter = build_daily_pool.IBKRPriceAdapter()
@@ -114,7 +155,9 @@ def run_premarket(pool_path: str):
         template = prompts.load_template()
         final_prompt = prompts.render_prompt(template, context)
         logger.info(f"✅ Prompt 长度：{len(final_prompt)} 字符")
-        
+        # 🔧 新增：保存盘前 Prompt 日志
+        save_prompt_log(final_prompt, cycle=0, date_str=date_str, keep_last_n=3)
+
         # 7. 保存缓存
         cache_path = build_daily_pool.save_context_cache(context)
         logger.info(f"💾 上下文缓存：{cache_path}")
@@ -148,19 +191,217 @@ def run_premarket(pool_path: str):
 
 
 # ================= 盘中决策模式 =================
-def run_intraday(pool_path: str, max_cycles: int = None):
-    """
-    盘中决策循环：
-    1. 更新 intraday 数据库（5 分钟/1 小时/2 小时）
-    2. 加载/刷新上下文
-    3. Agent 决策
-    4. 解析指令
-    5. 风控校验
-    6. 执行交易
-    7. 记录日志
+def get_est_time() -> datetime:
+    """获取当前美东时间（正确处理时区）"""
+    # 获取当前 UTC 时间
+    utc_now = datetime.now(pytz.UTC)
     
-    每 5 分钟循环一次
+    # 转换为美东时间
+    est = pytz.timezone('US/Eastern')
+    return utc_now.astimezone(est)
+
+def is_market_hours() -> bool:
+    """判断当前是否在常规交易时段（美东时间 9:30 AM - 4:00 PM）"""
+    now_est = get_est_time()
+    
+    # 创建今天的开盘/收盘时间（美东时区）
+    market_open = now_est.replace(hour=9, minute=30, second=0, microsecond=0)
+    market_close = now_est.replace(hour=16, minute=0, second=0, microsecond=0)
+    
+    return market_open <= now_est < market_close
+
+def is_premarket() -> bool:
+    """判断当前是否在盘前时段（美东时间 4:00 AM - 9:30 AM）"""
+    now_est = get_est_time()
+    
+    premarket_start = now_est.replace(hour=4, minute=0, second=0, microsecond=0)
+    market_open = now_est.replace(hour=9, minute=30, second=0, microsecond=0)
+    
+    return premarket_start <= now_est < market_open
+
+def is_afterhours() -> bool:
+    """判断当前是否在盘后时段（美东时间 4:00 PM - 8:00 PM）"""
+    now_est = get_est_time()
+    
+    market_close = now_est.replace(hour=16, minute=0, second=0, microsecond=0)
+    afterhours_end = now_est.replace(hour=20, minute=0, second=0, microsecond=0)
+    
+    return market_close <= now_est < afterhours_end
+
+def is_market_hours() -> bool:
     """
+    判断当前是否在常规交易时段（美东时间 9:30 AM - 4:00 PM）
+    """
+    now_est = get_est_time()
+    
+    # 交易时段：9:30 AM - 4:00 PM
+    market_open = now_est.replace(hour=9, minute=30, second=0, microsecond=0)
+    market_close = now_est.replace(hour=16, minute=0, second=0, microsecond=0)
+    
+    # 🔧 修复：正确处理时间比较
+    return market_open <= now_est < market_close
+
+def get_time_to_market_open() -> timedelta:
+    """
+    获取距离开盘的时间
+    Returns:
+        timedelta 对象（负数表示已开盘）
+    """
+    now_est = get_est_time()
+    
+    # 创建今天 9:30 的美东时间
+    market_open = now_est.replace(hour=9, minute=30, second=0, microsecond=0)
+    
+    # 🔧 修复：如果已开盘，返回负数
+    if now_est >= market_open:
+        market_close = now_est.replace(hour=16, minute=0, second=0, microsecond=0)
+        if now_est < market_close:
+            # 已在交易时段内
+            return timedelta(seconds=-1)
+        else:
+            # 已收盘，计算明天开盘
+            market_open += timedelta(days=1)
+            # 🔧 修复：跳过周末
+            while market_open.weekday() >= 5:  # 5=周六，6=周日
+                market_open += timedelta(days=1)
+    
+    return market_open - now_est
+
+def wait_until_market_open() -> bool:
+    """
+    等待到开盘时间
+    Returns:
+        True: 成功等待到开盘（或已在交易时段）
+        False: 用户中断或等待失败
+    """
+    global running
+    
+    # 🔧 关键：先检查是否已在交易时段
+    if is_market_hours():
+        logger.info("✅ 当前已在交易时段内，无需等待")
+        return True
+    
+    time_to_open = get_time_to_market_open()
+    seconds_to_wait = int(time_to_open.total_seconds())
+    
+    # 🔧 修复：负数表示已开盘，0 表示正好开盘
+    if seconds_to_wait <= 0:
+        logger.info("✅ 已到达或超过开盘时间")
+        return True
+    
+    # 格式化等待时间
+    hours = seconds_to_wait // 3600
+    minutes = (seconds_to_wait % 3600) // 60
+    
+    logger.info("=" * 70)
+    logger.info("🌅 盘前等待模式")
+    logger.info("=" * 70)
+    logger.info(f"📍 当前美东时间：{get_est_time().strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    logger.info(f"🕘 开盘时间：09:30:00 EST")
+    logger.info(f"⏳ 距离开盘：{hours}小时 {minutes}分钟")
+    logger.info(f"💡 程序将待机至开盘后自动启动盘中决策")
+    logger.info("=" * 70)
+    logger.info("按 Ctrl+C 可中断等待")
+    logger.info("=" * 70)
+    
+    # 🔧 修复：倒计时等待逻辑
+    last_log_time = datetime.now()
+    while seconds_to_wait > 0 and running:
+        now = datetime.now()
+        
+        # 每分钟打印一次状态
+        if (now - last_log_time).total_seconds() >= 60:
+            time_to_open = get_time_to_market_open()
+            seconds_to_wait = max(0, int(time_to_open.total_seconds()))
+            hours = seconds_to_wait // 3600
+            minutes = (seconds_to_wait % 3600) // 60
+            logger.info(f"⏰ 等待中... 剩余：{hours}小时 {minutes}分钟 | "
+                       f"美东：{get_est_time().strftime('%H:%M:%S')}")
+            last_log_time = now
+        
+        # 🔧 修复：短时睡眠 + 检查中断
+        time.sleep(5)
+        seconds_to_wait = int(get_time_to_market_open().total_seconds())
+    
+    # 🔧 修复：检查退出原因
+    if not running:
+        logger.info("🚨 用户中断等待")
+        return False
+    
+    if seconds_to_wait <= 0:
+        logger.info("✅ 等待完成，已到达开盘时间")
+        return True
+    
+    # 其他情况
+    logger.warning("⚠️ 等待异常退出")
+    return False
+
+def save_prompt_log(prompt: str, cycle: int, date_str: str):
+    """保存 Prompt 到日志文件"""
+    from pathlib import Path
+    
+    prompt_dir = PROJECT_ROOT / "data" / "prompts"
+    prompt_dir.mkdir(exist_ok=True)
+    
+    # 按日期和循环编号保存
+    prompt_file = prompt_dir / f"prompt_{date_str.replace('-', '')}_cycle{cycle:04d}.txt"
+    
+    try:
+        with open(prompt_file, 'w', encoding='utf-8') as f:
+            f.write(f"# AI-Trader-Intraday Prompt Log\n")
+            f.write(f"# Date: {date_str}\n")
+            f.write(f"# Cycle: {cycle}\n")
+            f.write(f"# Generated: {datetime.now().isoformat()}\n")
+            f.write(f"# Length: {len(prompt)} chars (~{len(prompt)//4} tokens)\n")
+            f.write(f"{'='*70}\n\n")
+            f.write(prompt)
+        
+        logger.info(f"📝 Prompt 已保存：{prompt_file}")
+        return str(prompt_file)
+    except Exception as e:
+        logger.error(f"❌ 保存 Prompt 失败：{e}")
+        return None
+
+
+def save_prompt_log(prompt: str, cycle: int, date_str: str, keep_last_n: int = 10):
+    """
+    保存 Prompt 到日志文件
+    同时清理旧文件，只保留最近 N 个
+    """
+    from pathlib import Path
+    
+    prompt_dir = PROJECT_ROOT / "data" / "prompts"
+    prompt_dir.mkdir(exist_ok=True)
+    
+    # 按日期和循环编号保存
+    prompt_file = prompt_dir / f"prompt_{date_str.replace('-', '')}_cycle{cycle:04d}.txt"
+    
+    try:
+        with open(prompt_file, 'w', encoding='utf-8') as f:
+            f.write(f"# AI-Trader-Intraday Prompt Log\n")
+            f.write(f"# Date: {date_str}\n")
+            f.write(f"# Cycle: {cycle}\n")
+            f.write(f"# Generated: {datetime.now().isoformat()}\n")
+            f.write(f"# Length: {len(prompt)} chars (~{len(prompt)//4} tokens)\n")
+            f.write(f"{'='*70}\n\n")
+            f.write(prompt)
+        
+        logger.info(f"📝 Prompt 已保存：{prompt_file}")
+        
+        # 🔧 清理旧文件，只保留最近 N 个
+        all_prompts = sorted(prompt_dir.glob(f"prompt_{date_str.replace('-', '')}_*.txt"))
+        if len(all_prompts) > keep_last_n:
+            for old_file in all_prompts[:-keep_last_n]:
+                old_file.unlink()
+                logger.debug(f"🗑️ 清理旧 Prompt: {old_file}")
+        
+        return str(prompt_file)
+    except Exception as e:
+        logger.error(f"❌ 保存 Prompt 失败：{e}")
+        return None
+    
+def run_intraday(pool_path: str, max_cycles: int = None, wait_for_open: bool = True):
+    """盘中决策循环"""
     logger.info("=" * 70)
     logger.info("📊 盘中决策模式")
     logger.info("=" * 70)
@@ -168,9 +409,30 @@ def run_intraday(pool_path: str, max_cycles: int = None):
     date_str = datetime.now().strftime("%Y-%m-%d")
     perf_logger = PerformanceLogger(date_str)
     
-    # 导入模块
-    import_modules()
-    from src.data_prep import update_intraday
+    # 🔧 修复：盘前检测与等待
+    if wait_for_open and not is_market_hours():
+        if is_premarket():
+            logger.warning("⚠️ 当前为盘前时段")
+            if not wait_until_market_open():
+                logger.info("🚨 等待被中断，退出程序")
+                perf_logger.close()
+                return False
+            logger.info("✅ 已到达开盘时间，开始盘中决策")
+        elif is_afterhours():
+            logger.warning("⚠️ 当前为盘后时段")
+            logger.info("💡 程序将在下一个交易日开盘时自动恢复")
+            # 🔧 修复：盘后等待到明天开盘
+            if not wait_until_market_open():
+                logger.info("🚨 等待被中断，退出程序")
+                perf_logger.close()
+                return False
+        else:
+            # 周末或节假日
+            logger.warning("⚠️ 当前为非交易时段（可能是周末或节假日）")
+            if not wait_until_market_open():
+                logger.info("🚨 等待被中断，退出程序")
+                perf_logger.close()
+                return False
     
     try:
         # 1. 初始化组件
@@ -200,8 +462,19 @@ def run_intraday(pool_path: str, max_cycles: int = None):
         while running:
             cycle += 1
             cycle_start = datetime.now()
+            
+            # 🔧 新增：检查是否已收盘
+            if is_market_hours():
+                pass  # 交易时段内，继续
+            elif wait_for_open:
+                logger.info("🌙 已收盘，等待下一个交易日开盘...")
+                if not wait_until_market_open():
+                    break
+            # 如果不等待，继续执行（测试模式）
+            
             logger.info(f"\n{'='*70}")
-            logger.info(f"🔄 决策循环 {cycle} | 时间：{cycle_start.strftime('%H:%M:%S')}")
+            logger.info(f"🔄 决策循环 {cycle} | 时间：{cycle_start.strftime('%H:%M:%S')} | "
+                       f"美东：{get_est_time().strftime('%H:%M:%S')}")
             logger.info(f"{'='*70}")
             
             # 检查最大循环次数
@@ -232,6 +505,10 @@ def run_intraday(pool_path: str, max_cycles: int = None):
                 template = prompts.load_template()
                 system_prompt = prompts.render_prompt(template, context)
                 
+                if cycle == 1 or settings.LOG_LEVEL == "DEBUG":
+                    save_prompt_log(system_prompt, cycle, date_str, keep_last_n=5)
+                    logger.info(f"📊 Prompt 长度：{len(system_prompt)} 字符 (~{len(system_prompt)//4} tokens)")
+
                 # ── 步骤 4: Agent 决策 ──
                 logger.info("🤖 Agent 决策中...")
                 decision_result = agent.decide(system_prompt)
@@ -287,7 +564,7 @@ def run_intraday(pool_path: str, max_cycles: int = None):
                                 "price": parsed.get("price") or exec_result.get("fill_price"),
                                 "order_id": exec_result.get("order_id"),
                                 "commission": exec_result.get("commission", 0),
-                                "pnl": 0,  # 买入时 PnL 为 0
+                                "pnl": 0,
                                 "pnl_percent": 0,
                                 "status": exec_result.get("status"),
                                 "simulate": exec_result.get("status") == "SIMULATED",
@@ -301,7 +578,6 @@ def run_intraday(pool_path: str, max_cycles: int = None):
                 
             except Exception as e:
                 logger.error(f"❌ 循环 {cycle} 失败：{e}", exc_info=True)
-                # 记录错误日志
                 perf_logger.log_decision({
                     "raw_output": f"Error: {str(e)}",
                     "parsed": {"action": "NO_OP"},
@@ -320,7 +596,6 @@ def run_intraday(pool_path: str, max_cycles: int = None):
             
             if wait_time > 0 and running:
                 logger.info(f"💤 等待 {wait_time:.0f} 秒后下一次决策...")
-                # 可中断的等待
                 for _ in range(int(wait_time)):
                     if not running:
                         break
@@ -411,28 +686,164 @@ def run_review(date_str: str):
 
 # ================= 辅助函数 =================
 def get_account_info() -> Dict[str, Any]:
-    """
-    获取账户信息
-    实际使用时应从 IBKR API 或本地持仓记录获取
-    这里返回模拟数据供测试
-    """
-    # TODO: 实现真实的 IBKR 账户查询
-    return {
-        "total_value": 100000.0,
-        "available_cash": 50000.0,
-        "return": 0.05,  # 5%
-        "positions": {
-            "AAPL": {"shares": 100, "avg_cost": 150.0, "current_price": 155.0},
-            "MSFT": {"shares": 50, "avg_cost": 300.0, "current_price": 305.0},
-            "CASH": {"available": 50000.0}
-        },
-        "current_prices": {
-            "AAPL": 155.0,
-            "MSFT": 305.0,
-            "TSLA": 200.0,
-            "NVDA": 500.0
+    """从 IBKR 获取真实账户信息"""
+    from ib_insync import IB, Stock
+    from config import settings
+    
+    logger.info("🔍 获取 IBKR 账户信息...")
+    
+    ib = None
+    try:
+        ib = IB()
+        ib.connect(
+            host=settings.IB_HOST,
+            port=settings.IB_PORT,
+            clientId=settings.IB_CLIENT_ID + 100,
+            timeout=10,
+            readonly=True
+        )
+        logger.info(f"✅ IBKR 连接成功：{settings.IB_HOST}:{settings.IB_PORT}")
+        
+        ib.waitOnUpdate(timeout=5)
+        
+        account_summary = ib.accountSummary()
+        
+        total_value = 0.0
+        available_cash = 0.0
+        total_cash = 0.0
+        account_code = None
+        
+        logger.info(f"📋 获取到 {len(account_summary)} 条账户摘要记录")
+        
+        for summary in account_summary:
+            if account_code is None:
+                account_code = summary.account
+                logger.info(f"📋 账户代码：{account_code}")
+            
+            if summary.account != account_code:
+                continue
+            
+            # 🔧 修复：放宽 tag 过滤条件
+            if summary.tag == 'NetLiquidation':  # 不限制 currency
+                total_value = float(summary.value)
+                logger.info(f"💰 账户总值：${total_value:,.2f} ({summary.currency})")
+            elif summary.tag == 'AvailableFunds':
+                available_cash = float(summary.value)
+                logger.info(f"💵 可用现金：${available_cash:,.2f} ({summary.currency})")
+            elif summary.tag == 'TotalCashValue':
+                total_cash = float(summary.value)
+                logger.info(f"💰 总现金：${total_cash:,.2f} ({summary.currency})")
+        
+        # 🔧 修复：如果 USD 有数据则使用
+        if total_value == 0:
+            for summary in account_summary:
+                if summary.account != account_code:
+                    continue
+                if summary.tag == 'NetLiquidation' and summary.currency == 'USD':
+                    total_value = float(summary.value)
+                elif summary.tag == 'AvailableFunds' and summary.currency == 'USD':
+                    available_cash = float(summary.value)
+        
+        # 获取持仓
+        positions = ib.positions()
+        logger.info(f"📊 获取到 {len(positions)} 个持仓")
+        
+        positions_dict = {}
+        current_prices = {}
+        
+        for pos in positions:
+            if pos.account != account_code:
+                continue
+            
+            if pos.contract.symbol and pos.contract.secType == 'STK':
+                symbol = pos.contract.symbol
+                shares = pos.position
+                avg_cost = pos.avgCost
+                
+                if shares == 0:
+                    continue
+                
+                try:
+                    contract = Stock(symbol, "SMART", "USD")
+                    ib.reqMktData(contract, '', False, False)
+                    ib.sleep(0.2)
+                    
+                    ticker = ib.ticker(contract)
+                    current_price = ticker.last if ticker.last else ticker.close
+                    
+                    if current_price and current_price > 0:
+                        current_prices[symbol] = current_price
+                    else:
+                        # 🔧 修复：avgCost 是总成本，不是每股成本
+                        current_prices[symbol] = avg_cost
+                        
+                except Exception as e:
+                    logger.warning(f"⚠️ 获取 {symbol} 价格失败：{e}")
+                    current_prices[symbol] = avg_cost
+                
+                # 🔧 修复：正确计算每股成本
+                cost_per_share = avg_cost
+                current_price = current_prices.get(symbol, 0)
+                market_value = current_price * abs(shares)
+                total_cost = cost_per_share * abs(shares)
+                pnl = (current_price - cost_per_share) * abs(shares)
+                pnl_pct = (current_price / cost_per_share - 1) * 100 if cost_per_share > 0 else 0
+                
+                positions_dict[symbol] = {
+                    "shares": int(abs(shares)),
+                    "avg_cost": cost_per_share,  # 🔧 每股成本
+                    "current_price": current_price,
+                    "market_value": market_value,
+                    "total_cost": total_cost,
+                    "pnl": pnl,
+                    "pnl_pct": pnl_pct
+                }
+                logger.info(f"  📈 {symbol}: {int(abs(shares))} shares @ ${current_price:.2f} (cost: ${cost_per_share:.2f})")
+        
+        positions_dict["CASH"] = {
+            "available": available_cash,
+            "total": total_cash
         }
-    }
+        
+        # 计算收益率
+        if total_value > 0 and total_cash > 0:
+            total_return = (total_value - total_cash) / total_cash * 100
+        else:
+            total_return = 0
+        
+        logger.info(f"✅ 账户信息获取完成 | 总值：${total_value:,.2f} | 现金：${available_cash:,.2f} | 持仓：{len(positions_dict) - 1} 只")
+        
+        return {
+            "total_value": total_value,
+            "available_cash": available_cash,
+            "return": total_return / 100,
+            "positions": positions_dict,
+            "current_prices": current_prices
+        }
+        
+    except Exception as e:
+        logger.error(f"❌ 获取账户信息失败：{e}", exc_info=True)
+        logger.warning("⚠️ 使用模拟账户数据")
+        return {
+            "total_value": 100000.0,
+            "available_cash": 50000.0,
+            "return": 0.05,
+            "positions": {
+                "AAPL": {"shares": 100, "avg_cost": 150.0, "current_price": 155.0},
+                "MSFT": {"shares": 50, "avg_cost": 300.0, "current_price": 305.0},
+                "CASH": {"available": 50000.0}
+            },
+            "current_prices": {
+                "AAPL": 155.0,
+                "MSFT": 305.0,
+                "TSLA": 200.0,
+                "NVDA": 500.0
+            }
+        }
+    finally:
+        if ib and ib.isConnected():
+            ib.disconnect()
+            logger.info("🔌 IBKR 账户查询连接已关闭")
 
 
 def validate_pool_path(pool_path: str) -> str:
@@ -506,6 +917,12 @@ def main():
         help="日志级别"
     )
     
+    parser.add_argument(
+        "--no-wait",
+        action="store_true",
+        help="盘前时不等待开盘，立即开始（用于测试）"
+    )
+    
     args = parser.parse_args()
     
     # 设置日志级别
@@ -538,7 +955,11 @@ def main():
         
     elif args.mode == "intraday":
         pool_path = validate_pool_path(args.pool)
-        success = run_intraday(pool_path, max_cycles=args.cycles)
+        success = run_intraday(
+            pool_path, 
+            max_cycles=args.cycles,
+            wait_for_open=not args.no_wait  # 默认等待开盘
+        )
         
     elif args.mode == "review":
         success = run_review(date_str)

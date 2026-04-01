@@ -45,3 +45,7 @@ ENABLE_REAL_TRADING = False     # 🛡️ 实盘保护开关（默认关闭）
 # ========== 日志配置 ==========
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 LOG_FILE = LOGS_DIR / "trader_{date}.log"
+
+SAVE_PROMPT_LOGS = True       # 是否保存 Prompt 日志
+PROMPT_LOG_KEEP_LAST = 5      # 保留最近 N 个 Prompt 文件
+PROMPT_LOG_DIR = "data/prompts"
